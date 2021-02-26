@@ -15,16 +15,18 @@
 
 <body>
     <div class="header zone">
-       <nav>
-			<ul id='main-nav'>
-                <a id='header-title' href="#"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a>
-				<a href='#'><li>Inicio</li></a>
-				<a href='#'><li>Ciclos</li></a>
-				<a href='#'><li>Prácticas</li></a>
-				<a href='#'><li>Dual</li></a>
-				<a href='#'><li>Contacto</li></a>
-			</ul>
-       </nav>
+        <nav class="mobile-menu">
+        <label for="show-menu" class="show-menu"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas<div class="lines"></div></label>
+            <input type="checkbox" id="show-menu">
+                <ul id="menu">
+                <li id='header-title'><a href="#"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Ciclos</a></li>
+                <li><a href="#">Prácticas</a></li>
+                <li><a href="#">Dual</a></li>
+                <li id='contacto'><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
   </div>
 
 
@@ -35,7 +37,6 @@
             <button id="desplazar-abajo">Más información</button>
         </div>
     </div>
-
   <div class="zone green grid-wrapper">
 	  <div class="box"><img src="img/data_storage_2_2.png" alt="data-storage"></div>
 	  <div class="box"><img src="img/desktop_analytics_2.png" alt="desktop-analysis"></div>
