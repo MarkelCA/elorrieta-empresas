@@ -1,4 +1,4 @@
-RewriteBase /elorrieta-empresas2
+RewriteBase /elorrieta-empresas
 RewriteEngine on
 
 #Ciclos
