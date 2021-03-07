@@ -1,15 +1,45 @@
 <?php
 
 //Array de familias profesionales
-$familia['AD'] = 'Administración y Gestión';
-$familia['CM'] = 'Comercio y Marketing';
-$familia['EO'] = 'Edificación y Obra Civil';
-$familia['EE'] = 'Electricidad-Electrónica';
-$familia['FM'] = 'Fabricación Mecánica';
-$familia['HT'] = 'Hostelería y Turismo';
-$familia['IN'] = 'Informática y Comunicación';
-$familia['IM'] = 'Instalación y Mantenimiento';
-$familia['QU'] = 'Química';
+$familia['AD'] = array(
+    'titulo' => 'Administración y Gestión',
+    'img' => 'img/svg/stats.svg'
+);
+
+$familia['CM'] = array(
+    'titulo' => 'Comercio y Marketing',
+    'img' => 'img/svg/social-media-marketing.svg'
+
+);
+$familia['EO'] = array(
+    'titulo' => 'Edificación y Obra Civil',
+    'img' => 'img/svg/engineer.svg'
+);
+$familia['EE'] = array(
+    'titulo' => 'Electricidad-Electrónica',
+    'img' => 'img/svg/circuit.svg'
+);
+$familia['FM'] = array(
+    'titulo' => 'Fabricación Mecánica',
+    'img' => 'img/svg/construction.svg'
+);
+$familia['HT'] = array(
+    'titulo' => 'Hostelería y Turismo',
+    'img' => 'img/svg/travel-guide.svg'
+);
+$familia['IN'] = array(
+    'titulo' => 'Informática y Comunicación',
+    'img' => 'img/svg/document.svg'
+);
+$familia['IM'] = array(
+    'titulo' => 'Instalación y Mantenimiento',
+    'img' => 'img/svg/wrench.svg'
+);
+
+$familia['QU'] = array(
+    'titulo' => 'Química',
+    'img' => 'img/svg/chemistry.svg'
+);
 
 //Array de ciclos
 $ciclo['AD'][] = array(
@@ -1480,7 +1510,7 @@ $modulos['QUOL2']['segundo'][] = array(
 );
 
 header('Content-Type: text/html; charset=utf-8');
-print "<pre>\n".print_r($familia,true)."</pre>";
-print "<pre>\n".print_r($ciclo,true)."</pre>";
-print "<pre>\n".print_r($modulos,true)."</pre>";
+//print "<pre>\n".print_r($familia,true)."</pre>";
+//print "<pre>\n".print_r($ciclo,true)."</pre>";
+//print "<pre>\n".print_r($modulos,true)."</pre>";
 ?>

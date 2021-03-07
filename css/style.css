@@ -481,6 +481,13 @@ background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, 
 .heart {
     color: red;
 }
+
+/******************CICLOS********************************/
+#container-ciclos {
+    height: 500px
+}
+/***************************************************************/
+
 /***********************************************************************
  *  Blue Background
  **********************************************************************/
@@ -497,7 +504,6 @@ background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, 
 
 background: rgb(255,149,14);
 background: -moz-linear-gradient(180deg, rgba(255,149,14,1) 0%, rgba(255,162,100,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(255,149,14,1) 0%, rgba(255,162,100,1) 100%);
-background: linear-gradient(180deg, rgba(255,149,14,1) 0%, rgba(255,162,100,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(255,149,14,1) 0%, rgba(255,162,100,1) 100%); background: linear-gradient(180deg, rgba(255,149,14,1) 0%, rgba(255,162,100,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff950e",endColorstr="#ffa264",GradientType=1);
 }
