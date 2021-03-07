@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8"/>
     <meta name="description" content="La web de Elorrieta para las Empresas. Encuentra alumnos cualificados para FCT's prácticas remuneradas o para formación en el entorno empresarial."/>
     <meta name="keywords" content="empresa, practicas, ciclos, dual, FCT, Elorrieta"/>
@@ -35,7 +36,7 @@
             <input type="checkbox" id="show-menu">
                 <ul id="menu">
                 <li id='header-title'><a href="#"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./">Inicio</a></li>
                 <li><a href="#">Ciclos</a></li>
                 <li><a href="#">Prácticas</a></li>
                 <li><a href="#">Dual</a></li>
