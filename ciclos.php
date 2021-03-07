@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8"/>
     <meta name="description" content="La web de Elorrieta para las Empresas. Encuentra alumnos cualificados para FCT's prácticas remuneradas o para formación en el entorno empresarial."/>
@@ -14,18 +15,17 @@
     <script defer src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script defer src='js/script.js'></script>
 
-  <title>Elorrieta Empresas</title>
+  <title>Ciclos - Elorrieta Empresas</title>
 
     <!--Animate.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--Estilos propios-->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
+    <?php require_once 'funciones.php';?>
 </head>
-
 <body>
-    <div id="container">
-    
+<div id="container">
     <div class="header zone">
         <nav class="mobile-menu">
         <label for="show-menu" class="show-menu"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas<div class="lines"></div></label>
@@ -42,42 +42,13 @@
   </div>
 
 
-    <div class="cover">
-        <div id="cover-content">
-            <h3>¿Buscas contratación?</h3>
-            <p>Elit eius labore alias quasi inventore. Soluta numquam atque delectus deserunt ipsa debitis Nulla voluptatum illo quas quod molestias Maiores sed error obcaecati dolorem molestias Omnis deleniti velit aperiam veritatis</p>
-            <a id='go-down' href="">
-                <div id="down-arrows">
-                    <button class="desplazar-abajo"><i class="fas fa-angle-double-down"></i></button>
-                </div>
-            </a>
-        </div>
-    </div>
-  <div class="zone orange grid-wrapper">
-	  <div class="box ">
-            <!--<i id='ciclos-icon' class="fas fa-graduation-cap"></i>-->
-          <img src="img/books.svg" alt="ciclos-icono">
-          <h3>Ciclos</h3>
-      </div>
-	  <div class="box">
-          <img src="img/worker.svg" alt="practicas-icono">
-          <h3>Prácticas</h3>
-      </div>
-	  <div class="box"><img src="img/employee.svg" alt="dual-icono">
-          <h3>Formación Dual</h3>
-      </div>
-	  <div class="box"><img src="img/phone-call.svg" alt="contacto-icono">
-          <h3>Contacto</h3>
-      </div>
-  </div>
-
   <footer class="zone footer">
       <h4 class='credits'>Made with <i class="heart fas fa-heart"></i> by <a href="https://github.com/MarkelCA">Markel Cuesta</a></h4>
 <p class='freepik'>
     Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 </p>
   </footer>
+
 </div>
 </body>
 </html>
-
