@@ -1,5 +1,6 @@
+
 RewriteEngine on
 
-#Ciclos
+#Ciclo
 RewriteRule ^/?ciclos/$ ciclos [NC,R=301]
 RewriteRule ^/?ciclos/?$ ./ciclos.php 
