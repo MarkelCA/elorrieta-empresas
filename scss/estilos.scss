@@ -24,8 +24,35 @@ html {
             }
         }
     }
-    #container-ciclos {
-        margin-top: 15vh;
+    #container {
+        margin-top: 6rem;
+
+        #lista-ciclos {
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+
+            width: 80%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            margin: 1em auto;
+
+                .familia-logo {
+                    margin: 0 auto;
+                    width: 100px;
+                    //display:inline-block;
+                    text-align: right;
+
+                    .thumb-familia {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            h2{
+                text-align: center;
+            }
+        }
     }
 
 

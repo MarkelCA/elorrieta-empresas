@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8"/>
     <meta name="description" content="La web de Elorrieta para las Empresas. Encuentra alumnos cualificados para FCT's prácticas remuneradas o para formación en el entorno empresarial."/>
     <meta name="keywords" content="empresa, practicas, ciclos, dual, FCT, Elorrieta"/>
     <meta name="author" content="Markel Cuesta" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="shortcut icon" href="img/favicon-black.ico" />
 
      <!--Font awesome-->
@@ -48,6 +47,7 @@
     <div id="container-familias" class='grid-wrapper'>
         <?php imprimirFamilias(); ?>
     </div>
+    <div id="controles-ciclos"></div>
     <div id="container-ciclos"></div>
 
   <footer class="zone footer">

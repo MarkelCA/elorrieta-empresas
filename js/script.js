@@ -4,7 +4,8 @@ $(function() {
 
     function mostrarCiclos() {
         const cod_familia = $(this).attr('codigo_familia');
-        console.log(cod_familia);
+
+        $('#controles-ciclos').load('ajax/cargar_controles_ciclos.php');
         $('#container-ciclos').load('ajax/imprimirCiclos.php?familia='+cod_familia, ciclosCargados);
 
 
@@ -14,23 +15,29 @@ $(function() {
         //}, 500);
         //
         $('#container-familias').slideUp(400, function() {
-            console.log('ia');
+            cleanCiclosFilters();
+
+
         });
     }
 
+    function cleanCiclosFilters() {
+    $('#clean-familia').click(clear);
+        function clear() {
+            $('#container-familias').slideDown(400, function() {
+                $('#container-ciclos').html('');
+                $('#controles-ciclos').html('');
+            })
+        }
+    };
 
     function ciclosCargados() {
         $('#select-familia').change(function() {
             const cod_familia = $(this).val();
-            $('#container-ciclos').load('ajax/imprimirCiclos.php?familia='+cod_familia, ciclosCargados);
+            $('#container-ciclos').load('ajax/imprimirCiclos.php?familia='+cod_familia, cleanCiclosFilters);
 
         });
 
-        $('#clean-familia').click(function() {
-            $('#container-familias').slideDown(400, function() {
-                $('#container-ciclos').html('');
-            });
-    });
     }
     // Boxes hover animation
     $('.grid-wrapper .box').mouseenter(hoverSeccionInicio);
