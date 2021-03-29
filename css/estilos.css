@@ -28,15 +28,56 @@ html {
 #container {
   margin-top: 6rem;
 }
+#container #controles-ciclos #select-familia {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/svg/method-draw-image.svg");
+  background-size: 100px 70px;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 2rem;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  color: white;
+  transition: border, 0.4s;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+#container #controles-ciclos #select-familia:hover {
+  border: 1px solid white;
+}
+#container #clean-familia {
+  background-color: rgba(255, 0, 0, 0.5);
+  border: none;
+  padding: 1em;
+  font-size: 1.2em;
+  display: block;
+  width: 80%;
+  color: white;
+  margin: 0 auto;
+  transition: background-color, 0.4s;
+}
+#container #clean-familia:hover {
+  background-color: rgba(243, 129, 0, 0.8);
+}
 #container #lista-ciclos {
   padding: 1em;
   display: flex;
   flex-direction: column;
   justify-items: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   width: 80%;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  margin: 1em auto;
+  margin: 0em auto;
 }
 #container #lista-ciclos .familia-logo {
   margin: 0 auto;

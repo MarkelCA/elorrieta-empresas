@@ -47,8 +47,10 @@
     <div id="container-familias" class='grid-wrapper'>
         <?php imprimirFamilias(); ?>
     </div>
-    <div id="controles-ciclos"></div>
-    <div id="container-ciclos"></div>
+    <div id="container-with-controles">
+        <div id="controles-ciclos"></div>
+        <div id="container-ciclos"></div>
+    </div>
 
   <footer class="zone footer">
       <h4 class='credits'>Made with <i class="heart fas fa-heart"></i> by <a href="https://github.com/MarkelCA">Markel Cuesta</a></h4>

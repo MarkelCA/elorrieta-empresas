@@ -67,15 +67,16 @@ function imprimirCiclos($familia_in) {
 
     echo "</div>";
 
+
 }
 function controles_ciclos() {
     global $familia;
+
         echo "<select id='select-familia'>\n";
 
     foreach($familia as $cod_familia => $nombre_familia ) {
         echo "\t<option value='$cod_familia'>$nombre_familia[titulo]</option>\n";
     }
         echo "</select>\n";
-    
 }
 
