@@ -25,6 +25,13 @@
     <!--Estilos propios-->
     <link rel="stylesheet" type="text/css" href="./css/estilos.css">
 
+    <!--Slick-->
+
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+    <script defer type="text/javascript" src="slick/slick/slick.min.js"></script>
+
+    <!--Slick-->
     <?php require_once 'funciones.php';?>
 </head>
 <body>
@@ -51,6 +58,10 @@
         <div id="controles-ciclos"></div>
         <div id="container-ciclos"></div>
     </div>
+
+        <div id="faq">
+            <?php print_faq_box("primero", "segundo"); ?>
+        </div>
 
   <footer class="zone footer">
       <h4 class='credits'>Made with <i class="heart fas fa-heart"></i> by <a href="https://github.com/MarkelCA">Markel Cuesta</a></h4>

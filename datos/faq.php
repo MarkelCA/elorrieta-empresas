@@ -14,6 +14,16 @@ $faq['primero'][]=array(
   'pregunta'=>'¿Cuánto hay que pagar al alumno?',
   'respuesta'=>'En esta modalidad el alumno no recibe dinero'
 );
+
+$faq['segundo'][]=array(
+  'pregunta'=>'¿Pregunta de segundo 1`?',
+  'respuesta'=>'Elit neque cum provident quae suscipit? Temporibus rem labore est nostrum consequuntur eius ullam quisquam, qui Excepturi et assumenda illum soluta placeat Quas molestias dolorem unde voluptatum natus tempore labore'
+);
+$faq['segundo'][]=array(
+  'pregunta'=>'¿Pregunta de segundo 2?',
+  'respuesta'=>'Adipisicing sit possimus quos explicabo aliquam porro Sint atque illum culpa sint amet a sunt In ipsa facere nobis repudiandae error? Unde veniam deserunt deleniti possimus aspernatur animi Sapiente autem'
+  
+);
 $faq['FCT'][]=array(
   'pregunta'=>'¿Cuál es el periodo para realizar las prácticas?',
   'respuesta'=>'Normalmente a partir de primeros de marzo'
@@ -31,6 +41,6 @@ $faq['DUAL'][]=array(
   'respuesta'=>'Teniendo en cuenta que les va a pagar, sí'
 );
 header('Content-Type: text/html; charset=utf-8');
-print "<pre>\n".print_r($faq,true)."</pre>";
+//print "<pre>\n".print_r($faq,true)."</pre>";
 
 ?>

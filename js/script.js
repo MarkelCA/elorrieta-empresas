@@ -1,5 +1,6 @@
 $(function() {
 
+    $('#faq').slick();
     $('.familia').click(mostrarCiclos);
 
     function mostrarCiclos() {

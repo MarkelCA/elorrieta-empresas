@@ -99,6 +99,17 @@ box-sizing: border-box;
                 text-align: center;
             }
         }
+
+        #faq {
+            width: 80vw;
+            margin: auto;
+
+            & > div {
+                background-color: rgba(10, 7, 33, 0.88);
+                color: white;
+            }
+
+        }
     }
 
 

@@ -91,6 +91,14 @@ html {
 #container #lista-ciclos h2 {
   text-align: center;
 }
+#container #faq {
+  width: 80vw;
+  margin: auto;
+}
+#container #faq > div {
+  background-color: rgba(10, 7, 33, 0.88);
+  color: white;
+}
 
 .header {
   top: 0;

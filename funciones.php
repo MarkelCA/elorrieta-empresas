@@ -1,5 +1,6 @@
 <?php
 require_once 'datos/datos.php';
+require_once 'datos/faq.php';
 
 
 function imprimirFamilias() {
@@ -79,4 +80,29 @@ function controles_ciclos() {
     }
         echo "</select>\n";
 }
+function print_faq_box() {
+    global $faq;
+    for($arg_no=0;$arg_no<func_num_args();$arg_no++) {
+        $category = func_get_arg($arg_no);
 
+        $faq_category = $faq[$category];
+
+        print_faq($category, $faq_category);
+
+        //echo '<hr style="border: 2px solid white">';
+    }
+}
+function print_faq($category, $faq_category) {
+    global $faq;
+
+    foreach($faq_category as $pregunta) {
+        echo '<div>';
+        echo "<h3>$category</h3>";
+        echo '<p>Pregunta: </p>';
+        echo $pregunta['pregunta'];
+        echo '<p>Respuesta: </p>';
+        echo $pregunta['respuesta'];
+        echo '</div>';
+    }
+
+}
