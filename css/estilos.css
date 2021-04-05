@@ -1,10 +1,10 @@
 body {
+  font-family: "Montserrat", Helvetica, sans-serif;
   background-image: url("../img/wooden-back.jpg");
   background-size: contain;
   font-size: 16px;
   margin: 0;
   padding: 0;
-  font-family: Helvetica, sans-serif;
 }
 
 html {
@@ -19,7 +19,11 @@ html {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 #container-familias .familia {
-  text-align: center;
+  text-align: left;
+}
+#container-familias .familia h3 {
+  overflow: visible;
+  font-size: 1em;
 }
 #container-familias .familia img {
   width: 100%;
@@ -91,13 +95,42 @@ html {
 #container #lista-ciclos h2 {
   text-align: center;
 }
-#container #faq {
-  width: 80vw;
-  margin: auto;
-}
-#container #faq > div {
+#container #faq-container {
+  margin-top: 1.5em !important;
   background-color: rgba(10, 7, 33, 0.88);
   color: white;
+  padding: 1em 0 2em 0;
+}
+#container #faq-container #title-faq {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#container #faq-container #faq {
+  margin-top: 1.5em !important;
+  margin-bottom: 1.5em !important;
+  width: 70vw;
+  margin: auto;
+}
+#container #faq-container #faq > div {
+  background-color: rgba(255, 255, 255, 0.88);
+  color: rgba(10, 7, 33, 0.88);
+  margin: 0 1em;
+  text-align: center;
+}
+#container #faq-container #faq > div .pregunta, #container #faq-container #faq > div .respuesta {
+  font-style: italic;
+}
+#container #faq-container #faq > div .title-pregunta, #container #faq-container #faq > div .title-respuesta {
+  font-weight: bold;
+}
+#container #faq-container #faq > div .faq-type-title {
+  text-transform: capitalize;
+  border-bottom: 1px solid rgba(10, 7, 33, 0.88);
+  text-align: center;
+  padding: 0.5em;
 }
 
 .header {
@@ -316,19 +349,26 @@ html {
   justify-content: center;
   align-content: center;
   color: white;
-  padding: 3em;
   margin: 20px;
   background-color: rgba(10, 7, 33, 0.88);
+}
+.grid-wrapper a > *:not(h3) {
+  margin: 3em;
+  margin-bottom: 0;
 }
 
 .box h3 {
   padding: 1em;
+  padding-top: 0;
   float: center;
-  border-top: 1px solid orange;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   line-height: 1.5em;
+}
+.box img {
+  padding-bottom: 3em;
+  border-bottom: 1px solid orange;
 }
 
 #ciclos-icon {

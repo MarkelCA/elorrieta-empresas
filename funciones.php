@@ -11,8 +11,8 @@ function imprimirFamilias() {
         echo "<a class='box'>\n";
         echo "<div codigo_familia='$familia_ciclo' class='familia'>\n";
         echo "<img alt='imagen-familia' src='{$familia[$familia_ciclo]['img']}' />\n";
-        echo '<h3>',$familia[$familia_ciclo]['titulo'],"</h3>\n";
         echo "</div>\n";
+        echo '<h3>',$familia[$familia_ciclo]['titulo'],"</h3>\n";
         echo "</a>\n";
     }
     
@@ -97,11 +97,11 @@ function print_faq($category, $faq_category) {
 
     foreach($faq_category as $pregunta) {
         echo '<div>';
-        echo "<h3>$category</h3>";
-        echo '<p>Pregunta: </p>';
-        echo $pregunta['pregunta'];
-        echo '<p>Respuesta: </p>';
-        echo $pregunta['respuesta'];
+        echo "<h3 class='faq-type-title'>Modalidad: $category</h3>";
+        echo '<p class="title-pregunta">Pregunta: </p>';
+        echo "<p class='pregunta'>$pregunta[pregunta]</p>";
+        echo '<p class="title-respuesta">Respuesta: </p>';
+        echo "<p class='respuesta'>$pregunta[respuesta]</p>";
         echo '</div>';
     }
 

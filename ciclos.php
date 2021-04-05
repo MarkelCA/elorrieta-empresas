@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--Estilos propios-->
     <link rel="stylesheet" type="text/css" href="./css/estilos.css">
-
+    <!--Google fonts--> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,600;1,300&display=swap" rel="stylesheet">
     <!--Slick-->
 
     <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
@@ -59,8 +61,11 @@
         <div id="container-ciclos"></div>
     </div>
 
-        <div id="faq">
-            <?php print_faq_box("primero", "segundo"); ?>
+        <div id="faq-container">
+        <h3 id='title-faq'>Preguntas frecuentes:</h3>
+            <div id="faq">
+                <?php print_faq_box("primero", "segundo"); ?>
+            </div>
         </div>
 
   <footer class="zone footer">

@@ -1,10 +1,11 @@
 body {
+    font-family: 'Montserrat', Helvetica, sans-serif;
     background-image:url('../img/wooden-back.jpg');
     background-size: contain;
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
-	font-family: Helvetica, sans-serif;
+	//font-family: Helvetica, sans-serif;
 }
 html {
 	margin: 0;
@@ -18,7 +19,12 @@ html {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         
         .familia {
-            text-align: center;
+            h3 {
+                //font-size: 1em;
+                overflow: visible;
+                font-size: 1em;
+            }
+            text-align: left;
             img {
                 width: 100%;
             }
@@ -100,16 +106,49 @@ box-sizing: border-box;
             }
         }
 
-        #faq {
-            width: 80vw;
-            margin: auto;
-
-            & > div {
-                background-color: rgba(10, 7, 33, 0.88);
-                color: white;
+        #faq-container {
+            #title-faq {
+                text-align: center;
+                font-weight: 300;
+                font-size: 2em;
+                letter-spacing: 2px;
+                text-transform: uppercase;
             }
+            margin-top: 1.5em !important;
+            background-color: rgba(10, 7, 33, 0.88);
+            color: white;
+            padding: 1em 0 2em 0;
+           #faq {
+                margin-top: 1.5em !important;
+                margin-bottom: 1.5em !important;
+                width: 70vw;
+                margin: auto;
 
+                & > div {
+                    background-color: rgba(255,255,255, 0.88);
+                    color: rgba(10, 7, 33, 0.88);
+                    margin: 0 1em;
+                    text-align: center;
+                    & > *:not(.faq-type-title) {
+                        //padding:0 1em;
+                    }
+                    .pregunta, .respuesta {
+                        font-style: italic;
+                    }
+                    .title-pregunta, .title-respuesta {
+                        font-weight: bold;
+                    }
+                    & .faq-type-title {
+                        text-transform: capitalize;
+                        border-bottom: 1px solid rgba(10, 7, 33, 0.88);
+                        text-align: center;
+                        padding: .5em;
+                    }
+                }
+
+            }
         }
+        
     }
 
 
@@ -338,13 +377,17 @@ box-sizing: border-box;
 }
 .grid-wrapper {
     a {
+    & > *:not(h3) {
+        margin: 3em;
+        margin-bottom: 0;
+    }
     text-decoration: none;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	color: white;
-	padding: 3em;
+    //padding: 3em;
     //height:60%;
 	margin: 20px;
 	background-color: rgba(10,7,33,0.88);
@@ -353,13 +396,17 @@ box-sizing: border-box;
 .box {
 	h3 {
 		padding: 1em;
+        padding-top: 0;
         float: center;
-		border-top: 1px solid orange;
 		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 0.15em;
 		line-height: 1.5em;
 	}
+    img {
+        padding-bottom: 3em;
+		border-bottom: 1px solid orange;
+    }
 }
 #ciclos-icon {
 	font-size: 10rem;
