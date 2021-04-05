@@ -24,17 +24,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--Estilos propios-->
     <link rel="stylesheet" type="text/css" href="./css/estilos.css">
-    <!--Google fonts--> 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,600;1,300&display=swap" rel="stylesheet">
     <!--Slick-->
-
     <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
     <script defer type="text/javascript" src="slick/slick/slick.min.js"></script>
 
-    <!--Slick-->
+    <!--Funciones php-->
     <?php require_once 'funciones.php';?>
+
+    <!--Activar carrousel-->
+    <script defer src='js/ciclos.js'></script>
 </head>
 <body>
 <div id="container">
@@ -43,7 +42,7 @@
         <label for="show-menu" class="show-menu"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas<div class="lines"></div></label>
             <input type="checkbox" id="show-menu">
                 <ul id="menu">
-                <li id='header-title'><a href="#"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
+                <li id='header-title'><a href="./"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
                 <li><a href="./">Inicio</a></li>
                 <li><a href="#">Ciclos</a></li>
                 <li><a href="#">Prácticas</a></li>
@@ -62,13 +61,25 @@
     </div>
 
         <div id="faq-container">
-        <h3 id='title-faq'>Preguntas frecuentes:</h3>
+        <h3 id='title-faq'>Preguntas frecuentes</h3>
             <div id="faq">
                 <?php print_faq_box("primero", "segundo"); ?>
             </div>
         </div>
 
   <footer class="zone footer">
+    
+        <nav class="footer-menu">
+            <ul class="menu">
+                <li><a href="./">Inicio</a></li>
+                <li><a href="#">Ciclos</a></li>
+                <li><a href="#">Prácticas</a></li>
+                <li><a href="#">Dual</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+      <hr class='footer-hr'>
       <h4 class='credits'>Made with <i class="heart fas fa-heart"></i> by <a href="https://github.com/MarkelCA">Markel Cuesta</a></h4>
 <p class='freepik'>
     Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>

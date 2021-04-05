@@ -1,10 +1,10 @@
 $(function() {
 
-    $('#faq').slick();
-    $('.familia').click(mostrarCiclos);
+    //$('#faq').slick();
+    $('.box').click(mostrarCiclos);
 
     function mostrarCiclos() {
-        const cod_familia = $(this).attr('codigo_familia');
+        const cod_familia = $(this).find('.familia').attr('codigo_familia');
 
         $('#controles-ciclos').load('ajax/cargar_controles_ciclos.php');
         $('#container-ciclos').load('ajax/imprimirCiclos.php?familia='+cod_familia, ciclosCargados);
@@ -53,19 +53,4 @@ $(function() {
     });
 
 
-    // Credits hover animation
-    $('.credits').mouseenter(function() {
-        $('.credits a').css({
-            'transition': 'all .3s',
-            'color': 'rgba(0,0,0,0)',
-        'background-image' : 'linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)',
-          '-webkit-background-clip': 'text'
-        });
-
-        $('.credits').mouseleave(function() {
-            $('.credits a').css({
-                'color' : 'orange'
-            });
-        });
-    });
 });

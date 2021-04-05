@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
 body {
   font-family: "Montserrat", Helvetica, sans-serif;
   background-image: url("../img/wooden-back.jpg");
@@ -27,6 +31,9 @@ html {
 }
 #container-familias .familia img {
   width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
 }
 
 #container {
@@ -109,10 +116,16 @@ html {
   text-transform: uppercase;
 }
 #container #faq-container #faq {
+  cursor: -webkit-grab;
+  cursor: grab;
   margin-top: 1.5em !important;
   margin-bottom: 1.5em !important;
   width: 70vw;
   margin: auto;
+}
+#container #faq-container #faq:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 #container #faq-container #faq > div {
   background-color: rgba(255, 255, 255, 0.88);
@@ -122,6 +135,7 @@ html {
 }
 #container #faq-container #faq > div .pregunta, #container #faq-container #faq > div .respuesta {
   font-style: italic;
+  padding: 0.5em 2em;
 }
 #container #faq-container #faq > div .title-pregunta, #container #faq-container #faq > div .title-respuesta {
   font-weight: bold;
@@ -199,6 +213,7 @@ html {
 }
 .mobile-menu li:not(#header-title):after {
   background: none repeat scroll 0 0 transparent;
+  top: 4px;
   bottom: 0;
   content: "";
   display: block;
@@ -209,18 +224,9 @@ html {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.mobile-menu li:hover ul a {
-  background: #f3f3f3;
-  color: #2f3036;
-  height: 40px;
-  line-height: 40px;
-}
-.mobile-menu li:hover .mobile-menu ul a:hover {
-  color: #4db3ff;
-}
-.mobile-menu li:hover:not(#header-title) a:after {
-  width: 100%;
+.mobile-menu li:hover:not(#header-title):after {
   left: 0;
+  width: 100%;
 }
 .mobile-menu li ul {
   display: none;
@@ -333,13 +339,54 @@ html {
 
 .footer {
   background-color: #2d2d2d;
-  height: 10rem;
   color: white;
   text-align: center;
   margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .footer a {
   color: orange;
+}
+.footer .footer-hr {
+  border: 1px solid orange;
+}
+.footer .footer-menu {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+.footer .footer-menu ul {
+  display: flex;
+  padding: 0;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.footer .footer-menu a {
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+}
+.footer .footer-menu li {
+  display: inline-block;
+  list-style-type: none;
+}
+.footer .footer-menu li:after {
+  background: none repeat scroll 0 0 transparent;
+  top: 4px;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: relative;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.footer .footer-menu li:hover:after {
+  left: 0;
+  width: 100%;
 }
 
 .grid-wrapper a {
@@ -357,6 +404,10 @@ html {
   margin-bottom: 0;
 }
 
+.box {
+  cursor: pointer;
+  padding-bottom: 7%;
+}
 .box h3 {
   padding: 1em;
   padding-top: 0;
@@ -387,9 +438,7 @@ html {
 
 .credits {
   padding: 1em;
-  padding-top: 2em;
   margin: 0;
-  border-bottom: 1px solid orange;
 }
 .credits a {
   font-size: 1rem;
@@ -442,8 +491,16 @@ html {
   #cover-content {
     width: 80%;
   }
+
+  footer .footer-menu .menu {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 460px) and (max-width: 562px) {
+  footer .footer-menu .menu {
+    width: 100%;
+  }
+
   .header {
     height: 6rem;
     font-size: 0.82rem;
@@ -475,6 +532,10 @@ html {
   }
 }
 @media screen and (max-width: 460px) {
+  footer .footer-menu .menu {
+    width: 100%;
+  }
+
   body {
     padding: 0;
     margin: 0;

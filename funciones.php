@@ -98,9 +98,9 @@ function print_faq($category, $faq_category) {
     foreach($faq_category as $pregunta) {
         echo '<div>';
         echo "<h3 class='faq-type-title'>Modalidad: $category</h3>";
-        echo '<p class="title-pregunta">Pregunta: </p>';
+        echo '<p class="title-pregunta">Pregunta <i class="fas fa-question-circle"></i> </p>';
         echo "<p class='pregunta'>$pregunta[pregunta]</p>";
-        echo '<p class="title-respuesta">Respuesta: </p>';
+        echo '<p class="title-respuesta">Respuesta <i class="fas fa-check"></i></p>';
         echo "<p class='respuesta'>$pregunta[respuesta]</p>";
         echo '</div>';
     }

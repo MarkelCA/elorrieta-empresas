@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
 body {
     font-family: 'Montserrat', Helvetica, sans-serif;
     background-image:url('../img/wooden-back.jpg');
@@ -19,6 +23,7 @@ html {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         
         .familia {
+            //height: 100px;
             h3 {
                 //font-size: 1em;
                 overflow: visible;
@@ -27,6 +32,9 @@ html {
             text-align: left;
             img {
                 width: 100%;
+                display: block;
+                margin: 0 auto;
+                max-width: 300px;
             }
         }
     }
@@ -82,7 +90,7 @@ html {
             display: flex;
             flex-direction: column;
             justify-items: center;
-box-sizing: border-box;
+            box-sizing: border-box;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             width: 80%;
@@ -119,11 +127,16 @@ box-sizing: border-box;
             color: white;
             padding: 1em 0 2em 0;
            #faq {
+               cursor: -webkit-grab; 
+               cursor: grab;
+               &:active {
+               cursor: -webkit-grabbing; 
+               cursor: grabbing;
+           }
                 margin-top: 1.5em !important;
                 margin-bottom: 1.5em !important;
                 width: 70vw;
                 margin: auto;
-
                 & > div {
                     background-color: rgba(255,255,255, 0.88);
                     color: rgba(10, 7, 33, 0.88);
@@ -134,6 +147,8 @@ box-sizing: border-box;
                     }
                     .pregunta, .respuesta {
                         font-style: italic;
+                        padding: .5em 2em;
+
                     }
                     .title-pregunta, .title-respuesta {
                         font-weight: bold;
@@ -216,6 +231,7 @@ box-sizing: border-box;
 			}
 			&:after {
 				background: none repeat scroll 0 0 transparent;
+                top: 4px;
 				bottom: 0;
 				content: "";
 				display: block;
@@ -228,30 +244,11 @@ box-sizing: border-box;
 			}
 		}
 		&:hover {
-			ul {
-				a {
-					background: #f3f3f3;
-					color: #2f3036;
-					height: 40px;
-					line-height: 40px;
-				}
-			}
-			.mobile-menu {
-				ul {
-					a {
-						&:hover {
-							color: #4db3ff;
-						}
-					}
-				}
-			}
 			&:not(#header-title) {
-				a {
-					&:after {
-						width: 100%;
-						left: 0;
-					}
-				}
+                &:after {
+                    left: 0;
+                    width: 100%;
+                }
 			}
 		}
 		ul {
@@ -367,13 +364,60 @@ box-sizing: border-box;
 }
 .footer {
 	background-color: #2d2d2d;
-	height: 10rem;
 	color: white;
 	text-align: center;
 	margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 	a {
 		color: orange;
 	}
+    .footer-hr {
+        border: 1px solid orange;
+    }
+    .footer-menu {
+        margin-top:1em;
+        margin-bottom:2em;
+        ul {
+            display: flex;
+            padding: 0;
+            width: 60%;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+        a {
+            font-size: 1.2em;
+            color: white;
+            text-decoration: none;
+        }
+        li {
+            display: inline-block;
+            list-style-type: none;
+
+			&:after {
+				background: none repeat scroll 0 0 transparent;
+                top: 4px;
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 1px;
+				left: 50%;
+				position: relative;
+				background: #fff;
+				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				width: 0;
+			}
+
+            &:hover {
+                &:after {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+
+
+    }
 }
 .grid-wrapper {
     a {
@@ -394,6 +438,8 @@ box-sizing: border-box;
     }
 }
 .box {
+    cursor: pointer;
+    padding-bottom: 7%;
 	h3 {
 		padding: 1em;
         padding-top: 0;
@@ -421,10 +467,8 @@ box-sizing: border-box;
 	background: linear-gradient(top, #F3AAAA 0%,#febf04 100%);
 }
 .credits {
-	padding: 1em;
-	padding-top: 2em;
+    padding: 1em;
 	margin: 0;
-	border-bottom: 1px solid orange;
 	a {
 		font-size: 1rem;
 		font-weight: thin;
@@ -475,8 +519,14 @@ box-sizing: border-box;
 	#cover-content {
 		width: 80%;
 	}
+    footer .footer-menu .menu {
+        width: 100%;
+    }
 }
 @media screen and (min-width : 460px) and (max-width : 562px) {
+    footer .footer-menu .menu {
+        width: 100%;
+    }
 	.header {
 		height: 6rem;
 		font-size: .82rem;
@@ -509,6 +559,9 @@ box-sizing: border-box;
 	}
 }
 @media screen and (max-width : 460px) {
+    footer .footer-menu .menu {
+        width: 100%;
+    }
 	body {
 		padding: 0;
 		margin: 0;
