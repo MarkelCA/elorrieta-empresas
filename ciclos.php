@@ -25,9 +25,9 @@
     <!--Estilos propios-->
     <link rel="stylesheet" type="text/css" href="./css/estilos.css">
     <!--Slick-->
-    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
-    <script defer type="text/javascript" src="slick/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick-theme.css"/>
+    <script defer type="text/javascript" src="slick-1.8.1/slick.min.js"></script>
 
     <!--Funciones php-->
     <?php require_once 'funciones.php';?>
