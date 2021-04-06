@@ -20,7 +20,7 @@ html {
         background-color: rgba(0,0,0, 0.25);
         margin-top: 15vh;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         
         .familia {
             //height: 100px;
@@ -129,6 +129,23 @@ html {
            #faq {
                cursor: -webkit-grab; 
                cursor: grab;
+
+               .slick-active:focus {
+                   outline: 0;
+               border: none !important;
+               }
+               .slick-active:active {
+                   outline: 0;
+               border: none !important;
+               }
+               .slick:active {
+                   outline: 0;
+               border: none !important;
+               }
+               div:focus{
+                   outline: 0;
+               border: none !important;
+               }
                &:active {
                cursor: -webkit-grabbing; 
                cursor: grabbing;
@@ -357,7 +374,7 @@ html {
 		width: 100%;
 	}
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 20px;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
