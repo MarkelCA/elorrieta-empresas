@@ -1,5 +1,11 @@
 $(function() {
 
+    $("#go-down").click(function() {
+        console.log('aaa');
+        $('html, body').animate({
+            scrollTop: $("#main-options").offset().top
+        }, 400);
+    });
     //$('#faq').slick();
     $('.box').click(mostrarCiclos);
 

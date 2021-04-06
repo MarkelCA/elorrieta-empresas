@@ -127,9 +127,6 @@ html {
             color: white;
             padding: 1em 0 2em 0;
            #faq {
-               cursor: -webkit-grab; 
-               cursor: grab;
-
                .slick-active:focus {
                    outline: 0;
                border: none !important;
@@ -344,6 +341,7 @@ html {
 	}
 }
 #down-arrows {
+    cursor: pointer;
 	display: flex;
 	height: 2.5rem;
 	width: 25%;
@@ -353,8 +351,14 @@ html {
 	&:hover {
 		background-color: rgba(255,165,0, 0.5);
 	}
+    *:focus {
+        outline: 0;
+        border: none;
+    }
 }
+    
 .desplazar-abajo {
+    cursor: pointer;
 	display: block;
 	margin: 0 auto;
 	color: white;
