@@ -1,7 +1,11 @@
 $(function() {
+    $("#subir-btn").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".header").offset().top
+        }, 400);
+    });
 
     $("#go-down").click(function() {
-        console.log('aaa');
         $('html, body').animate({
             scrollTop: $("#main-options").offset().top
         }, 400);
@@ -12,16 +16,11 @@ $(function() {
     function mostrarCiclos() {
         const cod_familia = $(this).find('.familia').attr('codigo_familia');
 
-        $('#controles-ciclos').load('ajax/cargar_controles_ciclos.php');
+        $('#controles-ciclos').load('ajax/cargar_controles_ciclos.php?cod_familia='+cod_familia);
         $('#container-ciclos').load('ajax/imprimirCiclos.php?familia='+cod_familia, ciclosCargados);
 
 
-        //$('#container-familias').addClass('animate__animated animate__fadeOutUpBig').delay(1500);
-        //setTimeout(function() {
-            //$('#container-familias').css('display', 'none');
-        //}, 500);
-        //
-        $('#container-familias').slideUp(400, function() {
+        $('#container-familias').slideUp(300, function() {
             cleanCiclosFilters();
 
 
@@ -37,13 +36,42 @@ $(function() {
             })
         }
     };
+    function desplegar_info_ciclo() {
+        $('.ciclo.multiple').click(function() {
+            const codigo = $(this).attr('cod');
+            const content = $(`.ciclo[cod=${codigo}] .ciclo-content`);
 
+                content.slideToggle(100);
+
+            const icon = $(`.ciclo[cod=${codigo}] .dd-icon`)
+            // if its closed, open it
+            if(icon.hasClass('opened'))
+                icon.removeClass('opened');
+            else
+                icon.addClass('opened');
+        });
+
+        function opened(codigo) {
+            $(`.ciclo[cod=${codigo}] .dd-icon`).css({'transform' : 'rotate(0)'});
+        }
+        function closed(codigo) {
+            $(`.ciclo[cod=${codigo}] .dd-icon`).css({'transform' : 'rotate(-90deg)'});
+            
+        }
+    }
     function ciclosCargados() {
         $('#select-familia').change(function() {
+            console.log('aa');
             const cod_familia = $(this).val();
-            $('#container-ciclos').load('ajax/imprimirCiclos.php?familia='+cod_familia, cleanCiclosFilters);
+            $('#container-ciclos').load('ajax/imprimirCiclos.php?familia='+cod_familia, function() {
+                desplegar_info_ciclo();
+                cleanCiclosFilters();
+            });
 
         });
+
+            desplegar_info_ciclo();
+
 
     }
     // Boxes hover animation

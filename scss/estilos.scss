@@ -38,6 +38,68 @@ html {
             }
         }
     }
+
+    #container-ciclos {
+        ul.ciclos-list {
+            margin: 0;
+            padding: 0;
+        }
+        .ciclo {
+            &.multiple {
+                cursor: pointer;
+            }
+            margin: 0 auto;
+            padding: 1em;
+            width: 80%;
+            &:not(:last-of-type){
+                border-bottom: 1px solid white;
+            }
+            &:hover {
+                background-color: rgba(255, 234, 196, 0.27);
+            }
+            .ciclo-content {
+                display: none;
+            }
+            li.ciclo-title {
+                padding-left: 2em;
+                background: url('../img/svg/ciclos-icon.png') no-repeat left top;
+                list-style-type: none;
+                background-size: 20px 20px;
+
+                line-height: 1.7em;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin: 0 auto;
+                .fa-graduation-cap {
+                    margin-right: 1em;
+                }
+                .horas-ciclo {
+                    color: orange;
+                    margin-left: 1em;
+                }
+                .dd-icon {
+                    font-weight: bold;
+                    display: block;
+                    width: fit-content;
+                    float:right;
+                    margin-left: auto;
+                    transform: rotate(-90deg);
+                    transition: all, .3s;
+                    &.opened {
+                        transform : rotate(0);
+                    }
+                }
+            }
+            .obs-title {
+                font-weight: bold;
+            }
+            .obs-list {
+                li {
+                    margin: .7em 0;
+                }
+            }
+        }
+    }
     #container {
         margin-top: 6rem;
         #controles-ciclos {
@@ -348,6 +410,7 @@ html {
 	margin: auto;
 	background-color: rgba(255,255,255, 0.5);
 	color: orange;
+    transition: background-color, .2s;
 	&:hover {
 		background-color: rgba(255,165,0, 0.5);
 	}
@@ -410,6 +473,10 @@ html {
             font-size: 1.2em;
             color: white;
             text-decoration: none;
+
+            &#subir-btn {
+                cursor: pointer;
+            }
         }
         li {
             display: inline-block;
@@ -427,6 +494,7 @@ html {
 				background: #fff;
 				transition: width 0.3s ease 0s, left 0.3s ease 0s;
 				width: 0;
+
 			}
 
             &:hover {
@@ -439,9 +507,7 @@ html {
 
 
     }
-}
-.grid-wrapper {
-    a {
+} .grid-wrapper { a {
     & > *:not(h3) {
         margin: 3em;
         margin-bottom: 0;

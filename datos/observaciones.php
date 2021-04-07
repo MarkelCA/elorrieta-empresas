@@ -16,7 +16,7 @@ Por ejemplo
 Observación a nivel de familia.
 */
 
-$obs['IN']='La familia que mejor se coloca';
+$obs['IN'][]='La familia que mejor se coloca';
 
 /*
 Solo podemos hacer una por familia. Si no habría que meter un array en plan:
@@ -31,12 +31,14 @@ $obs['IN'][]='Y la que más mola';
 Observación a nivel de ciclo
 */
 
-$obs['INDW3']='Este ciclo se imparte en turno de tarde';
-$obs['INAR3']='Este ciclo se imparte en trilingüe en turno de mañana y en castellano en turno de tarde';
+$obs['ADAF3'][]='Observación de prueba para devel';
+$obs['ADAF3'][]='Otra observación  más de prueba para devel';
+$obs['INDW3'][]='Este ciclo se imparte en turno de tarde';
+$obs['INAR3'][]='Este ciclo se imparte en trilingüe en turno de mañana y en castellano en turno de tarde';
 /*
 Observación a nivel de módulo
 */
-$obs['0373']='Módulo común a los tres ciclos superiores de informática';
+$obs['0373'][]='Módulo común a los tres ciclos superiores de informática';
 
 /*
 Seria recomendable no andar escribiendo cajas vacías donde no haya observaciones.
@@ -44,6 +46,6 @@ Seria recomendable no andar escribiendo cajas vacías donde no haya observacione
 */
 
 header('Content-Type: text/html; charset=utf-8');
-print "<pre>\n".print_r($obs,true)."</pre>";
+//print "<pre>\n".print_r($obs,true)."</pre>";
 
 ?>

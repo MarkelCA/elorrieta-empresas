@@ -29,6 +29,50 @@ html {
       margin: 0 auto;
       max-width: 300px; }
 
+#container-ciclos ul.ciclos-list {
+  margin: 0;
+  padding: 0; }
+#container-ciclos .ciclo {
+  margin: 0 auto;
+  padding: 1em;
+  width: 80%; }
+  #container-ciclos .ciclo.multiple {
+    cursor: pointer; }
+  #container-ciclos .ciclo:not(:last-of-type) {
+    border-bottom: 1px solid white; }
+  #container-ciclos .ciclo:hover {
+    background-color: rgba(255, 234, 196, 0.27); }
+  #container-ciclos .ciclo .ciclo-content {
+    display: none; }
+  #container-ciclos .ciclo li.ciclo-title {
+    padding-left: 2em;
+    background: url("../img/svg/ciclos-icon.png") no-repeat left top;
+    list-style-type: none;
+    background-size: 20px 20px;
+    line-height: 1.7em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 auto; }
+    #container-ciclos .ciclo li.ciclo-title .fa-graduation-cap {
+      margin-right: 1em; }
+    #container-ciclos .ciclo li.ciclo-title .horas-ciclo {
+      color: orange;
+      margin-left: 1em; }
+    #container-ciclos .ciclo li.ciclo-title .dd-icon {
+      font-weight: bold;
+      display: block;
+      width: fit-content;
+      float: right;
+      margin-left: auto;
+      transform: rotate(-90deg);
+      transition: all, .3s; }
+      #container-ciclos .ciclo li.ciclo-title .dd-icon.opened {
+        transform: rotate(0); }
+  #container-ciclos .ciclo .obs-title {
+    font-weight: bold; }
+  #container-ciclos .ciclo .obs-list li {
+    margin: .7em 0; }
+
 #container {
   margin-top: 6rem; }
   #container #controles-ciclos #select-familia {
@@ -271,7 +315,8 @@ html {
   width: 25%;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.5);
-  color: orange; }
+  color: orange;
+  transition: background-color, .2s; }
   #down-arrows:hover {
     background-color: rgba(255, 165, 0, 0.5); }
   #down-arrows *:focus {
@@ -324,6 +369,8 @@ html {
       font-size: 1.2em;
       color: white;
       text-decoration: none; }
+      .footer .footer-menu a#subir-btn {
+        cursor: pointer; }
     .footer .footer-menu li {
       display: inline-block;
       list-style-type: none; }

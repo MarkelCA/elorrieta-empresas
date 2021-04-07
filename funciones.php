@@ -1,13 +1,14 @@
 <?php
 require_once 'datos/datos.php';
 require_once 'datos/faq.php';
+require_once 'datos/observaciones.php';
 
 
 function imprimirFamilias() {
     global $ciclo;
     global $familia;
 
-    foreach($ciclo as $familia_ciclo => $ciclo ) {
+    foreach( $ciclo as $familia_ciclo => $ciclo ) {
         echo "<a class='box'>\n";
         echo "<div codigo_familia='$familia_ciclo' class='familia'>\n";
         echo "<img alt='imagen-familia' src='{$familia[$familia_ciclo]['img']}' />\n";
@@ -15,16 +16,51 @@ function imprimirFamilias() {
         echo '<h3>',$familia[$familia_ciclo]['titulo'],"</h3>\n";
         echo "</a>\n";
     }
-    
 }
 
 function ciclo_es_medio($ciclo) {
     return strtolower($ciclo['tipo']) === 'medio';
 }
 function imprimir_datos_ciclo($ciclo) {
-    echo "<h4>$ciclo[nombre]: $ciclo[horas] horas.</h4>";
-}
+    $datos = [];
+    $observaciones = get_observaciones($ciclo);
+    if(!empty($observaciones))
+        $datos['observaciones'] = $observaciones;
 
+    // Si tiene observaciones le añadimo la correspondiente clase
+    $multiple = $datos ? 'multiple' : '';
+    echo "<div cod='$ciclo[codigo]' class='ciclo $multiple'>";
+
+    // Si tiene observaciones le añade el icono.
+    $icono_drop_down = $datos ? "<span class='dd-icon'><i class='fas fa-sort-down'></i></span>" : '' ;
+    echo "<li class='ciclo-title'>$ciclo[nombre]:<span class='horas-ciclo'>$ciclo[horas] horas.</span>$icono_drop_down</li>";
+
+    // Si no tiene observaciones cierro el tag de ciclos y salgo del metodo
+    if (!$datos){
+        echo '</div>'; // .ciclo
+        return;
+    }
+        echo "<div class='ciclo-content'>";
+        imprimir_observaciones($ciclo, $datos['observaciones']);
+        echo '</div>'; // .ciclo-content
+    echo '</div>'; // .ciclo
+
+}
+function imprimir_observaciones($ciclo, $observaciones) {
+    echo "<p class='obs-title'>Observaciones: </p>";
+    echo "<ul class='obs-list'>";
+    foreach($observaciones as $obser) {
+        echo "<li>$obser</li>";
+    }
+    echo '</ul>';
+
+}
+function get_observaciones($ciclo) {
+    global $obs;
+    $codigo_ciclo = $ciclo['codigo'];
+    $observaciones = $obs[$codigo_ciclo];
+    return $observaciones;
+}
 function ciclo_es_superior($ciclo) {
     return strtolower($ciclo['tipo']) === 'superior';
 }
@@ -50,9 +86,11 @@ function imprimirCiclos($familia_in) {
     if(empty($ciclos_medios) != 1) {
         echo "<div id='ciclos_medios'>";
         echo "<h3>Ciclos medios</h3>";
+        echo "<ul class='ciclos-list'>";
         foreach($ciclos_medios as $ciclo) {
             imprimir_datos_ciclo($ciclo);
         }
+        echo '</ul>';
         echo "</div>";
     }
 
@@ -70,13 +108,18 @@ function imprimirCiclos($familia_in) {
 
 
 }
-function controles_ciclos() {
+function controles_ciclos($cod_familia_selected) {
     global $familia;
 
+    echo $cod_familia;
         echo "<select id='select-familia'>\n";
-
     foreach($familia as $cod_familia => $nombre_familia ) {
-        echo "\t<option value='$cod_familia'>$nombre_familia[titulo]</option>\n";
+        echo "\t<option value='$cod_familia'";
+        if ($cod_familia === $cod_familia_selected)
+            echo 'selected';
+        echo ">";
+
+        echo "$nombre_familia[titulo]</option>\n";
     }
         echo "</select>\n";
 }
