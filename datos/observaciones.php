@@ -16,29 +16,30 @@ Por ejemplo
 Observación a nivel de familia.
 */
 
-$obs['IN'][]='La familia que mejor se coloca';
-
-/*
-Solo podemos hacer una por familia. Si no habría que meter un array en plan:
-
-$obs['IN'][]='La familia que mejor se coloca';
-
-$obs['IN'][]='Y la que más mola';
-
-*/
+/////////////////////////////////////////////////
+$obs['AD']['observaciones'][]='Observacion de familia 1';
+$obs['AD']['observaciones'][]='Consectetur tenetur dolor reprehenderit ratione accusantium? Repellendus sapiente quasi et maiores consectetur culpa Dolore rerum delectus debitis suscipit libero deleniti. Tenetur explicabo et impedit velit rem repudiandae sint? Vel illo?';
+//Solo podemos hacer una por familia. Si no habría que meter un array en plan:
+$obs['IN']['observaciones'][]='La familia que mejor se coloca';
+$obs['IN']['observaciones'][]='Y la que más mola';
 
 /*
 Observación a nivel de ciclo
 */
-
-$obs['ADAF3'][]='Observación de prueba para devel';
-$obs['ADAF3'][]='Otra observación  más de prueba para devel';
-$obs['INDW3'][]='Este ciclo se imparte en turno de tarde';
-$obs['INAR3'][]='Este ciclo se imparte en trilingüe en turno de mañana y en castellano en turno de tarde';
+/////////////////////////////////////////////////
+$obs['ADAF3']['observaciones'][]='Observación de prueba para devel';
+$obs['ADAF3']['observaciones'][]='Otra observación  más de prueba para devel';
+$obs['ADAF3']['descripcion']='Dolor assumenda iure cupiditate natus vero? Dolore exercitationem magnam reiciendis non nam ad! Accusamus tenetur eveniet debitis culpa quod? Suscipit enim molestiae consequatur molestias totam? Eligendi ipsam soluta eum ea.';
+/////////////////////////////////////////////////
+$obs['ADAD3']['descripcion']='Dolor assumenda iure cupiditate natus vero? Dolore exercitationem magnam reiciendis non nam ad! Accusamus tenetur eveniet debitis culpa quod? Suscipit enim molestiae consequatur molestias totam? Eligendi ipsam soluta eum ea.';
+/////////////////////////////////////////////////
+$obs['INDW3']['observaciones'][]='Este ciclo se imparte en turno de tarde';
+/////////////////////////////////////////////////
+$obs['INAR3']['observaciones'][]='Este ciclo se imparte en trilingüe en turno de mañana y en castellano en turno de tarde';
 /*
 Observación a nivel de módulo
 */
-$obs['0373'][]='Módulo común a los tres ciclos superiores de informática';
+$obs['0373']['observaciones'][]='Módulo común a los tres ciclos superiores de informática';
 
 /*
 Seria recomendable no andar escribiendo cajas vacías donde no haya observaciones.

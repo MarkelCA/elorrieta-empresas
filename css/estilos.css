@@ -43,7 +43,9 @@ html {
   #container-ciclos .ciclo:hover {
     background-color: rgba(255, 234, 196, 0.27); }
   #container-ciclos .ciclo .ciclo-content {
-    display: none; }
+    display: none;
+    padding: .5em 1em;
+    padding-left: 2em; }
   #container-ciclos .ciclo li.ciclo-title {
     padding-left: 2em;
     background: url("../img/svg/ciclos-icon.png") no-repeat left top;
@@ -68,10 +70,12 @@ html {
       transition: all, .3s; }
       #container-ciclos .ciclo li.ciclo-title .dd-icon.opened {
         transform: rotate(0); }
-  #container-ciclos .ciclo .obs-title {
+  #container-ciclos .ciclo .obs-title, #container-ciclos .ciclo .des-title {
     font-weight: bold; }
-  #container-ciclos .ciclo .obs-list li {
-    margin: .7em 0; }
+  #container-ciclos .ciclo .obs-list {
+    list-style-type: square; }
+    #container-ciclos .ciclo .obs-list li {
+      margin: .7em 0; }
 
 #container {
   margin-top: 6rem; }
@@ -110,7 +114,7 @@ html {
     #container #clean-familia:hover {
       background-color: rgba(243, 129, 0, 0.8); }
   #container #lista-ciclos {
-    padding: 1em;
+    padding: 1em 2em;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -121,6 +125,11 @@ html {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     margin: 0em auto; }
+    #container #lista-ciclos .obs-familia {
+      font-size: 1.2em;
+      text-align: center;
+      font-style: italic;
+      padding: .5em; }
     #container #lista-ciclos .familia-logo {
       margin: 0 auto;
       width: 100px;
@@ -130,6 +139,12 @@ html {
         height: 100px; }
     #container #lista-ciclos h2 {
       text-align: center; }
+    #container #lista-ciclos #ciclos_medios, #container #lista-ciclos #ciclos_superiores {
+      padding: .5em; }
+    #container #lista-ciclos .title-superiores, #container #lista-ciclos .title-medios {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 1em; }
   #container #faq-container {
     margin-top: 1.5em !important;
     background-color: rgba(10, 7, 33, 0.88);

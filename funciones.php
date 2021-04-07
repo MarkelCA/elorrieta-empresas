@@ -22,31 +22,48 @@ function ciclo_es_medio($ciclo) {
     return strtolower($ciclo['tipo']) === 'medio';
 }
 function imprimir_datos_ciclo($ciclo) {
+    // Buscamos datos adicionales del ciclo
     $datos = [];
-    $observaciones = get_observaciones($ciclo);
+    $cod_ciclo = $ciclo['codigo'];
+    $observaciones = get_observaciones($cod_ciclo, 'observaciones');
+    $descripcion = get_observaciones($cod_ciclo, 'descripcion');
+
     if(!empty($observaciones))
         $datos['observaciones'] = $observaciones;
 
-    // Si tiene observaciones le añadimo la correspondiente clase
+    if(!empty($descripcion))
+        $datos['descripcion'] = $descripcion;
+
+    // Si tiene datos le añadimos la correspondiente clase
     $multiple = $datos ? 'multiple' : '';
     echo "<div cod='$ciclo[codigo]' class='ciclo $multiple'>";
 
-    // Si tiene observaciones le añade el icono.
+    // Si tiene datos le añade el icono del drop-down.
     $icono_drop_down = $datos ? "<span class='dd-icon'><i class='fas fa-sort-down'></i></span>" : '' ;
     echo "<li class='ciclo-title'>$ciclo[nombre]:<span class='horas-ciclo'>$ciclo[horas] horas.</span>$icono_drop_down</li>";
 
-    // Si no tiene observaciones cierro el tag de ciclos y salgo del metodo
+    // Si no tiene datos cierro el tag de ciclos y salgo del metodo
     if (!$datos){
         echo '</div>'; // .ciclo
         return;
     }
+        //Contenido adicional del ciclo
         echo "<div class='ciclo-content'>";
-        imprimir_observaciones($ciclo, $datos['observaciones']);
+
+        // Imprimimos las observaciones
+    if(!empty($observaciones))
+        imprimir_observaciones_ciclo($observaciones);
+    if(!empty($descripcion))
+        imprimir_descripcion_ciclo($descripcion);
         echo '</div>'; // .ciclo-content
     echo '</div>'; // .ciclo
 
 }
-function imprimir_observaciones($ciclo, $observaciones) {
+function imprimir_descripcion_ciclo($descripcion) {
+    echo "<p class='des-title'>Descripcion: </p>";
+    echo "<p class='des-content'>$descripcion</p>";
+}
+function imprimir_observaciones_ciclo($observaciones) {
     echo "<p class='obs-title'>Observaciones: </p>";
     echo "<ul class='obs-list'>";
     foreach($observaciones as $obser) {
@@ -55,12 +72,19 @@ function imprimir_observaciones($ciclo, $observaciones) {
     echo '</ul>';
 
 }
-function get_observaciones($ciclo) {
+function imprimir_observaciones_familia($observaciones) {
+    foreach($observaciones as $obser) {
+        echo "<div class='obs-familia'>$obser";
+        echo "</div>";
+    }
+
+}
+function get_observaciones($codigo, $tipo_dato) {
     global $obs;
-    $codigo_ciclo = $ciclo['codigo'];
-    $observaciones = $obs[$codigo_ciclo];
+    $observaciones = $obs[$codigo][$tipo_dato];
     return $observaciones;
 }
+
 function ciclo_es_superior($ciclo) {
     return strtolower($ciclo['tipo']) === 'superior';
 }
@@ -81,11 +105,14 @@ function imprimirCiclos($familia_in) {
     // Diseño: hacer del titulo de familia un desplegable para las familias
     echo  "<div class='familia-logo'><img alt='thumb-familia' class='thumb-familia' src=$logo_familia></div>";
     echo "<h2>$titulo_familia</h2>";
+    $observaciones = get_observaciones($familia_in, 'observaciones');
+
+    imprimir_observaciones_familia($observaciones);
 
     // Ciclos medios
     if(empty($ciclos_medios) != 1) {
         echo "<div id='ciclos_medios'>";
-        echo "<h3>Ciclos medios</h3>";
+        echo "<h3 class='title-medios'>Ciclos medios</h3>";
         echo "<ul class='ciclos-list'>";
         foreach($ciclos_medios as $ciclo) {
             imprimir_datos_ciclo($ciclo);
@@ -97,7 +124,7 @@ function imprimirCiclos($familia_in) {
     // Ciclos superiores
     if(empty($ciclos_superiores) != 1) {
         echo "<div id='ciclos_superiores'>";
-        echo "<h3>Ciclos superiores</h3>";
+        echo "<h3 class='title-superiores'>Ciclos superiores</h3>";
         foreach($ciclos_superiores as $ciclo) {
             imprimir_datos_ciclo($ciclo);
         }
@@ -114,10 +141,9 @@ function controles_ciclos($cod_familia_selected) {
     echo $cod_familia;
         echo "<select id='select-familia'>\n";
     foreach($familia as $cod_familia => $nombre_familia ) {
-        echo "\t<option value='$cod_familia'";
-        if ($cod_familia === $cod_familia_selected)
-            echo 'selected';
-        echo ">";
+        // If this family is where we come from we select it in the drop-down list
+        $selected = $cod_familia === $cod_familia_selected ? 'selected' : '';
+        echo "\t<option value='$cod_familia' $selected>";
 
         echo "$nombre_familia[titulo]</option>\n";
     }
