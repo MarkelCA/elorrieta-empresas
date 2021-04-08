@@ -1,10 +1,10 @@
 @font-face {
     font-family: "Montserrat";
-    src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+    src: url("../../fonts/Montserrat/Montserrat-Regular.ttf");
 }
 body {
     font-family: 'Montserrat', Helvetica, sans-serif;
-    background-image:url('../img/wooden-back.jpg');
+    background-image:url("../../img/wooden-back.jpg");
     background-size: contain;
 	font-size: 16px;
 	margin: 0;
@@ -64,7 +64,7 @@ html {
             }
             li.ciclo-title {
                 padding-left: 2em;
-                background: url('../img/svg/ciclos-icon.png') no-repeat left top;
+                background: url("../../img/svg/ciclos-icon.png") no-repeat left top;
                 list-style-type: none;
                 background-size: 20px 20px;
 
@@ -109,7 +109,7 @@ html {
             #select-familia {
                 border:none;
                 background-color: rgba(0, 0, 0, 0.5);
-                background-image: url('../img/svg/method-draw-image.svg');
+                background-image: url("../../img/svg/method-draw-image.svg");
                 background-size: 100px 70px;
                 background-repeat: no-repeat;
                 background-position: 95% 50% ;
@@ -389,7 +389,7 @@ html {
 }
 .cover {
 	height: 110vh;
-	background-image: url('../img/cover-background.jpg');
+	background-image: url("../../img/cover-background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-bottom: 3em;
@@ -451,6 +451,12 @@ html {
 	&:hover {
 		background-color: rgba(255,255,255, 0);
 	}
+}
+
+
+
+#main-options {
+	padding: 1em;
 }
 
 .grid-wrapper {
@@ -524,10 +530,12 @@ html {
 
 
     }
-} .grid-wrapper { a {
-    & > *:not(h3) {
-        margin: 3em;
-        margin-bottom: 0;
+} 
+.grid-wrapper { 	
+	a {
+    	& > *:not(h3) {
+        	margin: 3em;
+        	margin-bottom: 0;
     }
     text-decoration: none;
 	display: flex;

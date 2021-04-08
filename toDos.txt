@@ -1,8 +1,0 @@
-[ ] Formulario de contacto en Drive
-[ ] Mostrar Ciclos disponibles (por ahora los de informática)
-[ ] Formación en centros de trabajo
-[ ] Formación Dual 
-[ ] Nuevas practicas de primero
-
-------------------------------------------------------------------------------------------------------
-Cada sección incluirá una sección de preguntas frecuentes y si procede enlaces a páginas de Gobierno Vasco.

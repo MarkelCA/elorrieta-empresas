@@ -45,8 +45,6 @@ function mostrarCiclos() {
 
     $('#container-familias').slideUp(300, function() {
         cleanCiclosFilters();
-
-
     });
 }
 

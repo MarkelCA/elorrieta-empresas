@@ -3,42 +3,42 @@
 //Array de familias profesionales
 $familia['AD'] = array(
     'titulo' => 'Administración y Gestión',
-    'img' => 'img/svg/stats.svg'
+    'img' => './src/img/svg/stats.svg'
 );
 
 $familia['CM'] = array(
     'titulo' => 'Comercio y Marketing',
-    'img' => 'img/svg/social-media-marketing.svg'
+    'img' => './src/img/svg/social-media-marketing.svg'
 
 );
 $familia['EO'] = array(
     'titulo' => 'Edificación y Obra Civil',
-    'img' => 'img/svg/engineer.svg'
+    'img' => './src/img/svg/engineer.svg'
 );
 $familia['EE'] = array(
     'titulo' => 'Electricidad-Electrónica',
-    'img' => 'img/svg/circuit.svg'
+    'img' => './src/img/svg/circuit.svg'
 );
 $familia['FM'] = array(
     'titulo' => 'Fabricación Mecánica',
-    'img' => 'img/svg/construction.svg'
+    'img' => './src/img/svg/construction.svg'
 );
 $familia['HT'] = array(
     'titulo' => 'Hostelería y Turismo',
-    'img' => 'img/svg/travel-guide.svg'
+    'img' => './src/img/svg/travel-guide.svg'
 );
 $familia['IN'] = array(
     'titulo' => 'Informática y Comunicación',
-    'img' => 'img/svg/document.svg'
+    'img' => './src/img/svg/document.svg'
 );
 $familia['IM'] = array(
     'titulo' => 'Instalación y Mantenimiento',
-    'img' => 'img/svg/wrench.svg'
+    'img' => './src/img/svg/wrench.svg'
 );
 
 $familia['QU'] = array(
     'titulo' => 'Química',
-    'img' => 'img/svg/chemistry.svg'
+    'img' => './src/img/svg/chemistry.svg'
 );
 
 //Array de ciclos
