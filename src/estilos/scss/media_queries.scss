@@ -1,0 +1,149 @@
+
+
+@media screen and (min-width : 562px) and (max-width : 700px) {
+	.header {
+		height: 6rem;
+	}
+	.mobile-menu {
+		li {
+			&:last-child {
+				margin-left: 0;
+			}
+		}
+		ul {
+			flex-wrap: wrap;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	#header-title {
+		text-align: center;
+		border-right: none;
+		display: block;
+		width: 100%;
+		margin-bottom: 1rem;
+		padding: 0;
+		a {
+			padding: 0;
+		}
+	}
+	#cover-content {
+		width: 80%;
+	}
+    footer .footer-menu .menu {
+        width: 100%;
+    }
+}
+@media screen and (min-width : 460px) and (max-width : 562px) {
+    footer .footer-menu .menu {
+        width: 100%;
+    }
+	.header {
+		height: 6rem;
+		font-size: .82rem;
+	}
+	.mobile-menu {
+		li {
+			&:last-child {
+				margin-left: 0;
+			}
+		}
+		ul {
+			flex-wrap: wrap;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	#header-title {
+		text-align: center;
+		border-right: none;
+		display: block;
+		width: 100%;
+		margin-bottom: 1rem;
+		padding: 0;
+		a {
+			padding: 0;
+		}
+	}
+	#cover-content {
+		width: 80%;
+	}
+}
+@media screen and (max-width : 460px) {
+    footer .footer-menu .menu {
+        width: 100%;
+    }
+	body {
+		padding: 0;
+		margin: 0;
+		min-width: 314px;
+	}
+	html {
+		padding: 0;
+		margin: 0;
+	}
+	.header {
+		position: fixed;
+		height: 5rem;
+	}
+	.mobile-menu {
+		position: fixed;
+		ul {
+			background-color: rgba(0,0,0,0.6);
+			position: static;
+			display: none;
+			li {
+				width: 100%;
+			}
+		}
+		.lines {
+			border-bottom: 15px double #f8f8f8;
+			border-top: 5px solid #f8f8f8;
+			content: "";
+			height: 5px;
+			width: 20px;
+			float: right;
+			padding-right: 15px;
+		}
+		li {
+			margin-bottom: 1px;
+			a {
+				width: 100%;
+			}
+			&:not(#header-title) {
+				&:after {
+					display: none;
+				}
+			}
+		}
+		.show-menu {
+			display: block;
+		}
+	}
+	#header-title {
+		display: none;
+	}
+	label.show-menu {
+		letter-spacing: 0.15em;
+		word-spacing: .5em;
+	}
+	.lines {
+		margin-right: 1.5em;
+	}
+	.show-menu {
+		span.first-letter {
+			padding-left: 0;
+		}
+	}
+	#cover-content {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -20%);
+	}
+	.grid-wrapper {
+		width: 100%;
+	}
+} // media 460px end
+

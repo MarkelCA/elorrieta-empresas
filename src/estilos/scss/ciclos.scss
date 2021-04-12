@@ -1,0 +1,160 @@
+.container-familias {
+    background-color: rgba(0,0,0, 0.25);
+    margin-top: 15vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    .familia {
+        //height: 100px;
+        h3 {
+            //font-size: 1em;
+            overflow: visible;
+            font-size: 1em;
+        }
+        text-align: left;
+        img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+    }
+}
+#container-ciclos {
+    ul.ciclos-list {
+        margin: 0;
+        padding: 0;
+    }
+    .ciclo {
+        &.multiple {
+            cursor: pointer;
+        }
+        margin: 0 auto;
+        padding: 1em;
+        width: 80%;
+        &:not(:last-of-type){
+            border-bottom: 1px solid white;
+        }
+        &:hover {
+            background-color: rgba(255, 234, 196, 0.27);
+        }
+        .ciclo-content {
+            display: none;
+            padding: .5em 1em;
+            padding-left: 2em;
+        }
+        li.ciclo-title {
+            padding-left: 2em;
+            background: url("../../img/svg/ciclos-icon.png") no-repeat left top;
+            list-style-type: none;
+            background-size: 20px 20px;
+
+            line-height: 1.7em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0 auto;
+            .fa-graduation-cap {
+                margin-right: 1em;
+            }
+            .horas-ciclo {
+                color: orange;
+                margin-left: 1em;
+            }
+            .dd-icon {
+                font-weight: bold;
+                display: block;
+                width: fit-content;
+                float:right;
+                margin-left: auto;
+                transform: rotate(-90deg);
+                transition: all, .3s;
+                &.opened {
+                    transform : rotate(0);
+                }
+            }
+        }
+        .obs-title, .des-title {
+            font-weight: bold;
+        }
+        .obs-list {
+            list-style-type: square;
+            li {
+                margin: .7em 0;
+            }
+        }
+    }
+}
+#controles-ciclos {
+    #select-familia {
+        border:none;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url("../../img/svg/method-draw-image.svg");
+        background-size: 100px 70px;
+        background-repeat: no-repeat;
+        background-position: 95% 50% ;
+        //background-color: transparent;
+        width: 80%;
+        margin: 0 auto;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        font-size: 2rem;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        color: white;
+        transition: border, .4s;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        &:hover {
+            border: 1px solid white;
+        }
+    }
+
+}
+#lista-ciclos {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin: 0em auto;
+
+    .obs-familia {
+        font-size: 1.2em;
+        text-align: center;
+        font-style: italic;
+        padding: .5em;
+    }
+        .familia-logo {
+            margin: 0 auto;
+            width: 100px;
+            //display:inline-block;
+            text-align: right;
+
+            .thumb-familia {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    h2{
+        text-align: center;
+    }
+
+    #ciclos_medios, #ciclos_superiores {
+        padding: .5em;
+    }
+    .title-superiores, .title-medios {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+}
+#ciclos-icon {
+	font-size: 10rem;
+}
