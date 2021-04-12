@@ -1,6 +1,14 @@
+Options +SymLinksIfOwnerMatch 
 
-RewriteEngine on
+#RewriteBase /elorieta-empresas
+#RewriteEngine On
 
-#Ciclo
-RewriteRule ^/?ciclos/$ ciclos [NC,R=301]
-RewriteRule ^/?ciclos/?$ ./ciclos.php 
+#RewriteCond %{REQUEST_URI} !^/public/
+#RewriteRule ^(.*)$ /$1/public [L,R=301]
+
+
+
+# If the page does not exist redirects to 404.hml
+#RewriteCond %{REQUEST_FILENAME} !-f 
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . public/404.html [L]
