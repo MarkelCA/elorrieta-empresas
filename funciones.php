@@ -1,7 +1,7 @@
 <?php
-require_once 'datos/datos.php';
-require_once 'datos/faq.php';
-require_once 'datos/observaciones.php';
+require_once '../datos/datos.php';
+require_once '../datos/faq.php';
+require_once '../datos/observaciones.php';
 
 
 function imprimirFamilias() {

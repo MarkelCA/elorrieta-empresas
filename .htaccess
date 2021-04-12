@@ -1,14 +1,22 @@
-Options +SymLinksIfOwnerMatch 
-
-#RewriteBase /elorieta-empresas
 #RewriteEngine On
 
-#RewriteCond %{REQUEST_URI} !^/public/
-#RewriteRule ^(.*)$ /$1/public [L,R=301]
+#RewriteCond %{REQUEST_URI} !^/elorrieta-empresas/public/
+#RewriteRule ^(.*)$ /public/$1 [L,R=301]
 
-
+#Ciclo
+#RewriteRule ^\/elorrieta-empresas\/public\/(.*)\/?$ cba [NC,R=301] [L]
+#RewriteRule ciclos /ab.php [L]
+#RewriteRule ^ciclos$ ./ciclos.php 
 
 # If the page does not exist redirects to 404.hml
 #RewriteCond %{REQUEST_FILENAME} !-f 
 #RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteRule . public/404.html [L]
+
+# Remove php extension
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+#RewriteRule ^([^\.]+)$ $1.html [NC,L]
+

@@ -39,12 +39,13 @@ function global_event_listeners() {
 function mostrarCiclos() {
     const cod_familia = $(this).find('.familia').attr('codigo_familia');
 
-    $('#controles-ciclos').load('ajax/cargar_controles_ciclos.php?cod_familia='+cod_familia);
-    $('#container-ciclos').load('ajax/imprimirCiclos.php?familia='+cod_familia, ciclosCargados);
+    $('#controles-ciclos').load('../ajax/cargar_controles_ciclos.php?cod_familia='+cod_familia);
+    $('#container-ciclos').load('../ajax/imprimirCiclos.php?familia='+cod_familia, ciclosCargados);
 
 
     $('#container-familias').slideUp(300, function() {
         cleanCiclosFilters();
+        
     });
 }
 
@@ -80,7 +81,7 @@ function ciclosCargados() {
     // Si cambias de familia profesional
     $('#select-familia').change(function() {
         const cod_familia = $(this).val();
-        $('#container-ciclos').load('ajax/imprimirCiclos.php?familia='+cod_familia, function() {
+        $('#container-ciclos').load('../ajax/imprimirCiclos.php?familia='+cod_familia, function() {
             $('.ciclo.multiple').click(cargar_info_ciclo);
             cleanCiclosFilters();
         });
@@ -95,7 +96,7 @@ function cargar_info_ciclo() {
 
     // Si el contenido está vacío, lo cargamos, sino simplemente desplegamos el contenido
     if(content_div.html() === '')
-        content_div.load('ajax/cargar_contenido_ciclo.php?cod_ciclo='+cod_ciclo, () => desplegar_info_ciclo(cod_ciclo) );
+        content_div.load('../ajax/cargar_contenido_ciclo.php?cod_ciclo='+cod_ciclo, () => desplegar_info_ciclo(cod_ciclo) );
     else
         desplegar_info_ciclo(cod_ciclo);
 }
