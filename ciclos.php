@@ -26,7 +26,7 @@
     <!--Animate.css-->
     <link rel="stylesheet" href="./modules/animate.css/animate.min.css" />
     <!--Estilos propios-->
-    <link rel="stylesheet" type="text/css" href="./src/estilos/css/estilos.min.css">
+    <link rel="stylesheet" type="text/css" href="./src/estilos/css/all.min.css">
     <!--Slick-->
     <link rel="stylesheet" type="text/css" href="./modules/slick-1.8.1/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./modules/slick-1.8.1/slick-theme.css"/>
