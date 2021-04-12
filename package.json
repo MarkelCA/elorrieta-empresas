@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/MarkelCA/elorrieta-empresas#readme",
   "devDependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-minify": "^3.1.0",
     "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0"
