@@ -19,7 +19,7 @@
     <!-- <script defer src="./modules/jquery/jquery_ui/jquery_ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> -->
     
     <!-- Script propio -->
-    <script defer src='../js/script.js'></script>
+    <script defer src="./src/js/script.js"></script>
 
   <title>Ciclos - Elorrieta Empresas</title>
 
@@ -36,7 +36,7 @@
     <?php require_once '../funciones.php';?>
 
     <!--Activar carrousel-->
-    <script defer src='../js/ciclos.js'></script>
+    <script defer src="./src/js/ciclos.js"></script>
 </head>
 <body>
 <div id="container">
