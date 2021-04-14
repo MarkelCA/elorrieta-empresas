@@ -1,11 +1,15 @@
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import "../src/estilos/scss/main.scss";
+import 'slick-carousel'
+import "animate.css/source/animate.css";
+
 
 // import '@fortawesome/fontawesome-free/js/regular'
 // import '@fortawesome/fontawesome-free/js/brands'
 
 const $ = require( "jquery" );
+const _ = require('slick-carousel');
 
 $(function() {
 
@@ -32,15 +36,7 @@ function global_event_listeners() {
   $('.box').click(mostrarCiclos);
 
 
-  // Boxes hover animation using the https://animate.style/ library
-  $('.grid-wrapper .box').mouseenter(function() {
-      $(this).addClass('animate__animated animate__pulse');
-  });
-
-  $('.grid-wrapper .box').mouseleave(function() {
-      const target = $(this);
-      setTimeout(() => target.removeClass('animate__animated animate__pulse'), 700);
-  });
+  
 }
 
 
@@ -110,10 +106,29 @@ function cargar_info_ciclo() {
       desplegar_info_ciclo(cod_ciclo);
 }
 
-$(function() {
   $('#faq').slick();
-});
 
+  const animateCSS = (element, animation, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
+
+  $('.box').hover(function() {
+      animateCSS('.box', 'pulse')
+  })
 
 
 });

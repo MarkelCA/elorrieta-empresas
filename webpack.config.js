@@ -2,11 +2,11 @@ const path = require("path");
 
 module.exports = {
   
-    entry: './public/src/index.js',
+    entry: './src/index.js',
     output: {
         // the output bundle
         // saves the files into the dist/static folder
-        path: path.resolve(__dirname, 'public/src/js/dist'),
+        path: path.resolve(__dirname, './src/js/dist'),
         // set static as src="static/main.js as relative path
         // publicPath: 'public/src/js'
         },
@@ -26,6 +26,10 @@ module.exports = {
           },
         },
         {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
+        {
           test: /\.s[ac]ss$/i,
           use: [
             // Creates `style` nodes from JS strings
@@ -36,6 +40,18 @@ module.exports = {
             "sass-loader",
           ],
         },
+        {
+          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+                outputPath: 'fonts/'
+              }
+            }
+          ]
+        }
       ],
     },
   };

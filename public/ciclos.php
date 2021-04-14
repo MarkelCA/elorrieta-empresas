@@ -7,27 +7,19 @@
     <meta name="keywords" content="empresa, practicas, ciclos, dual, FCT, Elorrieta"/>
     <meta name="author" content="Markel Cuesta" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="shortcut icon" href="./src/img/favicon-black.ico" />
+     <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
 
 
-    <script defer src="src/js/dist/main.js"></script>
+    <script defer src="../src/js/dist/main.js"></script>
 
     <title>Ciclos - Elorrieta Empresas</title>
+    <!-- <link rel="stylesheet" href="../modules/animate.css/animate.min.css" /> -->
 
-    <!--Animate.css-->
-    <link rel="stylesheet" href="../modules/animate.css/animate.min.css" />
-    <!--Estilos propios-->
-    <link rel="stylesheet" type="text/css" href="./src/estilos/css/all.min.css">
-    <!--Slick-->
-    <link rel="stylesheet" type="text/css" href="../modules/slick-1.8.1/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="../modules/slick-1.8.1/slick-theme.css"/>
-    <script defer type="text/javascript" src="../modules/slick-1.8.1/slick.min.js"></script>
+    
 
     <!--Funciones php-->
     <?php require_once '../funciones.php';?>
 
-    <!--Activar carrousel-->
-    <script defer src="./src/js/ciclos.js"></script>
 </head>
 <body>
 <div id="container">
