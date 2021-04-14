@@ -18,7 +18,12 @@
   "homepage": "https://github.com/MarkelCA/elorrieta-empresas#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "css-loader": "^5.2.1",
+    "file-loader": "^6.2.0",
     "node-sass": "^5.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
     "webpack": "^5.32.0",
     "webpack-cli": "^4.6.0"
   },

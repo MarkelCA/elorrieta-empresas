@@ -9,19 +9,10 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="shortcut icon" href="./src/img/favicon-black.ico" />
 
-     <!--Font awesome-->
-     <script defer src="../modules/font-awesome/font-awesome.js" crossorigin="anonymous"></script>
-    <!--JQuery-->
-    <script defer src="../modules/jquery/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-    
-    <!--JQuery UI-->
-    <!-- <script defer src="./modules/jquery/jquery_ui/jquery_ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> -->
-    
-    <!-- Script propio -->
-    <script defer src="./src/js/script.js"></script>
+    <script defer src="src/js/dist/main.js"></script>
 
-  <title>Ciclos - Elorrieta Empresas</title>
+    <title>Ciclos - Elorrieta Empresas</title>
 
     <!--Animate.css-->
     <link rel="stylesheet" href="../modules/animate.css/animate.min.css" />

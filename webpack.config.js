@@ -1,6 +1,7 @@
 const path = require("path");
 
 module.exports = {
+  
     entry: './public/src/index.js',
     output: {
         // the output bundle
@@ -13,11 +14,27 @@ module.exports = {
 
       rules: [
         {
-          test: /\.(png|jpe?g|gif)$/i,
+          test: /\.(png|jpe?g|gif|svg)$/i,
+          
           loader: 'file-loader',
           options: {
-            publicPath: 'public',
+            name: '[path][name].[ext]',
+            // context: path.resolve(__dirname, "src/"),
+            outputPath: '../../img/dist/',
+            publicPath: './',
+            useRelativePaths: true            
           },
+        },
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "css-loader",
+            // Compiles Sass to CSS
+            "sass-loader",
+          ],
         },
       ],
     },
