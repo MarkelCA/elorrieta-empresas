@@ -13,9 +13,7 @@
     <script defer src="../src/js/dist/main.js"></script>
 
     <title>Ciclos - Elorrieta Empresas</title>
-    <!-- <link rel="stylesheet" href="../modules/animate.css/animate.min.css" /> -->
 
-    
 
     <!--Funciones php-->
     <?php require_once '../funciones.php';?>

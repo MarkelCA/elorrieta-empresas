@@ -2,7 +2,7 @@ import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import "../src/estilos/scss/main.scss";
 import 'slick-carousel'
-import "animate.css/source/animate.css";
+import "../node_modules/animate.css/animate.min.css";
 
 
 // import '@fortawesome/fontawesome-free/js/regular'
@@ -108,11 +108,11 @@ function cargar_info_ciclo() {
 
   $('#faq').slick();
 
-  const animateCSS = (element, animation, prefix = 'animate__') =>
+  const animateCSS = (node, animation, prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
-    const node = document.querySelector(element);
+    // const node = document.querySelector(element);
 
     node.classList.add(`${prefix}animated`, animationName);
 
@@ -126,8 +126,10 @@ function cargar_info_ciclo() {
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
   });
 
+
   $('.box').hover(function() {
-      animateCSS('.box', 'pulse')
+    animateCSS(this, 'pulse')
+
   })
 
 
