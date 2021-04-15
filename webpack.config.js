@@ -4,7 +4,10 @@ module.exports = {
   
   entry: {
     styles: './src/estilos/scss/main.scss',
-    script: './src/index.js',
+    script: {
+      dependOn: 'styles',
+      import: './src/index.js',
+    }
   },
   output: {
       // the output bundle
