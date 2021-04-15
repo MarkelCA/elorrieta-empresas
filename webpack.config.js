@@ -25,19 +25,7 @@ module.exports = {
             useRelativePaths: true            
           },
         },
-        // {
-        //   test: /\.(cur)$/i,
-          
-        //   loader: 'url-loader',
-          
-        //   options: {
-        //     name: '[path][name].[ext]',
-        //     context: path.resolve("./"),
-        //     outputPath: '../../img/dist/',
-        //     publicPath: '../../',
-        //     useRelativePaths: true            
-        //   },
-        // },
+      
         {
           test: /\.css$/i,
           use: ["style-loader", "css-loader"],

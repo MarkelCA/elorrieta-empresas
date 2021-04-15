@@ -9,6 +9,11 @@ body {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
+
+    &.back-white {
+        background-image: none;
+        background-color: rgb(65, 80, 68);
+    }
 }
 #faq-container {
     #title-faq {

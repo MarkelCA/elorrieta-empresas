@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body class='back-white'>
     <div id="container">
         <div class="header zone">
             <nav class="mobile-menu">
@@ -27,20 +27,23 @@
                     <li id='header-title'><a href="./"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
                     <li><a href="./">Inicio</a></li>
                     <li><a href="./ciclos.php">Ciclos</a></li>
-                    <li><a href="./practicas.php">Prácticas</a></li>
+                    <li><a href="#">Prácticas</a></li>
                     <li><a href="#">Dual</a></li>
                     <li id='contacto'><a href="#">Contacto</a></li>
                 </ul>
             </nav>
       </div>
-<h1>Error 404 - Página no encontrada</h1>
+    <div id="page-body">
+        <h1>Prácticas</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime ea sit a quod accusamus molestias alias assumenda nihil consequuntur asperiores praesentium, vel unde sunt voluptates quas sapiente quo cum?</p>
+    </div>
   <footer class="zone footer">
     
         <nav class="footer-menu">
             <ul class="menu">
                 <li><a href="./">Inicio</a></li>
-                <li><a href="./ciclos">Ciclos</a></li>
-                <li><a href="./practicas.php">Prácticas</a></li>
+                <li><a href="./ciclos.php">Ciclos</a></li>
+                <li><a href="#">Prácticas</a></li>
                 <li><a href="#">Dual</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
