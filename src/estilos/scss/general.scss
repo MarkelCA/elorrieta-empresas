@@ -10,10 +10,11 @@ body {
 	margin: 0;
 	padding: 0;
 
-    &.back-white {
-        background-image: none;
-        background-color: rgb(65, 80, 68);
-    }
+
+}
+.back-white {
+    background-image: none;
+    background-color: rgb(255, 255, 255);
 }
 #faq-container {
     #title-faq {
@@ -62,9 +63,9 @@ body {
             color: rgba(10, 7, 33, 0.88);
             margin: 0 1em;
             text-align: center;
-            & > *:not(.faq-type-title) {
-                //padding:0 1em;
-            }
+            // & > *:not(.faq-type-title) {
+            //     //padding:0 1em;
+            // }
             .pregunta, .respuesta {
                 font-style: italic;
                 padding: .5em 2em;
@@ -115,10 +116,10 @@ body {
     padding-top: 1em;
     padding-bottom: 1em;
 	a {
-		color: orange;
+		color: #ffa500;
 	}
     .footer-hr {
-        border: 1px solid orange;
+        border: 1px solid #ffa500;
     }
     .footer-menu {
         margin-top:1em;
@@ -181,7 +182,8 @@ body {
 			transition: all .3s;
 			color: rgba(0,0,0,0);
 			background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-			-webkit-background-clip: text;
+			background-clip: text;
+            -webkit-background-clip: text;
 		}
 	}
 }

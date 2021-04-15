@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id='html-practicas'>
 <head>
     <meta charset="utf-8"/>
     <meta name="description" content="La web de Elorrieta para las Empresas. Encuentra alumnos cualificados para FCT's prácticas remuneradas o para formación en el entorno empresarial."/>
@@ -16,7 +16,7 @@
 
 </head>
 
-<body class='back-white'>
+<body >
     <div id="container">
         <div class="header zone">
             <nav class="mobile-menu">
@@ -33,10 +33,18 @@
                 </ul>
             </nav>
       </div>
-    <div id="page-body">
-        <h1>Prácticas</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime ea sit a quod accusamus molestias alias assumenda nihil consequuntur asperiores praesentium, vel unde sunt voluptates quas sapiente quo cum?</p>
-    </div>
+        <div id="page-body" class='back-white'>
+            <h1>Prácticas</h1>
+            <div id="practicas-cover" class=' back-white'>
+                <img src="../src/img/svg/undraw_Code_thinking_re_gka2.svg" alt="practicas-cover">
+            </div>
+            <div id="article" >
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime ea sit a quod accusamus molestias alias assumenda nihil consequuntur asperiores praesentium, vel unde sunt voluptates quas sapiente quo cum?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam possimus quam dignissimos perferendis consequuntur? Reprehenderit, id quidem iusto voluptatum aspernatur quam, rerum ut asperiores repellendus eligendi deleniti eos. Expedita, nihil.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates rem eaque est voluptatem ratione placeat sed nemo alias officia unde iure animi, deserunt eum adipisci inventore officiis explicabo non ex.</p>
+        </div>
+
+        </div>
   <footer class="zone footer">
     
         <nav class="footer-menu">

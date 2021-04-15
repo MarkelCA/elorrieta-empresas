@@ -1,5 +1,5 @@
 // Main scss
-import "../src/estilos/scss/main.scss";
+// import "../src/estilos/scss/main.scss";
 
 // Font awesome
 import '@fortawesome/fontawesome-free/js/fontawesome.js'

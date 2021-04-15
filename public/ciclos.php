@@ -10,7 +10,8 @@
      <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
 
 
-    <script defer src="../src/js/dist/main.js"></script>
+    <script defer src="../src/dist/styles.js"></script>
+    <script defer src="../src/dist/script.js"></script>
 
     <title>Ciclos - Elorrieta Empresas</title>
 
