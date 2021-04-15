@@ -27,12 +27,28 @@ function imprimir_datos_ciclo($ciclo) {
     $cod_ciclo = $ciclo['codigo'];
     $observaciones = get_observaciones($cod_ciclo, 'observaciones');
     $descripcion = get_observaciones($cod_ciclo, 'descripcion');
+    $temario = get_observaciones($cod_ciclo, 'temario');
 
-    if(!empty($observaciones))
+    $has_observaciones = !empty($observaciones);
+    $has_descripcion = !empty($descripcion);
+    $has_temario = !empty($temario);
+
+    if($has_observaciones){
         $datos['observaciones'] = $observaciones;
+        
+        // Nos interesa saber si tiene ambas para organizar el layout
+        if($has_temario){
+            $has_both = TRUE;
+        }
 
-    if(!empty($descripcion))
+    }
+    if ($has_temario){
+
         $datos['descripcion'] = $descripcion;
+    }
+
+    if($has_both)
+        $mid_content_width = TRUE;
 
     // Si tiene datos le añadimos la correspondiente clase
     $multiple = $datos ? 'multiple' : '';
@@ -50,26 +66,49 @@ function imprimir_datos_ciclo($ciclo) {
         //Contenido adicional del ciclo
         echo "<div class='ciclo-content'>";
 
-        // Imprimimos las observaciones
-    if(!empty($observaciones))
-        imprimir_observaciones_ciclo($observaciones);
-    if(!empty($descripcion))
-        imprimir_descripcion_ciclo($descripcion);
+    // Imprimimos las observaciones (Si además tiene temario su anchura será la mitad)
+    if($has_observaciones)
+        imprimir_observaciones_ciclo($observaciones, $mid_content_width);
+    
+    // Imprimimos el temario (Si además tiene observaciones su anchura será la mitad)
+    if($has_temario)
+        imprimir_temario_ciclo($temario, $mid_content_width);
+
+    if($has_descripcion)
+        imprimir_descripcion_ciclo($descripcion, $mid_content_width);
+
         echo '</div>'; // .ciclo-content
     echo '</div>'; // .ciclo
 
 }
 function imprimir_descripcion_ciclo($descripcion) {
+    echo "<div class='descripcion $mid_width_class'>";
     echo "<p class='des-title'>Descripcion: </p>";
     echo "<p class='des-content'>$descripcion</p>";
+    echo '</div>';
 }
-function imprimir_observaciones_ciclo($observaciones) {
+function imprimir_temario_ciclo($temario, $mid_width = FALSE) {
+    $mid_width_class = $mid_width ? 'mid-width' : '';
+    echo "<div class='temario $mid_width_class'>";
+    echo "<p class='tem-title'>Temario: </p>";
+    echo "<ul class='tem-list'>";
+    foreach($temario as $tema) {
+        echo "<li>$tema</li>";
+    }
+    echo '</ul>';
+    echo '</div>';
+
+}
+function imprimir_observaciones_ciclo($observaciones, $mid_width = FALSE) {
+    $mid_width_class = $mid_width ? 'mid-width' : '';
+    echo "<div class='observaciones $mid_width_class'>";
     echo "<p class='obs-title'>Observaciones: </p>";
     echo "<ul class='obs-list'>";
     foreach($observaciones as $obser) {
         echo "<li>$obser</li>";
     }
     echo '</ul>';
+    echo '</div>';
 
 }
 function imprimir_observaciones_familia($observaciones) {

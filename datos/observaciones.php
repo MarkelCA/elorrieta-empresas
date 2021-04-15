@@ -29,6 +29,9 @@ Observación a nivel de ciclo
 /////////////////////////////////////////////////
 $obs['ADAF3']['observaciones'][]='Observación de prueba para devel';
 $obs['ADAF3']['observaciones'][]='Otra observación  más de prueba para devel';
+$obs['ADAF3']['temario'][]='CSS';
+$obs['ADAF3']['temario'][]='JS';
+$obs['ADAF3']['temario'][]='HTML';
 $obs['ADAF3']['descripcion']='Dolor assumenda iure cupiditate natus vero? Dolore exercitationem magnam reiciendis non nam ad! Accusamus tenetur eveniet debitis culpa quod? Suscipit enim molestiae consequatur molestias totam? Eligendi ipsam soluta eum ea.';
 /////////////////////////////////////////////////
 $obs['ADAD3']['descripcion']='Dolor assumenda iure cupiditate natus vero? Dolore exercitationem magnam reiciendis non nam ad! Accusamus tenetur eveniet debitis culpa quod? Suscipit enim molestiae consequatur molestias totam? Eligendi ipsam soluta eum ea.';

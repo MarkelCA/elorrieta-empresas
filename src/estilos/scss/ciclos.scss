@@ -73,10 +73,14 @@
                 }
             }
         }
-        .obs-title, .des-title {
+        .obs-title, .des-title, .tem-title {
             font-weight: bold;
         }
-        .obs-list {
+        .mid-width {
+            float: left;
+            width: 50%;
+        }
+        .obs-list, .tem-list {
             list-style-type: square;
             li {
                 margin: .7em 0;
