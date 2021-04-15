@@ -1,7 +1,7 @@
 # Elorrieta Empresas
 
-[Elorrieta-Errekamari](https://elorrieta.hezkuntza.net/es/inicio)
-Esta es una  extension de la web de (<a name="https://elorrieta.hezkuntza.net/es/inicio"></a>) destinada a atraer a empresas a contratar alumnos del centro para practicas, o formación dual. 
+Esta es una  extension de la web de ([Elorrieta-Errekamari](https://elorrieta.hezkuntza.net/es/inicio)
+) destinada a atraer a empresas a contratar alumnos del centro para practicas, o formación dual. 
 
 Esta página ha sido realizada como proyecto final del ciclo superior de Desarrollo de Aplicaciones Web (DAW).
 
