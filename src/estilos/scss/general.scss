@@ -23,6 +23,11 @@ body {
     color: white;
     padding: 1em 0 2em 0;
    #faq {
+    cursor: grab;
+    cursor: -webkit-grab; /* Chrome 1-21, Safari 4+ */
+    cursor:    -moz-grab; /* Firefox 1.5-26 */
+    cursor: url('../../cursor/grab.cur'), auto; /* fallback: Chrome 1-21, Firefox 1.5-26, Safari 4+, IE, Edge 12-14, Android 2.1-4.4.4 */
+
        .slick-active:focus {
            outline: 0;
        border: none !important;
