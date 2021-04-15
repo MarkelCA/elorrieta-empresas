@@ -1,15 +1,21 @@
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
+// Main scss
 import "../src/estilos/scss/main.scss";
-import 'slick-carousel'
-import "../node_modules/animate.css/animate.min.css";
+
+// Font awesome
+import '@fortawesome/fontawesome-free/js/fontawesome.js'
+import '@fortawesome/fontawesome-free/js/solid.js'
+
+// Slick carousel
+import 'slick-carousel/slick/slick.min'
+import 'slick-carousel/slick/slick.scss'
+import 'slick-carousel/slick/slick-theme.scss'
+
+// Animate.css
+import "animate.css/animate.min.css";
 
 
-// import '@fortawesome/fontawesome-free/js/regular'
-// import '@fortawesome/fontawesome-free/js/brands'
 
 const $ = require( "jquery" );
-const _ = require('slick-carousel');
 
 $(function() {
 

@@ -19,12 +19,13 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[path][name].[ext]',
-            // context: path.resolve(__dirname, "src/"),
+            context: path.resolve("./"),
             outputPath: '../../img/dist/',
-            publicPath: './',
+            publicPath: '../',
             useRelativePaths: true            
           },
         },
+        
         {
           test: /\.css$/i,
           use: ["style-loader", "css-loader"],
@@ -41,6 +42,15 @@ module.exports = {
           ],
         },
         {
+        test: /\.less$/i,
+        use: [
+          // compiles Less to CSS
+          "style-loader",
+          "css-loader",
+          "less-loader",
+        ],
+      },
+        {
           test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
           use: [
             {
@@ -52,6 +62,7 @@ module.exports = {
             }
           ]
         }
+        
       ],
     },
   };
