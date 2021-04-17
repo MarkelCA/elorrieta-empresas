@@ -12,7 +12,7 @@ module.exports = {
   output: {
       // the output bundle
       // saves the files into the dist/static folder
-      path: path.resolve(__dirname, './src/js/dist'),
+      path: path.resolve(__dirname, './src/dist'),
       // set static as src="static/main.js as relative path
       // publicPath: 'public/src/js'
       },

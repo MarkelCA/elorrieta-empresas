@@ -1,4 +1,7 @@
 html#html-practicas {
+    #container {
+        margin-top: 5rem;
+    }
     h1{
         color: orange;
         text-transform: uppercase;
@@ -7,20 +10,30 @@ html#html-practicas {
     }
 
     #practicas-cover {
-        width:100%;
-        
-        img {
-            width: 50%;
-            display: block;
-            height: 50%;
-            margin:  0 auto;
-            transform:translate(-13.5%);
+        width: 100%;
+        height: 29vw;
+        background-position: 50% 33%;
+        background-image: url('../../img/resized/top-view-person-writing-on-laptop-with-copy-space.jpg');
+        background-size: cover;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+
+        #descripcion-cover {
+            width: 45%;
+            margin-left: auto;
+            margin-right: 5em;
+
+            p{
+                text-align: justify;
+            }
         }
+        
     }
     #page-body {
         width: 100%;
-    }
-    #article {
+    }   
+    .article {
         width: 70%;
         margin: 2em auto;
     }

@@ -9,14 +9,15 @@
      <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
 
    
-    <script defer src="../src/js/dist/main.js"></script>
+     <script src="../src/dist/styles.js"></script>
+     <script defer src="../src/dist/script.js"></script>
 
   <title>Elorrieta Empresas</title>
 
 
 </head>
 
-<body >
+<body class='back-white'>
     <div id="container">
         <div class="header zone">
             <nav class="mobile-menu">
@@ -34,17 +35,26 @@
             </nav>
       </div>
         <div id="page-body" class='back-white'>
-            <h1>Prácticas</h1>
+                <!-- <h1>Prácticas</h1> -->
             <div id="practicas-cover" class=' back-white'>
-                <img src="../src/img/svg/undraw_Code_thinking_re_gka2.svg" alt="practicas-cover">
+                <!-- <img src="../src/img/top-view-person-writing-on-laptop-with-copy-space.jpg" alt="practicas-cover"> -->
+                <div id="descripcion-cover">
+                    <h1>Prácticas</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores tenetur nihil perspiciatis culpa eum numquam architecto aut deserunt aliquid ab! Nisi, sint itaque. Atque distinctio quo veniam reprehenderit tenetur. Repudiandae?</p>
+
+                </div>
             </div>
-            <div id="article" >
+            <div class="article" >
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime ea sit a quod accusamus molestias alias assumenda nihil consequuntur asperiores praesentium, vel unde sunt voluptates quas sapiente quo cum?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam possimus quam dignissimos perferendis consequuntur? Reprehenderit, id quidem iusto voluptatum aspernatur quam, rerum ut asperiores repellendus eligendi deleniti eos. Expedita, nihil.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates rem eaque est voluptatem ratione placeat sed nemo alias officia unde iure animi, deserunt eum adipisci inventore officiis explicabo non ex.</p>
         </div>
-
+        <div class="article">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, dicta praesentium dolores sunt voluptates incidunt earum culpa animi eos natus nesciunt tenetur, qui fugit at recusandae mollitia odit commodi temporibus.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet impedit iste accusantium, beatae porro pariatur nulla repellat reiciendis atque quaerat, error et, maxime qui. Sunt fuga odit dolore asperiores? Facilis!</p>
         </div>
+
+    </div>
   <footer class="zone footer">
     
         <nav class="footer-menu">
