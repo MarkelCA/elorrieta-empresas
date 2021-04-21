@@ -82,7 +82,6 @@ function imprimir_datos_ciclo($ciclo) {
 
 }
 function imprimir_descripcion_ciclo($descripcion) {
-    echo "<div class='descripcion $mid_width_class'>";
     echo "<p class='des-title'>Descripcion: </p>";
     echo "<p class='des-content'>$descripcion</p>";
     echo '</div>';
@@ -177,7 +176,6 @@ function imprimirCiclos($familia_in) {
 function controles_ciclos($cod_familia_selected) {
     global $familia;
 
-    echo $cod_familia;
         echo "<select id='select-familia'>\n";
     foreach($familia as $cod_familia => $nombre_familia ) {
         // If this family is where we come from we select it in the drop-down list
@@ -201,7 +199,7 @@ function print_faq_box() {
     }
 }
 function print_faq($category, $faq_category) {
-    global $faq;
+    //global $faq;
 
     foreach($faq_category as $pregunta) {
         echo '<div>';

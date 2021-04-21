@@ -21,6 +21,7 @@ $(function() {
 
   global_event_listeners();
 
+    
 
 function global_event_listeners() {
   // Boton del footer destinado a subir a la parte superior de la pagina
