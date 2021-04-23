@@ -11,7 +11,7 @@ html#html-practicas {
 
     #practicas-cover {
         width: 100%;
-        height: 34vw;
+        height: 55vh;
         background-position: 50% 33%;
         background-image: url('../../img/resized/top-view-person-writing-on-laptop-with-copy-space.jpg');
         background-size: cover;
@@ -23,18 +23,30 @@ html#html-practicas {
             width: 45%;
             margin-left: auto;
             margin-right: 5em;
-
             p{
                 text-align: justify;
             }
         }
-        
     }
+
     #page-body {
-        width: 100%;
-    }   
-    .article {
         width: 70%;
-        margin: 2em auto;
-    }
+        display: flex;
+        margin: 1em auto;
+        #article-container {
+            width: 80%;
+            .article {
+                width: 85%;
+                text-align: justify;
+                margin: 2em auto; 
+                &:not(:first-of-type) {
+                    margin: 2em auto; 
+                }
+            }
+        }
+        .mas-enlaces{
+            width: 30%;
+            text-align: justify;
+        }
+    }   
 }

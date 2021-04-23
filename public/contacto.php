@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id='html-contacto'>
 <head>
     <meta charset="utf-8"/>
     <meta name="description" content="La web de Elorrieta para las Empresas. Encuentra alumnos cualificados para FCT's prácticas remuneradas o para formación en el entorno empresarial."/>
@@ -9,9 +9,10 @@
      <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
 
    
-    <script defer src="../src/js/dist/main.js"></script>
+     <script src="../src/dist/styles.js"></script>
+     <script defer src="../src/dist/script.js"></script>
 
-  <title>Elorrieta Empresas</title>
+  <title>Contacto | Elorrieta Empresas</title>
 
 
 </head>
@@ -29,24 +30,33 @@
                     <li><a href="./ciclos.php">Ciclos</a></li>
                     <li><a href="./practicas.php">Prácticas</a></li>
                     <li><a href="#">Dual</a></li>
-                    <li id='contacto'><a href="./contacto.php">Contacto</a></li>
+                    <li id='contacto'><a href="#">Contacto</a></li>
                 </ul>
             </nav>
       </div>
-<h1>Error 404 - Página no encontrada</h1>
+        <div id="page-body">
+            <h1 id="form-block-title">Contáctanos</h1>
+            <form id="contact-form" action="">
+                <input type="text" id="input-nombre" name="nombre" placeholder="Nombre"><br>
+                <input type="text" id="input-email" name="email" placeholder = "Email"><br>
+                <input type="text" id="input-tel" name="telefono" placeholder = "Teléfono"><br>
+                <textarea id="input-mensaje" name="" cols="30" rows="10" spellcheck="false" placeholder="Mensaje"></textarea>
+                <input type="submit" id='input-enviar' value= "Enviar"> 
+                
+            </form>
+        </div>
   <footer class="zone footer">
     
         <nav class="footer-menu">
             <ul class="menu">
                 <li><a href="./">Inicio</a></li>
-                <li><a href="./ciclos">Ciclos</a></li>
+                <li><a href="./ciclos.php">Ciclos</a></li>
                 <li><a href="./practicas.php">Prácticas</a></li>
                 <li><a href="#">Dual</a></li>
-                <li><a href="./contacto.php">Contacto</a></li>
+                <li><a href="#">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>
         </nav>
-
       <hr class='footer-hr'>
       <h4 class='credits'>Made with <i class="heart fas fa-heart"></i> by <a href="https://github.com/MarkelCA">Markel Cuesta</a></h4>
 <p class='freepik'>

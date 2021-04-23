@@ -32,7 +32,7 @@
                 <li><a href="#">Ciclos</a></li>
                 <li><a href="./practicas.php">Prácticas</a></li>
                 <li><a href="#">Dual</a></li>
-                <li id='contacto'><a href="#">Contacto</a></li>
+                <li id='contacto'><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
   </div>
@@ -60,7 +60,7 @@
                 <li><a href="#">Ciclos</a></li>
                 <li><a href="./practicas.php">Prácticas</a></li>
                 <li><a href="#">Dual</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="./contacto.php">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>
         </nav>

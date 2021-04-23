@@ -5,12 +5,12 @@
     <meta name="description" content="La web de Elorrieta para las Empresas. Encuentra alumnos cualificados para FCT's prácticas remuneradas o para formación en el entorno empresarial."/>
     <meta name="keywords" content="empresa, practicas, ciclos, dual, FCT, Elorrieta"/>
     <meta name="author" content="Markel Cuesta" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
 
-   
-     <script src="../src/dist/styles.js"></script>
-     <script defer src="../src/dist/script.js"></script>
+
+    <script src="../src/dist/styles.js"></script>
+    <script defer src="../src/dist/script.js"></script>
 
   <title>Elorrieta Empresas</title>
 
@@ -30,11 +30,10 @@
                     <li><a href="./ciclos.php">Ciclos</a></li>
                     <li><a href="#">Prácticas</a></li>
                     <li><a href="#">Dual</a></li>
-                    <li id='contacto'><a href="#">Contacto</a></li>
+                    <li id='contacto'><a href="./contacto.php">Contacto</a></li>
                 </ul>
             </nav>
       </div>
-        <div id="page-body" class='back-white'>
                 <!-- <h1>Prácticas</h1> -->
             <div id="practicas-cover" class=' back-white'>
                 <!-- <img src="../src/img/top-view-person-writing-on-laptop-with-copy-space.jpg" alt="practicas-cover"> -->
@@ -44,15 +43,24 @@
 
                 </div>
             </div>
-            <div class="article" >
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime ea sit a quod accusamus molestias alias assumenda nihil consequuntur asperiores praesentium, vel unde sunt voluptates quas sapiente quo cum?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam possimus quam dignissimos perferendis consequuntur? Reprehenderit, id quidem iusto voluptatum aspernatur quam, rerum ut asperiores repellendus eligendi deleniti eos. Expedita, nihil.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates rem eaque est voluptatem ratione placeat sed nemo alias officia unde iure animi, deserunt eum adipisci inventore officiis explicabo non ex.</p>
-        </div>
-        <div class="article">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, dicta praesentium dolores sunt voluptates incidunt earum culpa animi eos natus nesciunt tenetur, qui fugit at recusandae mollitia odit commodi temporibus.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet impedit iste accusantium, beatae porro pariatur nulla repellat reiciendis atque quaerat, error et, maxime qui. Sunt fuga odit dolore asperiores? Facilis!</p>
-        </div>
+
+        <div id="page-body" class='back-white'>
+            <div id="article-container">
+                <div class="article" >
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime ea sit a quod accusamus molestias alias assumenda nihil consequuntur asperiores praesentium, vel unde sunt voluptates quas sapiente quo cum?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam possimus quam dignissimos perferendis consequuntur? Reprehenderit, id quidem iusto voluptatum aspernatur quam, rerum ut asperiores repellendus eligendi deleniti eos. Expedita, nihil.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates rem eaque est voluptatem ratione placeat sed nemo alias officia unde iure animi, deserunt eum adipisci inventore officiis explicabo non ex.</p>
+            </div>
+            <div class="article">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, dicta praesentium dolores sunt voluptates incidunt earum culpa animi eos natus nesciunt tenetur, qui fugit at recusandae mollitia odit commodi temporibus.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet impedit iste accusantium, beatae porro pariatur nulla repellat reiciendis atque quaerat, error et, maxime qui. Sunt fuga odit dolore asperiores? Facilis!</p>
+            </div>
+
+            </div>
+            <div class="mas-enlaces">
+                <p>Lorem cum dolore magni beatae veniam? Enim est consectetur aut eum saepe? Rerum nisi quam molestiae est repudiandae nostrum. Repudiandae facere suscipit nesciunt natus doloribus labore? Eveniet quidem officiis commodi.</p>
+                <p>Ipsum dolorem modi aliquam porro mollitia. Dolorem voluptatibus est quos aliquam reprehenderit, quas. Id labore vel impedit quasi officia ad. Numquam ipsa molestiae quidem facere placeat Delectus dolorem harum sequi</p>
+            </div>
 
     </div>
   <footer class="zone footer">
@@ -63,7 +71,7 @@
                 <li><a href="./ciclos.php">Ciclos</a></li>
                 <li><a href="#">Prácticas</a></li>
                 <li><a href="#">Dual</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="./contacto.php">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>
         </nav>

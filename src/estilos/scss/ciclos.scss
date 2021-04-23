@@ -20,7 +20,30 @@
         }
     }
 }
+#container-with-controles {
+    width: 80%;
+    margin: 0em auto;
+    position: relative;
+    top: 30px;
+
+}
 #container-ciclos {
+
+        #clean-familia {
+            background-color: rgba(255, 0, 0, 0.5);
+            border: none;
+            padding: 1em;
+            font-size: 1.2em;
+            //background-color: transparent;
+            display: block;
+            width: 100%;
+            color: white;
+            margin: 0 auto;
+            transition: background-color, .4s;
+            &:hover {
+                background-color: rgba(243, 129, 0, 0.8);
+            }
+        }
     ul.ciclos-list {
         margin: 0;
         padding: 0;
@@ -31,7 +54,7 @@
         }
         margin: 0 auto;
         padding: 1em;
-        width: 80%;
+        width: 100%;
         &:not(:last-of-type){
             border-bottom: 1px solid white;
         }
@@ -87,7 +110,12 @@
             }
         }
         .descripcion {
+            margin-top: 1.5em;
             clear: both;
+            position: relative;
+            top: 1.5em;
+            text-align: justify;
+
         }
     }
 }
@@ -100,7 +128,7 @@
         background-repeat: no-repeat;
         background-position: 95% 50% ;
         //background-color: transparent;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         -webkit-appearance:none;
         -moz-appearance:none;
@@ -127,7 +155,7 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    width: 80%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     margin: 0em auto;

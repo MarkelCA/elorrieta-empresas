@@ -3,7 +3,6 @@ require_once '../datos/datos.php';
 require_once '../datos/faq.php';
 require_once '../datos/observaciones.php';
 
-
 function imprimirFamilias() {
     global $ciclo;
     global $familia;
@@ -17,7 +16,6 @@ function imprimirFamilias() {
         echo "</a>\n";
     }
 }
-
 function ciclo_es_medio($ciclo) {
     return strtolower($ciclo['tipo']) === 'medio';
 }
@@ -82,6 +80,7 @@ function imprimir_datos_ciclo($ciclo) {
 
 }
 function imprimir_descripcion_ciclo($descripcion) {
+    echo '<div class="descripcion">';
     echo "<p class='des-title'>Descripcion: </p>";
     echo "<p class='des-content'>$descripcion</p>";
     echo '</div>';

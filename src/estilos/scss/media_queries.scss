@@ -1,3 +1,84 @@
+@media (max-width: 1100px) {
+    html#html-contacto {
+        input,textarea {
+            font-size:1.3em !important;
+        }
+    }
+}
+@media (max-width: 660px) {
+    #controles-ciclos #select-familia{
+        font-size: 20px !important;
+        background-size: 55px 40px;
+    }
+    .obs-familia {
+        font-size: 14px !important;
+    }
+    #container-with-controles, .ciclo {
+        width: 100% !important;
+        padding-left: 0em !important;
+        .obs-list {
+            margin-left: 0;
+            padding: 0;
+        }
+    }
+    #lista-ciclos{
+        padding-right: 0;
+        padding-left: 0;
+        .ciclo-title {
+            background-position: 0% 50% !important;
+            font-size: 13px;
+            .dd-icon {
+                margin-right: 1.5em;
+            }
+        }
+    }
+
+}
+@media (max-width: 528px) {
+    .mid-width {
+        width: 100% !important;
+        clear: both;
+        margin-bottom: 1.5em 0 !important;
+        ul  {
+            width: 100%;
+            li {
+                width: 40%;
+                margin: .5em 1em !important;
+                float: left;
+            }
+        }
+    }
+}
+@media (max-width: 550px) {
+    html#html-contacto {
+        #page-body {
+            h1 {
+                font-size:1.5em;
+            }
+        }
+        #contact-form {
+            width: 90% !important;
+        }
+    }
+}
+@media screen and (max-width : 850px) { 
+    footer .footer-menu .menu  {
+        width: 100% !important;
+    }
+    html#html-contacto {
+        input,textarea {
+            font-size:1.2em !important;
+        }
+        #page-body {
+            width: 100% !important;
+        }
+    }
+}
+@media screen and (min-width : 850px) { 
+    footer .footer-menu .menu  {
+        width: 70% !important;
+    }
+}
 
 
 @media screen and (min-width : 562px) and (max-width : 700px) {
@@ -30,13 +111,14 @@
 	#cover-content {
 		width: 80%;
 	}
-    footer .footer-menu .menu {
-        width: 100%;
+    footer .footer-menu .menu  {
+        width: 100% !important;
     }
 }
 @media screen and (min-width : 460px) and (max-width : 562px) {
     footer .footer-menu .menu {
         width: 100%;
+        font-size: 1rem;
     }
 	.header {
 		height: 6rem;
@@ -72,6 +154,7 @@
 @media screen and (max-width : 460px) {
     footer .footer-menu .menu {
         width: 100%;
+        font-size: 13px;
     }
 	body {
 		padding: 0;
@@ -85,6 +168,7 @@
 	.header {
 		position: fixed;
 		height: 5rem;
+        background-color:#1c1b1b !important;
 	}
 	.mobile-menu {
 		position: fixed;
