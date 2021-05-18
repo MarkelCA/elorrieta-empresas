@@ -45,7 +45,7 @@ function imprimir_datos_ciclo($ciclo) {
         $datos['descripcion'] = $descripcion;
     }
 
-    if($has_both)
+    if(@$has_both)
         $mid_content_width = TRUE;
 
     // Si tiene datos le añadimos la correspondiente clase
@@ -110,6 +110,7 @@ function imprimir_observaciones_ciclo($observaciones, $mid_width = FALSE) {
 
 }
 function imprimir_observaciones_familia($observaciones) {
+    if ($observaciones)
     foreach($observaciones as $obser) {
         echo "<div class='obs-familia'>$obser";
         echo "</div>";
@@ -118,7 +119,7 @@ function imprimir_observaciones_familia($observaciones) {
 }
 function get_observaciones($codigo, $tipo_dato) {
     global $obs;
-    $observaciones = $obs[$codigo][$tipo_dato];
+    @$observaciones = $obs[$codigo][$tipo_dato];
     return $observaciones;
 }
 
