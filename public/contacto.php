@@ -36,12 +36,11 @@
       </div>
         <div id="page-body">
             <h1 id="form-block-title">Contáctanos</h1>
-            <form id="contact-form" action="">
+            <form id="contact-form" action="../ajax/mail.php" method="POST">
                 <input type="text" id="input-nombre" name="nombre" placeholder="Nombre"><br>
-                <input type="text" id="input-email" name="email" placeholder = "Email"><br>
-                <input type="text" id="input-tel" name="telefono" placeholder = "Teléfono"><br>
-                <textarea id="input-mensaje" name="" cols="30" rows="10" spellcheck="false" placeholder="Mensaje"></textarea>
-                <input type="submit" id='input-enviar' value= "Enviar"> 
+                <input type="text" id="input-email" name="email" placeholder = "Email"><br> <input type="text" id="input-tel" name="telefono" placeholder = "Teléfono"><br>
+                <textarea id="input-mensaje" name="mensaje" cols="30" rows="10" spellcheck="false" placeholder="Mensaje"></textarea>
+                <input type="submit" name="submit" id='input-enviar' value= "Enviar"> 
                 
             </form>
         </div>
