@@ -7,7 +7,7 @@ function imprimirFamilias() {
     global $ciclo;
     global $familia;
 
-    foreach( $ciclo as $familia_ciclo => $ciclo ) {
+    foreach( $ciclo as $familia_ciclo => $ciclo ){
         echo "<a class='box'>\n";
         echo "<div codigo_familia='$familia_ciclo' class='familia'>\n";
         echo "<img alt='imagen-familia' src='{$familia[$familia_ciclo]['img']}' />\n";
@@ -19,8 +19,8 @@ function imprimirFamilias() {
 function ciclo_es_medio($ciclo) {
     return strtolower($ciclo['tipo']) === 'medio';
 }
-function imprimir_datos_ciclo($ciclo) {
-    // Buscamos datos adicionales del ciclo
+function imprimir_datos_ciclo($ciclo) 
+{// Buscamos datos adicionales del ciclo
     $datos = [];
     $cod_ciclo = $ciclo['codigo'];
     $observaciones = get_observaciones($cod_ciclo, 'observaciones');
@@ -45,8 +45,10 @@ function imprimir_datos_ciclo($ciclo) {
         $datos['descripcion'] = $descripcion;
     }
 
-    if($has_both)
+    if(@$has_both)
         $mid_content_width = TRUE;
+    else 
+        $mid_content_width = FALSE;
 
     // Si tiene datos le añadimos la correspondiente clase
     $multiple = $datos ? 'multiple' : '';
@@ -110,6 +112,7 @@ function imprimir_observaciones_ciclo($observaciones, $mid_width = FALSE) {
 
 }
 function imprimir_observaciones_familia($observaciones) {
+    if ($observaciones)
     foreach($observaciones as $obser) {
         echo "<div class='obs-familia'>$obser";
         echo "</div>";
@@ -118,7 +121,7 @@ function imprimir_observaciones_familia($observaciones) {
 }
 function get_observaciones($codigo, $tipo_dato) {
     global $obs;
-    $observaciones = $obs[$codigo][$tipo_dato];
+    @$observaciones = $obs[$codigo][$tipo_dato];
     return $observaciones;
 }
 

@@ -47,15 +47,13 @@
         <div id="page-body" class='back-white'>
             <div id="article-container">
                 <div class="article" >
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime ea sit a quod accusamus molestias alias assumenda nihil consequuntur asperiores praesentium, vel unde sunt voluptates quas sapiente quo cum?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam possimus quam dignissimos perferendis consequuntur? Reprehenderit, id quidem iusto voluptatum aspernatur quam, rerum ut asperiores repellendus eligendi deleniti eos. Expedita, nihil.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates rem eaque est voluptatem ratione placeat sed nemo alias officia unde iure animi, deserunt eum adipisci inventore officiis explicabo non ex.</p>
-            </div>
-            <div class="article">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, dicta praesentium dolores sunt voluptates incidunt earum culpa animi eos natus nesciunt tenetur, qui fugit at recusandae mollitia odit commodi temporibus.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet impedit iste accusantium, beatae porro pariatur nulla repellat reiciendis atque quaerat, error et, maxime qui. Sunt fuga odit dolore asperiores? Facilis!</p>
-            </div>
+                    <p>En el IEFPS. Elorrieta Erreka Mari estamos interesados en contactar con nuevas empresas dispuestas a acoger alumnos del ciclo superior de Desarrollo de Aplicaciones Web en su período de Formación en Centros de Trabajo.</p>
 
+                    <p>Dicho período de prácticas constituye para ellos un módulo (asignatura) más, que tiene su calificación en el expediente académico. Los alumnos se incorporan a la empresa durante un tiempo que totaliza 360 horas para poner en práctica los conocimientos adquiridos en el aula y tener una experiencia real de trabajo de campo.</p>
+
+                    <p>Habitualmente las horas de prácticas van repartidas en tres meses a partir de primeros de marzo, con jornadas semanales no superiores a 35 horas y diarias no superiores a 8. El horario se pacta entre el centro educativo y la empresa.</p>
+
+            </div>
             </div>
             <div class="mas-enlaces">
                 <p>Lorem cum dolore magni beatae veniam? Enim est consectetur aut eum saepe? Rerum nisi quam molestiae est repudiandae nostrum. Repudiandae facere suscipit nesciunt natus doloribus labore? Eveniet quidem officiis commodi.</p>
