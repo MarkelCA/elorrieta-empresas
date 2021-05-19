@@ -39,27 +39,49 @@
                 <!-- <img src="../src/img/top-view-person-writing-on-laptop-with-copy-space.jpg" alt="practicas-cover"> -->
                 <div id="descripcion-cover">
                     <h1>Prácticas</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores tenetur nihil perspiciatis culpa eum numquam architecto aut deserunt aliquid ab! Nisi, sint itaque. Atque distinctio quo veniam reprehenderit tenetur. Repudiandae?</p>
+                    <p>¡Encuentra talento joven! Obsérvales trabajar en tu empresa durante unos meses, prepálalos para tu modelo de negocio y fórmalos en tus tecnologías. Si quieres encontrar profesional cualificado y con ganas de trabajar es tu oportunidad perfecta.</p>
 
                 </div>
             </div>
 
-        <div id="page-body" class='back-white'>
+        <div class="page-section" class='back-white'>
+        <h3 class='section-subtitle'>Tus prácticas con Elorrieta:</h3>
             <div id="article-container">
                 <div class="article" >
                     <p>En el IEFPS. Elorrieta Erreka Mari estamos interesados en contactar con nuevas empresas dispuestas a acoger alumnos del ciclo superior de Desarrollo de Aplicaciones Web en su período de Formación en Centros de Trabajo.</p>
 
                     <p>Dicho período de prácticas constituye para ellos un módulo (asignatura) más, que tiene su calificación en el expediente académico. Los alumnos se incorporan a la empresa durante un tiempo que totaliza 360 horas para poner en práctica los conocimientos adquiridos en el aula y tener una experiencia real de trabajo de campo.</p>
 
+
+                </div>
+            </div>
+            
+    </div>
+
+        <div class="page-section" class='back-white'>
+        <h3 class='section-subtitle'>Horarios:</h3>
+            <div id="article-container">
+                <div class="article" >
                     <p>Habitualmente las horas de prácticas van repartidas en tres meses a partir de primeros de marzo, con jornadas semanales no superiores a 35 horas y diarias no superiores a 8. El horario se pacta entre el centro educativo y la empresa.</p>
+                </div>
+            </div>
+            
+    </div>
 
+    <div id="confian-en-nosotros">
+        <h3>Confían en nosotros: </h3>
+        <div id="empresas">
+            <div class="empresa">
+            <img src="../src/img/bikuma.png" alt="bikuma-logo">
             </div>
-            </div>
-            <div class="mas-enlaces">
-                <p>Lorem cum dolore magni beatae veniam? Enim est consectetur aut eum saepe? Rerum nisi quam molestiae est repudiandae nostrum. Repudiandae facere suscipit nesciunt natus doloribus labore? Eveniet quidem officiis commodi.</p>
-                <p>Ipsum dolorem modi aliquam porro mollitia. Dolorem voluptatibus est quos aliquam reprehenderit, quas. Id labore vel impedit quasi officia ad. Numquam ipsa molestiae quidem facere placeat Delectus dolorem harum sequi</p>
-            </div>
+        <div class="empresa">
+            <img src="../src/img/ELECNOR.png" alt="elecnor-logo">
+        </div>
+        <div class="empresa">
+            <img src="../src/img/bosonit-logo.png" alt="bosonit-logo">
+        </div>
 
+      </div>
     </div>
   <footer class="zone footer">
     
