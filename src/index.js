@@ -58,7 +58,7 @@ function mostrarCiclos() {
   $('#controles-ciclos').load('../ajax/cargar_controles_ciclos.php?cod_familia='+cod_familia);
   $('#container-ciclos').load('../ajax/imprimirCiclos.php?familia='+cod_familia, ciclosCargados);
 
-    console.log('kjkj')
+    //console.log('kjkj')
     $('#container-ciclos').css({
         height: 'auto',
     })
@@ -84,7 +84,7 @@ $('#clean-familia').click(clear);
          })
 
       function displayFamilias() {
-          console.log('displayyy familias')
+          //console.log('displayyy familias')
           $('#container-ciclos').html('');
           $('#controles-ciclos').html('');
 
@@ -123,9 +123,9 @@ function desplegar_info_ciclo(codigo) {
       let oldHeight = content.height();
       let oldPadding = content.css('padding');
 
-      console.log(oldHeight)
+      //console.log(oldPadding)
       let newHeight = oldHeight ? 0 : "auto";
-      let newPadding = oldPadding ? 0 : "auto";
+      let newPadding = oldPadding ? '.5em 1em' : 0;
 
       gsap.to(`.ciclo[cod=${codigo}] .ciclo-content`, 
           { 
@@ -144,6 +144,9 @@ function desplegar_info_ciclo(codigo) {
 }
 // Vuelve a cargar los event listeners cuando cambias de ciclo
 function ciclosCargados() {
+    $('html, body').animate({
+        scrollTop: $(".header").offset().top
+    }, 400);
   $('.ciclo.multiple').click(cargar_info_ciclo);
 
   // Si cambias de familia profesional
@@ -190,7 +193,7 @@ function cargar_info_ciclo() {
   });
 
 
-  $('.box').hover(function() {
+  $('.box, .empresa').hover(function() {
     animateCSS(this, 'pulse')
 
   })

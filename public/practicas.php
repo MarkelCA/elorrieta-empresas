@@ -12,8 +12,10 @@
     <script src="../src/dist/styles.js"></script>
     <script defer src="../src/dist/script.js"></script>
 
-  <title>Elorrieta Empresas</title>
+  <title>Prácticas | Elorrieta Empresas</title>
 
+
+    <?php require_once '../funciones.php';?>
 
 </head>
 
@@ -29,7 +31,7 @@
                     <li><a href="./">Inicio</a></li>
                     <li><a href="./ciclos.php">Ciclos</a></li>
                     <li><a href="#">Prácticas</a></li>
-                    <li><a href="#">Dual</a></li>
+                    <li><a href="./dual.php">Dual</a></li>
                     <li id='contacto'><a href="./contacto.php">Contacto</a></li>
                 </ul>
             </nav>
@@ -83,6 +85,14 @@
 
       </div>
     </div>
+
+        <div id="faq-container">
+        <h3 id='title-faq'>Preguntas frecuentes</h3>
+            <div id="faq">
+                <?php print_faq_box("FCT"); ?>
+            </div>
+        </div>
+
   <footer class="zone footer">
     
         <nav class="footer-menu">

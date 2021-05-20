@@ -29,7 +29,7 @@
                     <li><a href="./">Inicio</a></li>
                     <li><a href="./ciclos.php">Ciclos</a></li>
                     <li><a href="./practicas.php">Prácticas</a></li>
-                    <li><a href="#">Dual</a></li>
+                    <li><a href="./dual.php">Dual</a></li>
                     <li id='contacto'><a href="#">Contacto</a></li>
                 </ul>
             </nav>
@@ -51,7 +51,7 @@
                 <li><a href="./">Inicio</a></li>
                 <li><a href="./ciclos.php">Ciclos</a></li>
                 <li><a href="./practicas.php">Prácticas</a></li>
-                <li><a href="#">Dual</a></li>
+                <li><a href="./dual.php">Dual</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>

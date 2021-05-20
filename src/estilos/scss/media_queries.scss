@@ -56,8 +56,11 @@
 }
 
 @media screen and (max-width : 850px) { 
-    #practicas-cover #descripcion-cover {
-        font-size: 80%;
+    #practicas-cover, #dual-cover {
+        #descripcion-cover {
+            font-size: 80%;
+        }
+
     }
 }
 @media screen and (max-width : 850px) { 
@@ -89,14 +92,16 @@
         #contact-form {
             width: 90% !important;
         }
-    }
+    };
 
-    #practicas-cover #descripcion-cover {
-        padding-top: 2em;
-        font-size: 70%;
+    #practicas-cover, #dual-cover {
+        #descripcion-cover {
+            padding-top: 2em;
+            font-size: 70%;
+        }
     }
     .page-section {
-        flex-direction: column;
+        flex-direction: column !important;
         justify-content: center;
         width: 100% !important;
         #article-container {

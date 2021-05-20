@@ -202,7 +202,6 @@ function print_faq_box() {
 }
 function print_faq($category, $faq_category) {
     //global $faq;
-
     foreach($faq_category as $pregunta) {
         echo '<div>';
         echo "<h3 class='faq-type-title'>Modalidad: $category</h3>";

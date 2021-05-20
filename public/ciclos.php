@@ -13,7 +13,7 @@
     <script defer src="../src/dist/styles.js"></script>
     <script defer src="../src/dist/script.js"></script>
 
-    <title>Ciclos - Elorrieta Empresas</title>
+    <title>Ciclos | Elorrieta Empresas</title>
 
 
     <!--Funciones php-->
@@ -31,7 +31,7 @@
                 <li><a href="./">Inicio</a></li>
                 <li><a href="#">Ciclos</a></li>
                 <li><a href="./practicas.php">Prácticas</a></li>
-                <li><a href="#">Dual</a></li>
+                <li><a href="./dual.php">Dual</a></li>
                 <li id='contacto'><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
@@ -59,7 +59,7 @@
                 <li><a href="./">Inicio</a></li>
                 <li><a href="#">Ciclos</a></li>
                 <li><a href="./practicas.php">Prácticas</a></li>
-                <li><a href="#">Dual</a></li>
+                <li><a href="./dual.php">Dual</a></li>
                 <li><a href="./contacto.php">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>
