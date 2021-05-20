@@ -13,15 +13,17 @@ import 'slick-carousel/slick/slick-theme.scss'
 // Animate.css
 import "animate.css/animate.min.css";
 
+import gsap from "gsap";
+//import TweenMax from 'gsap/TweenMax'
+//require('gsap/ScrollTrigger')
+//gsap.registerPlugin(ScrollTrigger, Draggable, MotionPathPlugin); 
 
-
-const $ = require( "jquery" );
+window.$ = require( "jquery" );
 
 $(function() {
 
+    //gsap.to("#down-arrows", {duration: 6, opacity: 0.3});
   global_event_listeners();
-
-    
 
 function global_event_listeners() {
   // Boton del footer destinado a subir a la parte superior de la pagina
@@ -34,6 +36,8 @@ function global_event_listeners() {
 
   // Boton del cover del index destinado a bajar hasta las opciones principales
   $("#go-down").click(function() {
+
+
       $('html, body').animate({
           scrollTop: $("#main-options").offset().top
       }, 400);
@@ -54,21 +58,54 @@ function mostrarCiclos() {
   $('#controles-ciclos').load('../ajax/cargar_controles_ciclos.php?cod_familia='+cod_familia);
   $('#container-ciclos').load('../ajax/imprimirCiclos.php?familia='+cod_familia, ciclosCargados);
 
-
+    console.log('kjkj')
+    $('#container-ciclos').css({
+        height: 'auto',
+    })
   $('#container-familias').slideUp(300, function() {
       cleanCiclosFilters();
-      
   });
+
 }
 
 // Vuelve a la seleccion de familias en la pagina de ciclos
 function cleanCiclosFilters() {
 $('#clean-familia').click(clear);
   function clear() {
-      $('#container-familias').slideDown(400, function() {
+      const timeout = .4;
+
+      gsap.to('#container-ciclos',
+          {
+          height : 0,
+          padding : 0,
+          margin : 0,
+          onComplete: displayFamilias,
+          duration: timeout
+         })
+
+      function displayFamilias() {
+          console.log('displayyy familias')
           $('#container-ciclos').html('');
           $('#controles-ciclos').html('');
-      })
+
+          $('#container-familias').css({
+            display : 'grid',
+            //height : 0,
+            //padding : 0
+          })
+
+          //$('#container-ciclos').css({
+              //display : 'none',
+              //height : 'auto',
+          //})
+
+      //gsap.to('#conatiner-familias', 
+          //{ 
+              ////height: auto ,
+              ////padding: newPadding 
+
+          //});
+      }
   }
 };
 
@@ -76,7 +113,26 @@ $('#clean-familia').click(clear);
 function desplegar_info_ciclo(codigo) {
   const content = $(`.ciclo[cod=${codigo}] .ciclo-content`);
 
-      content.slideToggle(100);
+ if (content.css('display') === 'none')
+    content.css({
+        display : 'block',
+        height : 0,
+        padding : 0
+    })
+
+      let oldHeight = content.height();
+      let oldPadding = content.css('padding');
+
+      console.log(oldHeight)
+      let newHeight = oldHeight ? 0 : "auto";
+      let newPadding = oldPadding ? 0 : "auto";
+
+      gsap.to(`.ciclo[cod=${codigo}] .ciclo-content`, 
+          { 
+              height: newHeight ,
+              padding: newPadding 
+
+          });
 
   const icon = $(`.ciclo[cod=${codigo}] .dd-icon`)
 
