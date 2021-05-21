@@ -100,7 +100,7 @@
                 <li><a href="./">Inicio</a></li>
                 <li><a href="./ciclos.php">Ciclos</a></li>
                 <li><a href="#">Prácticas</a></li>
-                <li><a href="#">Dual</a></li>
+                <li><a href="./dual.php">Dual</a></li>
                 <li><a href="./contacto.php">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>

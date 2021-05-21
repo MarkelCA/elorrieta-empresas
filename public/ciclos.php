@@ -36,7 +36,7 @@
             </ul>
         </nav>
   </div>
-
+    <!--<h1 id='ciclos-title'>Qué se imparte en Elorrieta?</h1>-->
     <div id="container-familias" class='grid-wrapper'>
         <?php imprimirFamilias(); ?>
     </div>

@@ -41,33 +41,40 @@
                 <!-- <img src="../src/img/top-view-person-writing-on-laptop-with-copy-space.jpg" alt="practicas-cover"> -->
                 <div id="descripcion-cover">
                     <h1>Dual</h1>
-                    <p>¡Encuentra talento joven! Obsérvales trabajar en tu empresa durante unos meses, prepálalos para tu modelo de negocio y fórmalos en tus tecnologías. Si quieres encontrar profesional cualificado y con ganas de trabajar es tu oportunidad perfecta.</p>
+                    <p>En elorrieta apostamos por impulsar a los jóvenes a labrarse un futuro profesional mientras estudian. Es por ello que animamos a las empresas a confiar en una nueva generación de excelentes profesionales preparados. Sabemos que la frescura joven y el talento de nuestro alumnado aportará en tu empresa innovación, progreso y beneficio.</p>
 
                 </div>
             </div>
 
         <div class="page-section" class='back-white'>
-        <h3 class='section-subtitle'>Tus prácticas con Elorrieta:</h3>
+        <h3 class='section-subtitle'>Trabaja con nosotros:</h3>
             <div id="article-container">
                 <div class="article" >
-                    <p>En el IEFPS. Elorrieta Erreka Mari estamos interesados en contactar con nuevas empresas dispuestas a acoger alumnos del ciclo superior de Desarrollo de Aplicaciones Web en su período de Formación en Centros de Trabajo.</p>
-
-                    <p>Dicho período de prácticas constituye para ellos un módulo (asignatura) más, que tiene su calificación en el expediente académico. Los alumnos se incorporan a la empresa durante un tiempo que totaliza 360 horas para poner en práctica los conocimientos adquiridos en el aula y tener una experiencia real de trabajo de campo.</p>
-
-
+                    <p>Este es un programa en el que el alumno de segundo curso estudia y trabaja a la vez. Un caso típico en nuestra situación (turno de tarde) sería acudir a una empresa tres horas por las mañanas y al instituto por las tardes.</p>
+                    <p>Hay dos vías para formalizar esta situación: beca o contrato.</p>
                 </div>
             </div>
             
     </div>
 
         <div class="page-section" class='back-white'>
-        <h3 class='section-subtitle'>Horarios:</h3>
+        <h3 class='section-subtitle'>Beca:</h3>
             <div id="article-container">
                 <div class="article" >
-                    <p>Habitualmente las horas de prácticas van repartidas en tres meses a partir de primeros de marzo, con jornadas semanales no superiores a 35 horas y diarias no superiores a 8. El horario se pacta entre el centro educativo y la empresa.</p>
+                    <p>La beca no lleva aparejada subvención y el alumno cobra al menos un porcentaje del salario mínimo.</p>
+
                 </div>
             </div>
-            
+    </div>
+
+        <div class="page-section" class='back-white'>
+        <h3 class='section-subtitle'>Contrato:</h3>
+            <div id="article-container">
+                <div class="article" >
+                    <p>El contrato es de aprendizaje de los normales de lanbide. Hace falta que el alumno sea menor de 25 años y debe durar al menos un año. Lleva aparejada una subvención de unos 2.000.</p>
+
+                </div>
+            </div>
     </div>
 
     <div id="confian-en-nosotros">
@@ -89,7 +96,7 @@
         <div id="faq-container">
         <h3 id='title-faq'>Preguntas frecuentes</h3>
             <div id="faq">
-                <?php print_faq_box("FCT"); ?>
+                <?php print_faq_box("DUAL"); ?>
             </div>
         </div>
 
