@@ -7,7 +7,8 @@
     <meta name="author" content="Markel Cuesta" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
-    
+   
+
      <script src="../src/dist/styles.js"></script>
      <script defer src="../src/dist/script.js"></script>
 
@@ -28,10 +29,10 @@
                 <ul id="menu">
                 <li id='header-title'><a href="#"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
                 <li><a href="./">Inicio</a></li>
-                <li><a href="./ciclos.php">Ciclos</a></li>
-                <li><a href="./practicas.php">Prácticas</a></li>
-                <li><a href="./dual.php">Dual</a></li>
-                <li id='contacto'><a href="./contacto.php">Contacto</a></li>
+                <li><a href="./ciclos">Ciclos</a></li>
+                <li><a href="./practicas">Prácticas</a></li>
+                <li><a href="./dual">Dual</a></li>
+                <li id='contacto'><a href="./contacto">Contacto</a></li>
             </ul>
         </nav>
   </div>
@@ -40,7 +41,9 @@
     <div class="cover">
         <div id="cover-content">
             <h3>¿Buscas contratación?</h3>
-            <p>Elit eius labore alias quasi inventore. Soluta numquam atque delectus deserunt ipsa debitis Nulla voluptatum illo quas quod molestias Maiores sed error obcaecati dolorem molestias Omnis deleniti velit aperiam veritatis</p>
+            <p>Este es el portal web de Elorrieta-Errekamari destinado para las empresas. Aquí puedes encontrar alumnos para la realización de prácticas así como para formación dual o contratación para puestos de trabajo. 
+            </p>
+            <p>Si buscas talento joven y con ganas de trabajar este es tu sitio.</p>
             <a id='go-down'>
                 <div id="down-arrows">
                     <button class="desplazar-abajo"><i class="fas fa-angle-double-down"></i></button>
@@ -49,25 +52,25 @@
         </div>
     </div>
   <div id='main-options' class="zone orange grid-wrapper">
-	  <a href="./ciclos.php" class="box ">
+	  <a href="./ciclos" class="box ">
       <div >
             <!--<i id='ciclos-icon' class="fas fa-graduation-cap"></i>-->
           <img src="../src/img/svg/books.svg" alt="ciclos-icono">
           <h3>Ciclos</h3>
       </div>
     </a>
-    <a href="./practicas.php" class="box">
+    <a href="./practicas" class="box">
 	  <div >
           <img src="../src/img/svg/worker.svg" alt="practicas-icono">
           <h3>Prácticas</h3>
       </div>
     </a>
-    <a href="./dual.php" class="box">
+    <a href="./dual" class="box">
 	  <div><img src="../src/img/svg/employee.svg" alt="dual-icono">
           <h3>Formación Dual</h3>
       </div>
     </a>
-    <a href="./contacto.php" class="box">
+    <a href="./contacto" class="box">
 	  <div ><img src="../src/img/svg/phone-call.svg" alt="contacto-icono">
           <h3>Contacto</h3>
       </div>
@@ -80,9 +83,9 @@
             <ul class="menu">
                 <li><a href="./">Inicio</a></li>
                 <li><a href="./ciclos">Ciclos</a></li>
-                <li><a href="./practicas.php">Prácticas</a></li>
+                <li><a href="./practicas">Prácticas</a></li>
                 <li><a href="#">Dual</a></li>
-                <li><a href="./contacto.php">Contacto</a></li>
+                <li><a href="./contacto">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>
         </nav>

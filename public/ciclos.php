@@ -30,9 +30,9 @@
                 <li id='header-title'><a href="./"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
                 <li><a href="./">Inicio</a></li>
                 <li><a href="#">Ciclos</a></li>
-                <li><a href="./practicas.php">Prácticas</a></li>
-                <li><a href="./dual.php">Dual</a></li>
-                <li id='contacto'><a href="contacto.php">Contacto</a></li>
+                <li><a href="./practicas">Prácticas</a></li>
+                <li><a href="./dual">Dual</a></li>
+                <li id='contacto'><a href="contacto">Contacto</a></li>
             </ul>
         </nav>
   </div>
@@ -58,9 +58,9 @@
             <ul class="menu">
                 <li><a href="./">Inicio</a></li>
                 <li><a href="#">Ciclos</a></li>
-                <li><a href="./practicas.php">Prácticas</a></li>
-                <li><a href="./dual.php">Dual</a></li>
-                <li><a href="./contacto.php">Contacto</a></li>
+                <li><a href="./practicas">Prácticas</a></li>
+                <li><a href="./dual">Dual</a></li>
+                <li><a href="./contacto">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>
         </nav>

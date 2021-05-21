@@ -27,16 +27,16 @@
                     <ul id="menu">
                     <li id='header-title'><a href="./"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
                     <li><a href="./">Inicio</a></li>
-                    <li><a href="./ciclos.php">Ciclos</a></li>
-                    <li><a href="./practicas.php">Prácticas</a></li>
-                    <li><a href="./dual.php">Dual</a></li>
+                    <li><a href="./ciclos">Ciclos</a></li>
+                    <li><a href="./practicas">Prácticas</a></li>
+                    <li><a href="./dual">Dual</a></li>
                     <li id='contacto'><a href="#">Contacto</a></li>
                 </ul>
             </nav>
       </div>
         <div id="page-body">
             <h1 id="form-block-title">Contáctanos</h1>
-            <form id="contact-form" action="../ajax/mail.php" method="POST">
+            <form id="contact-form" action="../ajax/mail" method="POST">
                 <input type="text" id="input-nombre" name="nombre" placeholder="Nombre"><br>
                 <input type="text" id="input-email" name="email" placeholder = "Email"><br> <input type="text" id="input-tel" name="telefono" placeholder = "Teléfono"><br>
                 <textarea id="input-mensaje" name="mensaje" cols="30" rows="10" spellcheck="false" placeholder="Mensaje"></textarea>
@@ -49,9 +49,9 @@
         <nav class="footer-menu">
             <ul class="menu">
                 <li><a href="./">Inicio</a></li>
-                <li><a href="./ciclos.php">Ciclos</a></li>
-                <li><a href="./practicas.php">Prácticas</a></li>
-                <li><a href="./dual.php">Dual</a></li>
+                <li><a href="./ciclos">Ciclos</a></li>
+                <li><a href="./practicas">Prácticas</a></li>
+                <li><a href="./dual">Dual</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>
