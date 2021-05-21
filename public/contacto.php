@@ -5,7 +5,7 @@
     <meta name="description" content="La web de Elorrieta para las Empresas. Encuentra alumnos cualificados para FCT's prácticas remuneradas o para formación en el entorno empresarial."/>
     <meta name="keywords" content="empresa, practicas, ciclos, dual, FCT, Elorrieta"/>
     <meta name="author" content="Markel Cuesta" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
 
    
@@ -35,11 +35,23 @@
             </nav>
       </div>
         <div id="page-body">
+
+
+                <!-- 
+                    Formulario de contacto:
+                    Este formulario de contacto actúa como si fuese un formulario de Google
+                    Se ha replicado utilizando el formulario incrustado correspondiente de Google Forms
+                        - Se ha sustituido la propiedad 'action' de este formulario por el de Google
+                        - También se han sustituido los valores 'name' por los que llevaba el formulario de Google (que son campos ocultos)
+                -->
+
             <h1 id="form-block-title">Contáctanos</h1>
-            <form id="contact-form" action="../ajax/mail" method="POST">
-                <input type="text" id="input-nombre" name="nombre" placeholder="Nombre"><br>
-                <input type="text" id="input-email" name="email" placeholder = "Email"><br> <input type="text" id="input-tel" name="telefono" placeholder = "Teléfono"><br>
-                <textarea id="input-mensaje" name="mensaje" cols="30" rows="10" spellcheck="false" placeholder="Mensaje"></textarea>
+            <form id="contact-form"  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScQuzJQav9YIc_0t68bffrzrIFrSVqZ2BSKKMFg0d6K5eTkYg/formResponse?embedded=true" method="POST">
+                
+                <input type="text" name="entry.366340186"  id="input-nombre" name="nombre" placeholder="Nombre"><br>
+                <input type="text" name="entry.2119254591"  id="input-email" name="email" placeholder = "Email"><br>
+                <input type="text" name="entry.812076634" id="input-tel" name="telefono" placeholder = "Teléfono"><br>
+                <textarea id="input-mensaje" name="entry.1516524677" name="mensaje" cols="30" rows="10" spellcheck="false" placeholder="Mensaje"></textarea>
                 <input type="submit" name="submit" id='input-enviar' value= "Enviar"> 
                 
             </form>

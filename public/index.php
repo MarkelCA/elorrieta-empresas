@@ -8,10 +8,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
    
+    <!--<base href="http://localhost/elorrieta-empresas">-->
 
      <script src="../src/dist/styles.js"></script>
      <script defer src="../src/dist/script.js"></script>
-
 
   <title>Elorrieta Empresas</title>
 
