@@ -3,7 +3,7 @@ html#html-practicas {
         margin-top: 0rem;
     }
     h1{
-        color: orange;
+        color: #339437;
         text-transform: uppercase;
         text-align: center;
         font-size: 2em;
@@ -34,11 +34,12 @@ html#html-practicas {
     .page-section {
         width: 70%;
         display: flex;
+        color:#272727;
         margin: 1em auto;
         .section-subtitle {
             padding: .5em;
             width: 20%;
-            color: #ff5400;
+            color: #26802a;
         }
         #article-container {
             width: 80%;
@@ -57,13 +58,13 @@ html#html-practicas {
         }
     }   
     #confian-en-nosotros {
-        background-image: linear-gradient(180deg, #ff950e 0%, #ffa264 100%);
+        background-image: linear-gradient(180deg, #3cad41 0%, #a9ef92 100%);
         padding: 1em;
         h3 {
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: #2a3a3a;
+            color: #3a3a3a;
         }
         #empresas {
             display: flex;
@@ -89,6 +90,15 @@ html#html-practicas {
                     width: 70%;
                 }
             }
+        }
+    }
+    .footer-hr {
+        border: 1px solid #3cad41;
+    }
+
+    .credits, .freepik {
+        a {
+            color: #3cad41 !important;
         }
     }
 }
