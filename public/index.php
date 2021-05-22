@@ -5,27 +5,23 @@
     <meta name="description" content="La web de Elorrieta para las Empresas. Encuentra alumnos cualificados para FCT's prácticas remuneradas o para formación en el entorno empresarial."/>
     <meta name="keywords" content="empresa, practicas, ciclos, dual, FCT, Elorrieta"/>
     <meta name="author" content="Markel Cuesta" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/img/favicon-black.ico" />
+       
     <!--<base href="http://localhost/elorrieta-empresas">-->
 
-     <script src="../src/dist/styles.js"></script>
-     <script defer src="../src/dist/script.js"></script>
-
-  <title>Elorrieta Empresas</title>
-
-
+    <script src="../src/dist/styles.js"></script>
+    <script defer src="../src/dist/script.js"></script>
+    <title>Elorrieta Empresas</title>
 </head>
 
 <body>
-    <div id="index-container">
-    
+<div id="index-container">
+
     <div class="header zone">
         <nav class="mobile-menu">
         <label for="show-menu" class="show-menu"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas<div class="lines"></div></label>
             <input type="checkbox" id="show-menu">
-
                 <ul id="menu">
                 <li id='header-title'><a href="#"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
                 <li><a href="./">Inicio</a></li>
@@ -54,7 +50,7 @@
   <div id='main-options' class="zone orange grid-wrapper">
 	  <a href="./ciclos" class="box ">
       <div >
-            <!--<i id='ciclos-icon' class="fas fa-graduation-cap"></i>-->
+
           <img src="../src/img/svg/books.svg" alt="ciclos-icono">
           <h3>Ciclos</h3>
       </div>
@@ -78,7 +74,6 @@
   </div>
 
   <footer class="zone footer">
-    
         <nav class="footer-menu">
             <ul class="menu">
                 <li><a href="./">Inicio</a></li>

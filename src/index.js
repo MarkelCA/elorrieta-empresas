@@ -127,19 +127,28 @@ function desplegar_info_ciclo(codigo) {
       let newHeight = oldHeight ? 0 : "auto";
       let newPadding = oldPadding ? '.5em 1em' : 0;
 
+      const icon = $(`.ciclo[cod=${codigo}] .dd-icon`)
+
+      if(icon.hasClass('opened')){
+            icon.removeClass('opened');
+      }
+      else
+          icon.addClass('opened');
+
+
       gsap.to(`.ciclo[cod=${codigo}] .ciclo-content`, 
           { 
               height: newHeight ,
-              padding: newPadding 
-
+              padding: newPadding,
+              onComplete : hide_content
           });
 
-  const icon = $(`.ciclo[cod=${codigo}] .dd-icon`)
+    // Change to display none if its closing
+    function hide_content(){
+      if(!icon.hasClass('opened'))
+        content.css('display', 'none')
+    }
 
-  if(icon.hasClass('opened'))
-      icon.removeClass('opened');
-  else
-      icon.addClass('opened');
 
 }
 // Vuelve a cargar los event listeners cuando cambias de ciclo
@@ -147,13 +156,13 @@ function ciclosCargados() {
     $('html, body').animate({
         scrollTop: $(".header").offset().top
     }, 400);
-  $('.ciclo.multiple').click(cargar_info_ciclo);
+  $('.ciclo').click(cargar_info_ciclo);
 
   // Si cambias de familia profesional
   $('#select-familia').change(function() {
       const cod_familia = $(this).val();
       $('#container-ciclos').load('../ajax/imprimirCiclos.php?familia='+cod_familia, function() {
-          $('.ciclo.multiple').click(cargar_info_ciclo);
+          $('.ciclo').click(cargar_info_ciclo);
           cleanCiclosFilters();
       });
 
@@ -163,15 +172,47 @@ function ciclosCargados() {
 // Carga por ajax la información de un ciclo
 function cargar_info_ciclo() {
   const cod_ciclo = $(this).attr('cod');
-  const content_div = $(`.ciclo.multiple[cod=${cod_ciclo}]`).find('.ciclo-content');
+  const content_div = $(`.ciclo[cod=${cod_ciclo}]`).find('.ciclo-content');
 
   // Si el contenido está vacío, lo cargamos, sino simplemente desplegamos el contenido
   if(content_div.html() === '')
       content_div.load('../ajax/cargar_contenido_ciclo.php?cod_ciclo='+cod_ciclo, () => desplegar_info_ciclo(cod_ciclo) );
   else
       desplegar_info_ciclo(cod_ciclo);
+
+    const content_modulos = content_div.find('.content-modulos')
+    $('.btn-modulos').click(cargar_modulos);
+
+    
 }
 
+function cargar_modulos(e) {
+    const content_modulos = $(this).closest('.ciclo-content').find('.content-modulos')
+    const cod_ciclo = $(this).closest('.ciclo').attr('cod');
+
+  if(content_modulos.html() === '')
+    content_modulos.load('../ajax/cargar_contenido_modulos.php?cod_ciclo='+cod_ciclo, () => modulos_cargados(content_modulos))
+
+    else {
+            modulos_cargados(content_modulos)
+    }
+    // Stop Propagation para que no detecte el click en la caja de ciclos, tan solo lo haga en el botón de módulos
+    e.stopPropagation()
+}
+function modulos_cargados(content_modulos){
+    // Cerramos todas las ventanas abiertas actualmente para que no se acumulen
+    $('.content-modulos').css('display' ,'none')
+    // Abrimos la ventana de módulos actual
+    content_modulos.css('display' ,'block')
+    $('.content-modulos').click(close_module)
+
+    function close_module(e) {
+            $('.content-modulos').css('display','none')
+            // Para que no se propague el evento y se me cierre el ciclo
+            e.stopPropagation()
+    }
+
+}
   $('#faq').slick();
 
   const animateCSS = (node, animation, prefix = 'animate__') =>

@@ -1,13 +1,18 @@
 <?php
+
 require_once '../datos/datos.php';
 require_once '../datos/faq.php';
 require_once '../datos/observaciones.php';
 
+/*
+ * Función que imprime las cajas de familia profesional de la página /ciclos
+ */
 function imprimirFamilias() {
     global $ciclo;
     global $familia;
 
-    foreach( $ciclo as $familia_ciclo => $ciclo ){
+    foreach( $ciclo as $familia_ciclo => $ciclo )
+    { 
         echo "<a class='box'>\n";
         echo "<div codigo_familia='$familia_ciclo' class='familia'>\n";
         echo "<img alt='imagen-familia' src='{$familia[$familia_ciclo]['img']}' />\n";
@@ -19,8 +24,12 @@ function imprimirFamilias() {
 function ciclo_es_medio($ciclo) {
     return strtolower($ciclo['tipo']) === 'medio';
 }
+
+/*
+ * Buscamos datos adicionales del ciclo (observaciones, descripcion, temario)
+ */
 function imprimir_datos_ciclo($ciclo) 
-{// Buscamos datos adicionales del ciclo
+{
     $datos = [];
     $cod_ciclo = $ciclo['codigo'];
     $observaciones = get_observaciones($cod_ciclo, 'observaciones');
@@ -50,21 +59,15 @@ function imprimir_datos_ciclo($ciclo)
     else 
         $mid_content_width = FALSE;
 
-    // Si tiene datos le añadimos la correspondiente clase
-    $multiple = $datos ? 'multiple' : '';
-    echo "<div cod='$ciclo[codigo]' class='ciclo $multiple'>";
+    echo "<div cod='$ciclo[codigo]' class='ciclo'>";
 
     // Si tiene datos le añade el icono del drop-down.
-    $icono_drop_down = $datos ? "<span class='dd-icon'><i class='fas fa-sort-down'></i></span>" : '' ;
-    echo "<li class='ciclo-title'>$ciclo[nombre]:<span class='horas-ciclo'>$ciclo[horas] horas.</span>$icono_drop_down</li>";
+    echo "<li class='ciclo-title'>$ciclo[nombre]:<span class='horas-ciclo'>$ciclo[horas] horas.</span>";
+    echo "<span class='dd-icon'><i class='fas fa-sort-down'></i></span>";
+    echo "</li>";
 
-    // Si no tiene datos cierro el tag de ciclos y salgo del metodo
-    if (!$datos){
-        echo '</div>'; // .ciclo
-        return;
-    }
-        //Contenido adicional del ciclo
-        echo "<div class='ciclo-content'>";
+    //Contenido adicional del ciclo
+    echo "<div class='ciclo-content'>";
 
     // Imprimimos las observaciones (Si además tiene temario su anchura será la mitad)
     if($has_observaciones)
@@ -77,8 +80,27 @@ function imprimir_datos_ciclo($ciclo)
     if($has_descripcion)
         imprimir_descripcion_ciclo($descripcion, $mid_content_width);
 
+    echo "<button class='btn-modulos'><h3>Módulos</h3></button>";
+
+    echo "<div class='content-modulos'></div>";
         echo '</div>'; // .ciclo-content
     echo '</div>'; // .ciclo
+
+}
+function cargar_modulos($ciclo) {
+    global $modulos;
+    $modulos = $modulos[$ciclo];
+    echo "<h3 class='title-modulos'>Módulos</h3>";
+    $modulos_primero = $modulos['primero'];
+    var_dump($modulos_primero);
+    echo "<ul class='list-modulos-primero'>";
+    foreach($modulos_primero as $modulo){
+        echo "<li class='modulo'>";
+        echo "<p>$modulo[nombre]</p>";
+        echo "</li>";
+    }
+    echo "</ul>";
+    //var_dump($modulos[$ciclo]);
 
 }
 function imprimir_descripcion_ciclo($descripcion) {

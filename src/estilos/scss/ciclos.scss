@@ -60,9 +60,9 @@
         padding: 0;
     }
     .ciclo {
-        &.multiple {
+        //&.multiple {
             cursor: pointer;
-        }
+        //}
         margin: 0 auto;
         padding: 1em;
         width: 100%;
@@ -77,6 +77,17 @@
             padding: .5em 1em;
             padding-left: 2em;
             overflow: hidden;
+
+            .content-modulos {
+                display: none;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                padding: 1em;
+                width: 100%;
+                background-color: #000000b8;
+                top: 50%;
+            }
         }
         li.ciclo-title {
             padding-left: 2em;
