@@ -100,20 +100,56 @@ function imprimir_datos_ciclo($ciclo)
     echo '</div>'; // .ciclo
 
 }
-function cargar_modulos($ciclo) {
+function get_ciclo($cod_ciclo) {
+    global $ciclo;
+
+    foreach($ciclo as $familia)
+        foreach($familia as $ciclo_actual)
+        if($ciclo_actual['codigo'] === $cod_ciclo)
+            return $ciclo_actual;
+}
+
+function cargar_modulos($cod_ciclo) {
     global $modulos;
-    $modulos = $modulos[$ciclo];
-    echo "<h3 class='title-modulos'>Módulos</h3>";
+    global $ciclo;
+    $ciclo = get_ciclo($cod_ciclo);
+
+    $nombre_ciclo = $ciclo['nombre'];
+    $modulos = $modulos[$cod_ciclo];
+    echo '<div><i class="close-modulos fas fa-times"></i></div>';
+    echo "<h3 class='title-modulos'>$nombre_ciclo</h3>";
     $modulos_primero = $modulos['primero'];
-    var_dump($modulos_primero);
-    echo "<ul class='list-modulos-primero'>";
+    $modulos_segundo = $modulos['segundo'];
+
+    // Primer Curso
+    echo "<h4><span class='primero-segundo'>Primero:</span></h4>";
+    echo "<table class='table-modulos-primero'>";
+    echo "<tr class='cabecera'>
+        <th>Ciclo</th>
+        <th>Horas</th>
+    </tr>";
     foreach($modulos_primero as $modulo){
-        echo "<li class='modulo'>";
-        echo "<p>$modulo[nombre]</p>";
-        echo "</li>";
+        echo "<tr cod='$modulo[codigo]' class='modulo'>";
+        echo "<td>$modulo[nombre] </td>";
+        echo "<td class='horas-modulo'>$modulo[horas] h</td>";
+        echo "</tr>";
     }
-    echo "</ul>";
-    //var_dump($modulos[$ciclo]);
+    echo "</table>";
+
+    // Segundo Curso
+    echo "<h4><span class='primero-segundo'>Segundo:</span></h4>";
+    echo "<table class='table-modulos-segundo'>";
+    echo "<tr class='cabecera'>
+        <th>Ciclo</th>
+        <th>Horas</th>
+    </tr>";
+    foreach($modulos_segundo as $modulo){
+        echo "<tr cod='$modulo[codigo]' class='modulo'>";
+        echo "<td>$modulo[nombre] </td>";
+        echo "<td class='horas-modulo'>$modulo[horas] h</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
 
 }
 function imprimir_descripcion_ciclo($descripcion) {

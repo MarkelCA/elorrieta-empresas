@@ -215,7 +215,7 @@ function modulos_cargados(content_modulos){
     $('.content-modulos').css('display' ,'none')
     // Abrimos la ventana de módulos actual
     content_modulos.css('display' ,'block')
-    $('.content-modulos').click(close_module)
+    $('.content-modulos').find('.close-modulos').click(close_module)
 
     function close_module(e) {
             $('.content-modulos').css('display','none')

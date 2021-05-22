@@ -77,16 +77,84 @@
             padding: .5em 1em;
             padding-left: 2em;
             overflow: hidden;
+            .btn-modulos {
+                margin-top: 2em;
+                width: 100%;
+                border: none;
+                color: white;
+                border-bottom: 1px solid orange;
+                border-top: 1px solid orange;
+                background-color: rgba(0,0,0, 0.32);
+                &:not(.cabecera):hover {
+                    background-color: rgb(255 176 0 / 25%);
+                    cursor: pointer;
+                }
+            }
 
             .content-modulos {
                 display: none;
                 left: 50%;
                 position: absolute;
+                z-index: 1000000;
                 transform: translate(-50%, -50%);
                 padding: 1em;
                 width: 100%;
                 background-color: #000000b8;
                 top: 50%;
+                cursor: default; 
+
+                .title-modulos {
+                    text-align: center;
+                    font-size: 1.4em;
+                    padding: .5em;
+                    border-bottom: 1px solid orange;
+                }
+                h4 {
+                    text-align: center;
+                }
+                .table-modulos-primero, .table-modulos-segundo {
+                    width: 90%;
+                    margin: 0 auto;
+                    border-collapse: collapse;
+                    tr {
+                        margin: .5em;
+                        &:hover {
+                        background-color: rgba(255,255,255, 0.25);
+                        }
+                        td,th {
+                            padding: .5em;
+                            text-align: left;
+                            &:nth-child(2) {
+                                width: 14%;
+                                text-align: right;
+                            }
+                        }
+                    }
+                    .primero-segundo {
+                        font-size: 1.1em;
+                        border-left: 1px solid orange;
+                        padding: 0 .5em;
+                    }
+                    .horas-modulo {
+                        color: orange;
+                        font-size: 1.1em;
+                }
+                }
+                .close-modulos {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 15px;
+                    width: 30px;
+                    margin-left: auto;
+                    color: red;
+                    font-size: 1.2em;
+                    display: block;
+                    transition: all, .2s;
+                    &:hover {
+                        color: #ff7070;
+                        font-size: 1.4em;
+                    }
+                }
             }
         }
         li.ciclo-title {
