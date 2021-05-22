@@ -59,12 +59,25 @@ function imprimir_datos_ciclo($ciclo)
     else 
         $mid_content_width = FALSE;
 
-    echo "<div cod='$ciclo[codigo]' class='ciclo'>";
+
+    // Si tiene datos le añadimos la correspondiente clase
+    $multiple = $datos ? 'multiple' : '';
+    echo "<div cod='$ciclo[codigo]' class='ciclo $multiple'>";
 
     // Si tiene datos le añade el icono del drop-down.
-    echo "<li class='ciclo-title'>$ciclo[nombre]:<span class='horas-ciclo'>$ciclo[horas] horas.</span>";
-    echo "<span class='dd-icon'><i class='fas fa-sort-down'></i></span>";
-    echo "</li>";
+    $icono_drop_down = $datos ? "<span class='dd-icon'><i class='fas fa-sort-down'></i></span>" : '' ;
+    echo "<li class='ciclo-title'>$ciclo[nombre]:<span class='horas-ciclo'>$ciclo[horas] horas.</span>$icono_drop_down</li>";
+
+
+    // Si no tiene datos creo el div contenido y el de modulos, cierro el tag de ciclos y salgo del metodo
+    if (!$datos){
+        // Le añadimos el display block para que no de problemas al abrir los módulos
+        echo "<div class='ciclo-content' style='display:block'>";
+                echo "<div class='content-modulos'></div>";
+            echo "</div>"; // ciclo-content
+        echo '</div>'; // .ciclo
+        return;
+    }
 
     //Contenido adicional del ciclo
     echo "<div class='ciclo-content'>";

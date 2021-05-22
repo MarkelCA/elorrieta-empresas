@@ -53,6 +53,7 @@ function global_event_listeners() {
 
 //Recoje un código y carga el ciclo por ajax
 function mostrarCiclos() {
+
   const cod_familia = $(this).find('.familia').attr('codigo_familia');
 
   $('#controles-ciclos').load('../ajax/cargar_controles_ciclos.php?cod_familia='+cod_familia);
@@ -170,7 +171,14 @@ function ciclosCargados() {
 }
 
 // Carga por ajax la información de un ciclo
-function cargar_info_ciclo() {
+function cargar_info_ciclo(e) {
+  // Si no tiene datos adicionales desplegamos los módulos
+  if(!$(this).hasClass('multiple')){
+      // Le paso el evento click del padre para saber de dónde viene
+      cargar_modulos(e)
+      return
+  }
+
   const cod_ciclo = $(this).attr('cod');
   const content_div = $(`.ciclo[cod=${cod_ciclo}]`).find('.ciclo-content');
 
@@ -187,8 +195,9 @@ function cargar_info_ciclo() {
 }
 
 function cargar_modulos(e) {
-    const content_modulos = $(this).closest('.ciclo-content').find('.content-modulos')
-    const cod_ciclo = $(this).closest('.ciclo').attr('cod');
+    const src = $(e.target)
+    const content_modulos = src.closest('.ciclo').find('.content-modulos')
+    const cod_ciclo = src.closest('.ciclo').attr('cod') || src.attr('cod');
 
   if(content_modulos.html() === '')
     content_modulos.load('../ajax/cargar_contenido_modulos.php?cod_ciclo='+cod_ciclo, () => modulos_cargados(content_modulos))
@@ -197,7 +206,9 @@ function cargar_modulos(e) {
             modulos_cargados(content_modulos)
     }
     // Stop Propagation para que no detecte el click en la caja de ciclos, tan solo lo haga en el botón de módulos
-    e.stopPropagation()
+    // El Stop Prapagation solo se aplicara cuando venga del boton de modulos (si tiene e, event)
+    if(e)
+        e.stopPropagation()
 }
 function modulos_cargados(content_modulos){
     // Cerramos todas las ventanas abiertas actualmente para que no se acumulen
