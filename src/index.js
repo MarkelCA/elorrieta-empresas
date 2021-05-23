@@ -59,7 +59,6 @@ function mostrarCiclos() {
   $('#controles-ciclos').load('../ajax/cargar_controles_ciclos.php?cod_familia='+cod_familia);
   $('#container-ciclos').load('../ajax/imprimirCiclos.php?familia='+cod_familia, ciclosCargados);
 
-    //console.log('kjkj')
     $('#container-ciclos').css({
         height: 'auto',
     })
@@ -85,7 +84,6 @@ $('#clean-familia').click(clear);
          })
 
       function displayFamilias() {
-          //console.log('displayyy familias')
           $('#container-ciclos').html('');
           $('#controles-ciclos').html('');
 
@@ -124,7 +122,6 @@ function desplegar_info_ciclo(codigo) {
       let oldHeight = content.height();
       let oldPadding = content.css('padding');
 
-      //console.log(oldPadding)
       let newHeight = oldHeight ? 0 : "auto";
       let newPadding = oldPadding ? '.5em 1em' : 0;
 
@@ -157,7 +154,6 @@ function ciclosCargados() {
     $('html, body').animate({
         scrollTop: $(".header").offset().top
     }, 400);
-
   $('.ciclo').click(cargar_info_ciclo);
 
   // Si cambias de familia profesional
@@ -181,38 +177,17 @@ function cargar_info_ciclo(e) {
   }
 
   const cod_ciclo = $(this).attr('cod');
-  const content_div = $(`.ciclo[cod=${cod_ciclo}]`).find('.ciclo-content');
+  const content_div = $(`.ciclo[cod=${cod_ciclo}]`).find('.ciclo-content')
 
-
-    // Si el click viene de el content-modulos, no quiero cerrar el desplegable de ciclos
-    const is_in_content_modulos = $(e.target).closest('.content-modulos').length
-    console.log(is_in_content_modulos)
-
-    const target_btn_modulos = $(e.target).closest('.btn-modulos').length
-    console.log(target_btn_modulos)
-    // Si el evento no viene de conten modulos y su origen no es el boton de modulos
-    if(!is_in_content_modulos && !target_btn_modulos) {
-
-      // Si el contenido está vacío, lo cargamos, sino simplemente desplegamos el contenido
-      if(content_div.html() === '')
-          content_div.load('../ajax/cargar_contenido_ciclo.php?cod_ciclo='+cod_ciclo, () => desplegar_info_ciclo(cod_ciclo) );
-      else
-          desplegar_info_ciclo(cod_ciclo);
-
-    }
-    else {
-        if(target_btn_modulos){
-            console.log('fdf')
-            cargar_modulos(e)
-        }
-        else
-            $('.btn-modulos').click(e,cargar_modulos);
-    }
+  // Si el contenido está vacío, lo cargamos, sino simplemente desplegamos el contenido
+  if(content_div.html() === '')
+      content_div.load('../ajax/cargar_contenido_ciclo.php?cod_ciclo='+cod_ciclo, () => desplegar_info_ciclo(cod_ciclo) );
+  else
+      desplegar_info_ciclo(cod_ciclo);
 
     //const content_modulos = content_div.find('.content-modulos')
-
-
-
+    // Si no esta abierto cargamos los modulos
+    $('.btn-modulos').click(cargar_modulos);
 
     
 }
@@ -223,29 +198,47 @@ function cargar_modulos(e) {
     const cod_ciclo = src.closest('.ciclo').attr('cod') || src.attr('cod');
 
   if(content_modulos.html() === '')
-    content_modulos.load('../ajax/cargar_contenido_modulos.php?cod_ciclo='+cod_ciclo, () => modulos_cargados(content_modulos))
-
-    else {
-            modulos_cargados(content_modulos)
-    }
+    content_modulos.load('../ajax/cargar_contenido_modulos.php?cod_ciclo='+cod_ciclo, function(){
+        modulos_cargados(content_modulos)
+    })
+    else
+        modulos_cargados(content_modulos)
     // Stop Propagation para que no detecte el click en la caja de ciclos, tan solo lo haga en el botón de módulos
     // El Stop Prapagation solo se aplicara cuando venga del boton de modulos (si tiene e, event)
     if(e)
         e.stopPropagation()
 }
 function modulos_cargados(content_modulos){
+    // Si hemos hecho click sobre content-modulos no propagamos el evento (para que no se cierre el dialog) 
+    // y si es sobre la equis cerramos la ventana
+    $('.content-modulos').click(function(e) {
+        if($(e.target).closest('.close-modulos').length)
+            close_module(e)
+
+        e.stopPropagation()
+    })
+
     // Cerramos todas las ventanas abiertas actualmente para que no se acumulen
     $('.content-modulos').css('display' ,'none')
     // Abrimos la ventana de módulos actual
     content_modulos.css('display' ,'block')
+    $('.content-modulos').addClass('opened')
 
-    $('.content-modulos').find('.close-modulos').click(close_module)
 
+    // Si hacemos click fuera mientras está abierta la pantalla de módulos, la cerramos 
+    // (solo si la ventana esta abierta)
+    if($('.content-modulos').hasClass('opened'))
+    $('body').click(function(e) {
+        if($('.content-modulos').hasClass('opened')){
+            close_module(e)
+        }
+    })
 }
+
 function close_module(e) {
         $('.content-modulos').css('display','none')
+        $('.content-modulos').removeClass('opened')
         // Para que no se propague el evento y se me cierre el ciclo
-    console.log('closing')
         e.stopPropagation()
 }
   $('#faq').slick();

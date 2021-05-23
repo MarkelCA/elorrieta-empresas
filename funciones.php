@@ -93,7 +93,7 @@ function imprimir_datos_ciclo($ciclo)
     if($has_descripcion)
         imprimir_descripcion_ciclo($descripcion, $mid_content_width);
 
-    echo "<button class='btn-modulos'><h3>Módulos</h3></button>";
+    echo "<button class='btn-modulos'><h3><i class='fas fa-book-open'></i> Módulos</h3></button>";
 
     echo "<div class='content-modulos'></div>";
         echo '</div>'; // .ciclo-content

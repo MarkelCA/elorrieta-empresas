@@ -1,6 +1,6 @@
 #ciclos-title {
     text-align: center;
-    background: #00000052;
+    background: rgba(0,0,0, 0.32);
     text-transform: uppercase;
     border-radius: 20px 20px 0 0;
     color: orange;
@@ -89,20 +89,31 @@
                     background-color: rgb(255 176 0 / 25%);
                     cursor: pointer;
                 }
+                h3{
+                    text-transform: uppercase ;
+                    font-weight: 100;
+                    letter-spacing: 1px;
+                }
             }
 
             .content-modulos {
                 display: none;
+                &.opened {
+                    display: block;
+                }
                 left: 50%;
                 position: absolute;
                 z-index: 1000000;
                 transform: translate(-50%, -50%);
                 padding: 1em;
                 width: 100%;
-                background-color: #000000b8;
+                height: 85vh;
+                overflow: auto;
+                background-color:rgba(0,0,0, 0.92);
                 top: 50%;
                 cursor: default; 
-
+                scrollbar-color: orange;        
+                
                 .title-modulos {
                     text-align: center;
                     font-size: 1.4em;
@@ -127,7 +138,7 @@
                             padding: .5em;
                             text-align: left;
                             &:nth-child(2) {
-                                width: 16%;
+                                width: 20%;
                                 text-align: right;
                             }
                         }
