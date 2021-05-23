@@ -125,8 +125,8 @@ function cargar_modulos($cod_ciclo) {
     echo "<h4><span class='primero-segundo'>Primero:</span></h4>";
     echo "<table class='table-modulos-primero'>";
     echo "<tr class='cabecera'>
-        <th>Ciclo</th>
-        <th>Horas</th>
+        <th><i class='fas fa-book-open'></i> Módulo</th>
+        <th><i class='fas fa-clock'></i> Horas</th>
     </tr>";
     foreach($modulos_primero as $modulo){
         echo "<tr cod='$modulo[codigo]' class='modulo'>";
@@ -140,8 +140,8 @@ function cargar_modulos($cod_ciclo) {
     echo "<h4><span class='primero-segundo'>Segundo:</span></h4>";
     echo "<table class='table-modulos-segundo'>";
     echo "<tr class='cabecera'>
-        <th>Ciclo</th>
-        <th>Horas</th>
+        <th><i class='fas fa-book-open'></i> Módulo</th>
+        <th><i class='fas fa-clock'></i> Horas</th>
     </tr>";
     foreach($modulos_segundo as $modulo){
         echo "<tr cod='$modulo[codigo]' class='modulo'>";

@@ -39,6 +39,11 @@ $obs['ADAD3']['descripcion']='Dolor assumenda iure cupiditate natus vero? Dolore
 $obs['INDW3']['observaciones'][]='Este ciclo se imparte en turno de tarde';
 /////////////////////////////////////////////////
 $obs['INAR3']['observaciones'][]='Este ciclo se imparte en trilingüe en turno de mañana y en castellano en turno de tarde';
+////////////////////////////////////////////////
+$obs['CMAC2']['observaciones'][]='Observacion de test 1';
+$obs['CMAC2']['temario'][]='Temario de test 1';
+////////////////////////////////////////////////
+$obs['CMCI3']['descripcion'][]='Descripcion de test 1';
 /*
 Observación a nivel de módulo
 */

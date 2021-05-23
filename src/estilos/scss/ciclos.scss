@@ -119,13 +119,15 @@
                     tr {
                         margin: .5em;
                         &:hover {
-                        background-color: rgba(255,255,255, 0.25);
+                            &:not(.cabecera) {
+                            background-color: rgba(255,255,255, 0.25);
+                            }
                         }
                         td,th {
                             padding: .5em;
                             text-align: left;
                             &:nth-child(2) {
-                                width: 14%;
+                                width: 16%;
                                 text-align: right;
                             }
                         }
