@@ -1,0 +1,303 @@
+#ciclos-title {
+    text-align: center;
+    background: rgba(0,0,0, 0.32);
+    text-transform: uppercase;
+    border-radius: 20px 20px 0 0;
+    color: orange;
+    padding: .5em;
+    border-bottom: 1px solid orange;
+    margin: auto 1.0em;
+}
+.container-familias {
+    overflow: hidden;
+    background-color: rgba(0,0,0, 0.25);
+    margin-top: 15vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    .familia {
+        //height: 100px;
+        h3 {
+            //font-size: 1em;
+            overflow: visible;
+            font-size: 1em;
+        }
+        text-align: left;
+        img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+    }
+}
+#container-with-controles {
+    width: 80%;
+    margin: 0em auto;
+    position: relative;
+    top: 30px;
+
+}
+#container-ciclos {
+    overflow: hidden;
+        #clean-familia {
+            background-color: rgba(255, 0, 0, 0.5);
+            border: none;
+            padding: 1em;
+            font-size: 1.2em;
+            //background-color: transparent;
+            display: block;
+            width: 100%;
+            color: white;
+            margin: 0 auto;
+            transition: background-color, .4s;
+            &:hover {
+                background-color: rgba(243, 129, 0, 0.8);
+            }
+        }
+    ul.ciclos-list {
+        margin: 0;
+        padding: 0;
+    }
+    .ciclo {
+        //&.multiple {
+            cursor: pointer;
+        //}
+        margin: 0 auto;
+        padding: 1em;
+        width: 100%;
+        &:not(:last-of-type){
+            border-bottom: 1px solid white;
+        }
+        &:hover {
+            background-color: rgba(255, 234, 196, 0.27);
+        }
+        .ciclo-content {
+            display: none;
+            padding: .5em 1em;
+            padding-left: 2em;
+            overflow: hidden;
+            .btn-modulos {
+                margin-top: 2em;
+                width: 100%;
+                border: none;
+                color: white;
+                border-bottom: 1px solid orange;
+                border-top: 1px solid orange;
+                background-color: rgba(0,0,0, 0.32);
+                &:not(.cabecera):hover {
+                    background-color: rgb(255 176 0 / 25%);
+                    cursor: pointer;
+                }
+                h3{
+                    text-transform: uppercase ;
+                    font-weight: 100;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .content-modulos {
+                display: none;
+                &.opened {
+                    display: block;
+                }
+                left: 50%;
+                position: absolute;
+                z-index: 1000000;
+                transform: translate(-50%, -50%);
+                padding: 1em;
+                width: 100%;
+                height: 85vh;
+                overflow: auto;
+                background-color:rgba(0,0,0, 0.92);
+                top: 50%;
+                cursor: default; 
+                scrollbar-color: orange;        
+                
+                .title-modulos {
+                    text-align: center;
+                    font-size: 1.4em;
+                    padding: .5em;
+                    border-bottom: 1px solid orange;
+                }
+                h4 {
+                    text-align: center;
+                }
+                .table-modulos-primero, .table-modulos-segundo {
+                    width: 90%;
+                    margin: 0 auto;
+                    border-collapse: collapse;
+                    tr {
+                        margin: .5em;
+                        &:hover {
+                            &:not(.cabecera) {
+                            background-color: rgba(255,255,255, 0.25);
+                            }
+                        }
+                        td,th {
+                            padding: .5em;
+                            text-align: left;
+                            &:nth-child(2) {
+                                width: 20%;
+                                text-align: right;
+                            }
+                            .obs-modulo {
+                                color: #585858;
+                                font-style: italic;
+                            }
+                        }
+                    }
+                    .primero-segundo {
+                        font-size: 1.1em;
+                        border-left: 1px solid orange;
+                        padding: 0 .5em;
+                    }
+                    .horas-modulo {
+                        color: orange;
+                        font-size: 1.1em;
+                }
+                }
+                .close-modulos {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 15px;
+                    width: 30px;
+                    margin-left: auto;
+                    color: red;
+                    font-size: 1.2em;
+                    display: block;
+                    transition: all, .2s;
+                    &:hover {
+                        color: #ff7070;
+                        font-size: 1.4em;
+                    }
+                }
+            }
+        }
+        li.ciclo-title {
+            padding-left: 2em;
+            background: url("../../img/svg/ciclos-icon.png") no-repeat left top;
+            list-style-type: none;
+            background-size: 20px 20px;
+
+            line-height: 1.7em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0 auto;
+            .fa-graduation-cap {
+                margin-right: 1em;
+            }
+            .horas-ciclo {
+                color: orange;
+                margin-left: 1em;
+            }
+            .dd-icon {
+                font-weight: bold;
+                display: block;
+                width: fit-content;
+                float:right;
+                margin-left: auto;
+                transform: rotate(-90deg);
+                transition: all, .3s;
+                &.opened {
+                    transform : rotate(0);
+                }
+            }
+        }
+        .obs-title, .des-title, .tem-title {
+            font-weight: bold;
+        }
+        .mid-width {
+            float: left;
+            width: 50%;
+        }
+        .obs-list, .tem-list {
+            list-style-type: square;
+            li {
+                margin: .7em 0;
+            }
+        }
+        .descripcion {
+            margin-top: 1.5em;
+            clear: both;
+            position: relative;
+            top: 1.5em;
+            text-align: justify;
+
+        }
+    }
+}
+#controles-ciclos {
+    #select-familia {
+        border:none;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url("../../img/svg/method-draw-image.svg");
+        background-size: 100px 70px;
+        background-repeat: no-repeat;
+        background-position: 95% 50% ;
+        //background-color: transparent;
+        width: 100%;
+        margin: 0 auto;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        font-size: 2rem;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        color: white;
+        transition: border, .4s;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        &:hover {
+            border: 1px solid white;
+        }
+    }
+
+}
+#lista-ciclos {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin: 0em auto;
+
+    .obs-familia {
+        font-size: 1.2em;
+        text-align: center;
+        font-style: italic;
+        padding: .5em;
+    }
+        .familia-logo {
+            margin: 0 auto;
+            width: 100px;
+            //display:inline-block;
+            text-align: right;
+
+            .thumb-familia {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    h2{
+        text-align: center;
+    }
+
+    #ciclos_medios, #ciclos_superiores {
+        padding: .5em;
+    }
+    .title-superiores, .title-medios {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+}
+#ciclos-icon {
+	font-size: 10rem;
+}

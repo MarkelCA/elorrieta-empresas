@@ -1,0 +1,100 @@
+html#html-practicas {
+    #container {
+        margin-top: 0rem;
+    }
+    h1{
+        color: #339437;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #practicas-cover {
+        width: 100%;
+        height: 55vh;
+        background-position: 50% 33%;
+        background-image: url('../../img/resized/top-view-person-writing-on-laptop-with-copy-space.jpg');
+        background-size: cover;
+        padding: 1em 0;
+        display: flex;
+        align-items: center;
+
+        #descripcion-cover {
+            width: 45%;
+            margin-top: 2em;
+            margin-left: auto;
+            margin-right: 5em;
+            p{
+                text-align: justify;
+                line-height: 150%;
+            }
+        }
+    }
+
+    .page-section {
+        width: 70%;
+        display: flex;
+        color:#272727;
+        margin: 1em auto;
+        .section-subtitle {
+            padding: .5em;
+            width: 20%;
+            color: #26802a;
+        }
+        #article-container {
+            width: 80%;
+            .article {
+                width: 85%;
+                text-align: justify;
+                margin: 2em auto; 
+                &:not(:first-of-type) {
+                    margin: 2em auto; 
+                }
+            }
+        }
+        .mas-enlaces{
+            width: 30%;
+            text-align: justify;
+        }
+    }   
+    #confian-en-nosotros {
+        background-image: linear-gradient(180deg, #3cad41 0%, #a9ef92 100%);
+        padding: 1em;
+        h3 {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #3a3a3a;
+        }
+        #empresas {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width:  80%;
+            margin:  0 auto;
+            .empresa {
+                cursor: pointer;
+                background-color: white;
+                height: 100px;
+                width: 100px;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 70%;
+                    width: 70%;
+                }
+            }
+        }
+    }
+    .footer-hr {
+        border: 1px solid #3cad41;
+    }
+
+    .credits, .freepik {
+        a {
+            color: #3cad41 !important;
+        }
+    }
+}

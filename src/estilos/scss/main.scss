@@ -1,0 +1,27 @@
+
+// Main scss
+// @import "../src/estilos/scss/main.scss";
+
+// Font awesome
+// @import '@fortawesome/fontawesome-free/js/fontawesome.js';
+// @import '@fortawesome/fontawesome-free/js/solid.js'
+
+// Slick carousel
+// @import 'slick-carousel/slick/slick.min';
+// @import 'slick-carousel/slick/slick.scss';
+// @import 'slick-carousel/slick/slick-theme.scss';
+
+// Animate.css
+// @import "animate.css/animate.min.css";
+
+@import './general.scss';
+@import './index.scss';
+@import './fuentes.scss';
+@import './header.scss';
+@import './ciclos.scss';
+@import './utilities.scss';
+@import './media_queries.scss';
+@import './practicas.scss';
+@import './contacto.scss';
+@import './dual.scss';
+//@import './dialog.scss';

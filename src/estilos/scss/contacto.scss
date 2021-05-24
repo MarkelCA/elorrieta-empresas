@@ -1,0 +1,114 @@
+html#html-contacto {
+    body {
+        background-image: url('../../img/bussines-back.jpg');
+        background-size: cover;
+
+        &:after {
+            content:'';
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: rgba(0,0,0,0.6);
+
+        }
+    }
+    #page-body {
+        width: 70%;
+        margin: 1em auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        background-color:#d936364f;
+        padding: 1em 0;
+        border-radius: 20px;
+
+        h1 {
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            width: 70%;
+            margin: 1em auto;
+
+            input,textarea {
+                font-size: 1.4rem;
+                padding: .5em;
+                margin: .6em;
+                padding-left: 2em;
+                border: 1px solid black;
+                border-radius: 4px;
+                //background-size: 10px 10px;
+                background-size: 1.4rem;
+                background-position: 10px center;
+                opacity: .75;
+                background-repeat: no-repeat;
+                &#input-nombre {
+                    background-image: url('../../img/svg/user-solid.svg');
+                }
+                &#input-email {
+                    background-image: url('../../img/svg/envelope-solid.svg');
+                }
+                &#input-tel {
+                    background-image: url('../../img/svg/phone-alt-solid.svg');
+                }
+                &#input-mensaje {
+                    background-image: url('../../img/svg/comment-solid.svg');
+                    background-position: 15px 10px;
+                }
+
+                &:focus-visible {
+                    background-color: #ffafaf;
+                    outline: none;
+                }
+
+                &#input-enviar {
+                    background: rgb(222,18,18);
+                    background: linear-gradient(90deg, rgba(222,18,18,1) 41%, rgba(255,87,118,1) 100%);
+                    border:none;
+                    margin: .4em; color: white;
+                    padding-left: 0;
+                    transition: all, .4s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: rgb(255,54,54);
+                        background: linear-gradient(90deg, rgba(255,54,54,1) 0%, rgba(255,87,118,1) 100%);
+                        //background-color: #ff2e2e;
+                    }
+                }
+
+            }
+            textarea {
+                font-size: 1rem;
+                font-family: "Montserrat",Helvetica,sans-serif;
+                padding: .5em;
+                margin: .6em;
+                padding-left: 3em;
+                &::placeholder {
+                  font-size: 1.4rem;
+                }
+            }
+        }
+
+    }
+    .footer-hr {
+        border: 1px solid #de1212;
+    }
+
+    .credits, .freepik {
+        a {
+            color: #ff3030 !important;
+        }
+    }
+}

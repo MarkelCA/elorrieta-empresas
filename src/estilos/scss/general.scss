@@ -1,0 +1,200 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1f1f1f orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background:#1f1f1f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 20px;
+  border: 3px solid #1f1f1f;
+}
+body {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background-image:url("../../img/wooden-back.jpg");
+    background-size: contain;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+
+
+}
+.back-white {
+    background-image: none;
+    background-color: rgb(255, 255, 255);
+}
+#faq-container {
+    #title-faq {
+        text-align: center;
+        font-weight: 300;
+        font-size: 2em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    margin-top: 1.5em !important;
+    background-color: rgba(10, 7, 33, 0.88);
+    color: white;
+    padding: 1em 0 2em 0;
+   #faq {
+    cursor: grab;
+    cursor: -webkit-grab; /* Chrome 1-21, Safari 4+ */
+    cursor:    -moz-grab; /* Firefox 1.5-26 */
+    cursor: url('../../cursor/grab.cur'), auto; /* fallback: Chrome 1-21, Firefox 1.5-26, Safari 4+, IE, Edge 12-14, Android 2.1-4.4.4 */
+
+       .slick-active:focus {
+           outline: 0;
+       border: none !important;
+       }
+       .slick-active:active {
+           outline: 0;
+       border: none !important;
+       }
+       .slick:active {
+           outline: 0;
+       border: none !important;
+       }
+       div:focus{
+           outline: 0;
+       border: none !important;
+       }
+       &:active {
+       cursor: -webkit-grabbing; 
+       cursor: grabbing;
+   }
+        margin-top: 1.5em !important;
+        margin-bottom: 1.5em !important;
+        width: 70vw;
+        margin: auto;
+        & > div {
+            background-color: rgba(255,255,255, 0.88);
+            color: rgba(10, 7, 33, 0.88);
+            margin: 0 1em;
+            text-align: center;
+            // & > *:not(.faq-type-title) {
+            //     //padding:0 1em;
+            // }
+            .pregunta, .respuesta {
+                font-style: italic;
+                padding: .5em 2em;
+
+            }
+            .title-pregunta, .title-respuesta {
+                font-weight: bold;
+            }
+            & .faq-type-title {
+                text-transform: capitalize;
+                border-bottom: 1px solid rgba(10, 7, 33, 0.88);
+                text-align: center;
+                padding: .5em;
+            }
+        }
+
+    }
+}
+#container {
+    margin-top: 6rem;
+    
+    
+
+    
+    
+}
+.footer {
+	background-color: #2d2d2d;
+	color: white;
+	text-align: center;
+	margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+	a {
+		color: #ffa500;
+	}
+    .footer-hr {
+        border: 1px solid #ffa500;
+    }
+    .footer-menu {
+        margin-top:1em;
+        margin-bottom:2em;
+        ul {
+            display: flex;
+            padding: 0;
+            width: 60%;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+        a {
+            font-size: 1.2em;
+            color: white;
+            text-decoration: none;
+
+            &#subir-btn {
+                cursor: pointer;
+            }
+        }
+        li {
+            display: inline-block;
+            list-style-type: none;
+
+			&:after {
+				background: none repeat scroll 0 0 transparent;
+                top: 4px;
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 1px;
+				left: 50%;
+				position: relative;
+				background: #fff;
+				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				width: 0;
+
+			}
+
+            &:hover {
+                &:after {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+
+
+    }
+} 
+.credits {
+    padding: 1em;
+	margin: 0;
+	a {
+		font-size: 1rem;
+		font-weight: thin;
+		letter-spacing: .05em;
+		text-decoration: none;
+		&:hover {
+			transition: all .3s;
+			color: rgba(0,0,0,0);
+			background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+			background-clip: text;
+            -webkit-background-clip: text;
+		}
+	}
+}
+.freepik {
+	margin-top: 1em;
+	padding: .5em;
+}
+.heart {
+	color: red;
+}
