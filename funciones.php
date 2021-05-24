@@ -49,11 +49,11 @@ function imprimir_datos_ciclo($ciclo)
         }
 
     }
-    if ($has_temario){
-
+    if ($has_descripcion)
         $datos['descripcion'] = $descripcion;
-    }
+    
 
+    // Añadimos el @ para suprimir el warning si la variable es null
     if(@$has_both)
         $mid_content_width = TRUE;
     else 
@@ -100,26 +100,32 @@ function imprimir_datos_ciclo($ciclo)
     echo '</div>'; // .ciclo
 
 }
+/*
+ * Función que busca un ciclo por su código
+ */
 function get_ciclo($cod_ciclo) {
     global $ciclo;
-
     foreach($ciclo as $familia)
         foreach($familia as $ciclo_actual)
         if($ciclo_actual['codigo'] === $cod_ciclo)
             return $ciclo_actual;
 }
-
+/*
+ * Cargars los módulos de un ciclo
+ */
 function cargar_modulos($cod_ciclo) {
     global $modulos;
     global $ciclo;
-    $ciclo = get_ciclo($cod_ciclo);
+    global $obs;
 
+    $ciclo = get_ciclo($cod_ciclo);
     $nombre_ciclo = $ciclo['nombre'];
     $modulos = $modulos[$cod_ciclo];
-    echo '<div><i class="close-modulos fas fa-times"></i></div>';
-    echo "<h3 class='title-modulos'>$nombre_ciclo</h3>";
     $modulos_primero = $modulos['primero'];
     $modulos_segundo = $modulos['segundo'];
+
+    echo '<div><i class="close-modulos fas fa-times"></i></div>';
+    echo "<h3 class='title-modulos'>$nombre_ciclo</h3>";
 
     // Primer Curso
     echo "<h4><span class='primero-segundo'>Primero:</span></h4>";
@@ -129,8 +135,13 @@ function cargar_modulos($cod_ciclo) {
         <th><i class='fas fa-clock'></i> Horas</th>
     </tr>";
     foreach($modulos_primero as $modulo){
-        echo "<tr cod='$modulo[codigo]' class='modulo'>";
-        echo "<td>$modulo[nombre] </td>";
+        $cod_modulo = $modulo['codigo'];
+        @$obs_modulo = $obs[$cod_modulo]['observaciones'];
+
+        // Convertimos el array de observaciones de módulos en un string separado por comas
+        $str_modulo = $obs_modulo ? "<span class='obs-modulo'>(".implode(', ',$obs_modulo).")</span>" : "" ;
+        echo "<tr cod='$cod_modulo' class='modulo'>";
+        echo "<td>$modulo[nombre] $str_modulo </td>";
         echo "<td class='horas-modulo'>$modulo[horas] h</td>";
         echo "</tr>";
     }
