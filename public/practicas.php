@@ -80,7 +80,7 @@
             <img src="../src/img/ELECNOR.png" alt="elecnor-logo">
         </div>
         <div class="empresa">
-            <img src="../src/img/bosonit-logo.png" alt="bosonit-logo">
+            <img src="../src/img/bosonit.jpeg" alt="bosonit-logo">
         </div>
 
       </div>

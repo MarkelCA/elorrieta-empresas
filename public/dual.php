@@ -86,9 +86,6 @@
         <div class="empresa">
             <img src="../src/img/ELECNOR.png" alt="elecnor-logo">
         </div>
-        <div class="empresa">
-            <img src="../src/img/bosonit-logo.png" alt="bosonit-logo">
-        </div>
 
       </div>
     </div>

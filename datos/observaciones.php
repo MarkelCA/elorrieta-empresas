@@ -49,6 +49,7 @@ $obs['CMCI3']['descripcion']='Descripcion de test 1';
 Observación a nivel de módulo
 */
 $obs['0373']['observaciones'][]='Módulo común a los tres ciclos superiores de informática';
+$obs['0179']['observaciones'][] = 'Esta asignatura es común a todos los ciclos de primero de empresas';
 
 /*
 Seria recomendable no andar escribiendo cajas vacías donde no haya observaciones.
