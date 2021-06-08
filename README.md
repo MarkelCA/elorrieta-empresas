@@ -31,14 +31,23 @@ Instala todos los módulos necesarios del proyecto.
 ## Página:
 ### Index:
 ![index](https://user-images.githubusercontent.com/76633510/121243131-a6df3a00-c89d-11eb-9b52-893733899444.png)
+
 ### Ciclos:
+Lista de familias profesionales:
 ![ciclos-full](https://user-images.githubusercontent.com/76633510/121242844-4f40ce80-c89d-11eb-9956-37fdc186cbbe.png)
+
+Un solo ciclo:
 ![single-ciclo](https://user-images.githubusercontent.com/76633510/121243599-2c62ea00-c89e-11eb-8681-6aebed9744b0.png)
+
+Módulos de un ciclo:
 ![modulos](https://user-images.githubusercontent.com/76633510/121243824-75b33980-c89e-11eb-8d9a-9b0c75c5019c.png)
+
 ### Prácticas:
 ![practicas-full](https://user-images.githubusercontent.com/76633510/121243992-a72c0500-c89e-11eb-827b-ae9b666f4a05.png)
+
 ### Dual:
 ![dual-full](https://user-images.githubusercontent.com/76633510/121244088-c5920080-c89e-11eb-82db-5f7181069da6.png)
+
 ### Contacto:
 ![contacto-full](https://user-images.githubusercontent.com/76633510/121244183-dd698480-c89e-11eb-9eba-4738bffc62d9.png)
 
