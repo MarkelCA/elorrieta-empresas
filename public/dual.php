@@ -39,11 +39,14 @@
                 <!-- <h1>Prácticas</h1> -->
             <div id="dual-cover" class=' back-white'>
                 <!-- <img src="../src/img/top-view-person-writing-on-laptop-with-copy-space.jpg" alt="practicas-cover"> -->
-                <div id="descripcion-cover">
-                    <h1>Dual</h1>
-                    <p>En elorrieta apostamos por impulsar a los jóvenes a labrarse un futuro profesional mientras estudian. Es por ello que animamos a las empresas a confiar en una nueva generación de excelentes profesionales preparados. Sabemos que la frescura joven y el talento de nuestro alumnado aportará en tu empresa innovación, progreso y beneficio.</p>
+                <div id="cover-flex">
+                    <div id="descripcion-cover">
+                        <h1>Dual</h1>
+                        <p>En elorrieta apostamos por impulsar a los jóvenes a labrarse un futuro profesional mientras estudian. Es por ello que animamos a las empresas a confiar en una nueva generación de excelentes profesionales preparados. Sabemos que la frescura joven y el talento de nuestro alumnado aportará en tu empresa innovación, progreso y beneficio.</p>
 
+                    </div>
                 </div>
+                <span class='attribution'>freepik.com/rawpixel-com</span>
             </div>
 
         <div class="page-section" class='back-white'>

@@ -10,23 +10,40 @@ html#html-practicas {
     }
 
     #practicas-cover {
-        width: 100%;
-        height: 55vh;
+
         background-position: 50% 33%;
         background-image: url('../../img/resized/top-view-person-writing-on-laptop-with-copy-space.jpg');
         background-size: cover;
-        padding: 1em 0;
-        display: flex;
-        align-items: center;
-
-        #descripcion-cover {
-            width: 45%;
-            margin-top: 2em;
+        .attribution {
+            &::before {
+                content: "Photo: ";
+            }
+            padding: .5em;
+            display: block;
+            width: fit-content;
             margin-left: auto;
-            margin-right: 5em;
-            p{
-                text-align: justify;
-                line-height: 150%;
+            display: block;
+            width: fit-content;
+            font-size: 80%;
+            color: #9e9e9e;
+            font-style: italic;
+            margin-left: auto;
+        }
+        #cover-flex {
+            width: 100%;
+            height: 55vh;
+            padding: 1em 0;
+            display: flex;
+            align-items: center;
+            #descripcion-cover {
+                width: 45%;
+                margin-top: 2em;
+                margin-left: auto;
+                margin-right: 5em;
+                p{
+                    text-align: justify;
+                    line-height: 150%;
+                }
             }
         }
     }

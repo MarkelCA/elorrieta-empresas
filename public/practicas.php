@@ -39,11 +39,15 @@
                 <!-- <h1>Prácticas</h1> -->
             <div id="practicas-cover" class=' back-white'>
                 <!-- <img src="../src/img/top-view-person-writing-on-laptop-with-copy-space.jpg" alt="practicas-cover"> -->
+            <div id="cover-flex">
+
                 <div id="descripcion-cover">
                     <h1>Prácticas</h1>
                     <p>¡Encuentra talento joven! Obsérvales trabajar en tu empresa durante unos meses, prepálalos para tu modelo de negocio y fórmalos en tus tecnologías. Si quieres encontrar profesional cualificado y con ganas de trabajar es tu oportunidad perfecta.</p>
 
                 </div>
+            </div>
+                <span class='attribution'>freepik.com/freepik</span>
             </div>
 
         <div class="page-section" class='back-white'>

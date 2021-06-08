@@ -10,36 +10,55 @@ html#html-dual {
     }
 
     #dual-cover {
-        width: 100%;
-        height: 55vh;
         background-position: 50% 40%;
         background-image: url('../../img//resized//handshake.jpg');
         background-size: cover;
-        padding: 1em 0;
-        display: flex;
-        align-items: center;
 
-        #descripcion-cover {
-            width: 45%;
-            margin-top: 2em;
-            margin-right: auto;
-            margin-left: 3em;
-
-          position: relative;
-          padding: .7em;
-          //background: #1d9effde;
-          background-image: linear-gradient(180deg, #0eb1ff 0%, #64cdff47 100%);
-          border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
-          color: #313131;
-          box-shadow: 20px 20px rgba(0,0,0,.15);
-          transition: all .4s ease;
-            p{
-                text-align: justify;
-                line-height: 150%;
+        .attribution {
+            &::before {
+                content: "Photo: ";
             }
-            &:hover {
-              border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-              box-shadow: 10px 10px rgba(0,0,0,.25);
+            padding: .5em;
+            display: block;
+            width: fit-content;
+            margin-left: auto;
+            display: block;
+            width: fit-content;
+            font-size: 80%;
+            color: #2f2f2f;
+            font-style: italic;
+            margin-left: auto;
+        }
+
+        #cover-flex {
+            width: 100%;
+            height: 55vh;
+            padding: 1em 0;
+            display: flex;
+            align-items: center;
+
+            #descripcion-cover {
+                width: 45%;
+                margin-top: 2em;
+                margin-right: auto;
+                margin-left: 3em;
+
+              position: relative;
+              padding: .7em;
+              //background: #1d9effde;
+              background-image: linear-gradient(180deg, #0eb1ff 0%, #64cdff47 100%);
+              border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+              color: #313131;
+              box-shadow: 20px 20px rgba(0,0,0,.15);
+              transition: all .4s ease;
+                p{
+                    text-align: justify;
+                    line-height: 150%;
+                }
+                &:hover {
+                  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+                  box-shadow: 10px 10px rgba(0,0,0,.25);
+                }
             }
         }
 
