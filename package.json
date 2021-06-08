@@ -32,7 +32,6 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "gsap": "^3.6.1",
-    "jquery": "^3.6.0",
-    "slick-carousel": "^1.8.1"
+    "jquery": "^3.6.0"
   }
 }

@@ -5,11 +5,6 @@
 import '@fortawesome/fontawesome-free/js/fontawesome.js'
 import '@fortawesome/fontawesome-free/js/solid.js'
 
-// Slick carousel
-import 'slick-carousel/slick/slick.min'
-import 'slick-carousel/slick/slick.scss'
-import 'slick-carousel/slick/slick-theme.scss'
-
 // Animate.css
 import "animate.css/animate.min.css";
 
@@ -241,7 +236,6 @@ function close_module(e) {
         // Para que no se propague el evento y se me cierre el ciclo
         e.stopPropagation()
 }
-  $('#faq').slick();
 
   const animateCSS = (node, animation, prefix = 'animate__') =>
   // We create a Promise and return it
