@@ -25,10 +25,10 @@
                 <ul id="menu">
                 <li id='header-title'><a href="#"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
                 <li><a href="./">Inicio</a></li>
-                <li><a href="./ciclos">Ciclos</a></li>
-                <li><a href="./practicas">Prácticas</a></li>
-                <li><a href="./dual">Dual</a></li>
-                <li id='contacto'><a href="./contacto">Contacto</a></li>
+                <li><a href="./ciclos.php">Ciclos</a></li>
+                <li><a href="./practicas.php">Prácticas</a></li>
+                <li><a href="./dual.php">Dual</a></li>
+                <li id='contacto'><a href="./contacto.php">Contacto</a></li>
             </ul>
         </nav>
   </div>
@@ -48,25 +48,25 @@
         </div>
     </div>
   <div id='main-options' class="zone orange grid-wrapper">
-	  <a href="./ciclos" class="box ">
+	  <a href="./ciclos.php" class="box ">
       <div >
 
           <img src="../src/img/svg/books.svg" alt="ciclos-icono">
           <h3>Ciclos</h3>
       </div>
     </a>
-    <a href="./practicas" class="box">
+    <a href="./practicas.php" class="box">
 	  <div >
           <img src="../src/img/svg/worker.svg" alt="practicas-icono">
           <h3>Prácticas</h3>
       </div>
     </a>
-    <a href="./dual" class="box">
+    <a href="./dual.php" class="box">
 	  <div><img src="../src/img/svg/employee.svg" alt="dual-icono">
           <h3>Formación Dual</h3>
       </div>
     </a>
-    <a href="./contacto" class="box">
+    <a href="./contacto.php" class="box">
 	  <div ><img src="../src/img/svg/phone-call.svg" alt="contacto-icono">
           <h3>Contacto</h3>
       </div>
@@ -77,10 +77,10 @@
         <nav class="footer-menu">
             <ul class="menu">
                 <li><a href="./">Inicio</a></li>
-                <li><a href="./ciclos">Ciclos</a></li>
-                <li><a href="./practicas">Prácticas</a></li>
+                <li><a href="./ciclos.php">Ciclos</a></li>
+                <li><a href="./practicas.php">Prácticas</a></li>
                 <li><a href="#">Dual</a></li>
-                <li><a href="./contacto">Contacto</a></li>
+                <li><a href="./contacto.php">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>
         </nav>

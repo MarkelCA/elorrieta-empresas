@@ -15,6 +15,22 @@ html#html-contacto {
 
         }
     }
+
+    .attribution {
+        &::before {
+            content: "Photo: ";
+        }
+        padding: .5em;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        display: block;
+        width: fit-content;
+        font-size: 80%;
+        color: #585858;
+        font-style: italic;
+        margin-left: auto;
+    }
     #page-body {
         width: 70%;
         margin: 1em auto;

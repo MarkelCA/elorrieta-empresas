@@ -29,21 +29,24 @@
                     <ul id="menu">
                     <li id='header-title'><a href="./"><span class='first-letter'>E</span>lorrieta <span class='first-letter'>E</span>mpresas</a></li>
                     <li><a href="./">Inicio</a></li>
-                    <li><a href="./ciclos">Ciclos</a></li>
-                    <li><a href="./practicas">Prácticas</a></li>
+                    <li><a href="./ciclos.php">Ciclos</a></li>
+                    <li><a href="./practicas.php">Prácticas</a></li>
                     <li><a href="#">Dual</a></li>
-                    <li id='contacto'><a href="./contacto">Contacto</a></li>
+                    <li id='contacto'><a href="./contacto.php">Contacto</a></li>
                 </ul>
             </nav>
       </div>
                 <!-- <h1>Prácticas</h1> -->
             <div id="dual-cover" class=' back-white'>
                 <!-- <img src="../src/img/top-view-person-writing-on-laptop-with-copy-space.jpg" alt="practicas-cover"> -->
-                <div id="descripcion-cover">
-                    <h1>Dual</h1>
-                    <p>En elorrieta apostamos por impulsar a los jóvenes a labrarse un futuro profesional mientras estudian. Es por ello que animamos a las empresas a confiar en una nueva generación de excelentes profesionales preparados. Sabemos que la frescura joven y el talento de nuestro alumnado aportará en tu empresa innovación, progreso y beneficio.</p>
+                <div id="cover-flex">
+                    <div id="descripcion-cover">
+                        <h1>Dual</h1>
+                        <p>En elorrieta apostamos por impulsar a los jóvenes a labrarse un futuro profesional mientras estudian. Es por ello que animamos a las empresas a confiar en una nueva generación de excelentes profesionales preparados. Sabemos que la frescura joven y el talento de nuestro alumnado aportará en tu empresa innovación, progreso y beneficio.</p>
 
+                    </div>
                 </div>
+                <span class='attribution'>freepik.com/rawpixel-com</span>
             </div>
 
         <div class="page-section" class='back-white'>
@@ -102,10 +105,10 @@
         <nav class="footer-menu">
             <ul class="menu">
                 <li><a href="./">Inicio</a></li>
-                <li><a href="./ciclos">Ciclos</a></li>
-                <li><a href="./practicas">Prácticas</a></li>
+                <li><a href="./ciclos.php">Ciclos</a></li>
+                <li><a href="./practicas.php">Prácticas</a></li>
                 <li><a href="#">Dual</a></li>
-                <li><a href="./contacto">Contacto</a></li>
+                <li><a href="./contacto.php">Contacto</a></li>
                 <li><a id='subir-btn'>Subir <i class="fas fa-arrow-circle-up"></i></a></li>
             </ul>
         </nav>

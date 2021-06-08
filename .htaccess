@@ -1,9 +1,9 @@
-RewriteEngine On
+#RewriteEngine On
 #RewriteBase /elorrieta-empresas/
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME}.php -f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
 # en caso de tenerlo en localhost
 ErrorDocument 404  '/elorrieta-empresas/404.html'
