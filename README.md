@@ -28,3 +28,5 @@ Instala todos los módulos necesarios del proyecto.
 
 **Se debe ejecutar sobre la raiz del proyecto.** Compila todos los cambios realizados en los ficheros script.js y styles.js.
 
+### Página:
+[[documentation/images/ciclos-full.png]]
